@@ -1,30 +1,41 @@
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
-import openai
-from scrape_zillow import scrape_zillow_data
-from scrape_crexi import scrape_crexi_data
-from gpt_code_review import review_code
+import logging
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = 'your_openai_api_key'
+logging.basicConfig(level=logging.INFO)
 
-@app.route('/api/scrape_zillow', methods=['GET'])
-def scrape_zillow():
-    data = scrape_zillow_data()
-    return jsonify(data)
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'healthy'})
 
-@app.route('/api/scrape_crexi', methods=['GET'])
-def scrape_crexi():
-    data = scrape_crexi_data()
-    return jsonify(data)
+@app.route('/api/sample_zillow', methods=['GET'])
+def sample_zillow():
+    url = request.args.get('url')
+    if not url:
+        return jsonify({'error': 'URL parameter is required'}), 400
 
-@app.route('/api/review_code', methods=['POST'])
-def review_code_endpoint():
-    code = request.json.get('code')
-    review = review_code(code)
-    return jsonify(review)
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+    try:
+        driver.get(url)
+        html_content = driver.page_source
+        return jsonify({'html_content': html_content})
+    except Exception as e:
+        logging.error('Error loading key elements: %s', e)
+        return jsonify({'html_content': f'Error loading key elements after CAPTCHA: {str(e)}'})
+    finally:
+        driver.quit()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

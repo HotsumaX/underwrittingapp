@@ -7,7 +7,7 @@ def scrape_crexi_data():
     soup = BeautifulSoup(response.text, 'html.parser')
 
     properties = []
-    for listing in soup.find_all('div', {'class': 'property-item'})):
+    for listing in soup.find_all('div', {'class': 'property-item'}):  # Corrected line
         address = listing.find('div', {'class': 'property-address'}).text if listing.find('div', {'class': 'property-address'}) else 'N/A'
         price = listing.find('div', {'class': 'property-price'}).text if listing.find('div', {'class': 'property-price'}) else 'N/A'
         properties.append({'address': address, 'price': price})

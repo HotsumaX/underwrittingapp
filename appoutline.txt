@@ -1,0 +1,107 @@
+# Real Estate Scraper Application Outline
+
+## 1. Server Connection Status
+### Goals:
+- Display server connection status.
+- Add a button to reset the server connection.
+- Add a button to fetch a sample payload from Zillow.
+- Indicate success or failure of the connection.
+
+### Tasks:
+- [X] Implement server connection status display.
+- [X] Implement server connection reset button.
+- [X] Implement sample payload fetch button.
+- [X] Implement success/failure indicators.
+
+### Change Log:
+- Implemented server connection status display.
+- Implemented server connection reset button.
+- Implemented sample payload fetch button.
+- Implemented success/failure indicators.
+
+## 2. Site Scraper
+### Goals:
+- Scrape listings from CREXi and Zillow.
+- Store scraped data in a backend component.
+- Implement data querying for predictive analysis.
+
+### Tasks:
+- [ ] Implement listing scraper for CREXi.
+- [ ] Implement listing scraper for Zillow.
+- [ ] Implement backend storage for scraped data.
+- [ ] Implement data querying functionality.
+
+### Change Log:
+- Added "Test Zillow" button for quickly testing a sample URL.
+- Improved readability of scraped data section.
+- Added copy button to the scraped data section.
+- Provided temporary feedback for data copy action.
+- Moved copy button next to the scraped data header.
+
+## 3. Single Family Homes Evaluation
+### Goals:
+- Connect to the scraper section.
+- Identify favorable deals based on various metrics.
+- Calculate estimated best offer and possible repair concerns.
+
+### Tasks:
+- [ ] Connect to scraper section.
+- [ ] Implement deal identification based on metrics.
+- [ ] Implement estimated best offer calculation.
+- [ ] Implement possible repair concerns identification.
+
+## 4. Multi Family Homes Evaluation
+### Goals:
+- Similar to single family homes evaluation.
+- Include additional data like NOI and ROI.
+
+### Tasks:
+- [ ] Connect to scraper section.
+- [ ] Implement deal identification based on metrics.
+- [ ] Implement estimated best offer calculation.
+- [ ] Implement NOI and ROI calculation.
+
+## 5. Email to Point of Contact for the Listing
+### Goals:
+- Streamline the process of reaching out to agents.
+- Prepare LOI letter with team member selection and information display.
+
+### Tasks:
+- [ ] Implement email functionality to reach out to agents.
+- [ ] Implement LOI letter preparation.
+- [ ] Implement team member selection and information display.
+
+## 6. Property Management Section (Future)
+### Goals:
+- Manage both short and long-term rentals.
+- Include lifecycle items, maintenance, and management.
+- Connect to APIs for home locks, Airbnb, etc.
+- Prepare expense reports for the CPA.
+- Evaluate property upgrades and their impact.
+- Allow employees to request items needed for properties.
+
+### Tasks:
+- [ ] Implement lifecycle items management.
+- [ ] Implement maintenance and contractor communication.
+- [ ] Implement API connections for home locks, Airbnb, etc.
+- [ ] Implement expense report preparation.
+- [ ] Implement property upgrade evaluation.
+- [ ] Implement employee request functionality for property items.
+
+## 7. Log Section
+### Goals:
+- Improve logging to provide context without overwhelming the page.
+- Implement a focused area for console logs and stackflow logs.
+- Keep a record of logs for research and evaluation.
+
+### Tasks:
+- [ ] Implement improved logging with context.
+- [ ] Implement focused area for console logs and stackflow logs.
+- [ ] Implement log record keeping functionality.
+
+## Change Log
+### Server Connection Status:
+- Implemented server connection status display.
+- Implemented server connection reset button.
+- Implemented sample payload fetch button.
+- Implemented success/failure indicators.
