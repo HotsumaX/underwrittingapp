@@ -4,7 +4,8 @@ def list_files_in_repo():
     repo_files = []
     for root, dirs, files in os.walk('.'):
         for file in files:
-            repo_files.append(os.path.join(root, file))
+            if file.endswith('.py') or file.endswith('.js') or file.endswith('.json'):
+                repo_files.append(os.path.join(root, file))
     return repo_files
 
 def get_file_status(filepath):
@@ -20,11 +21,36 @@ def get_file_status(filepath):
     except IsADirectoryError:
         return 'is a directory'
 
+def evaluate_code(filepath):
+    try:
+        with open(filepath, 'r') as file:
+            content = file.read()
+        lines = content.split('\n')
+        functions = [line for line in lines if line.strip().startswith('def ')]
+        classes = [line for line in lines if line.strip().startswith('class ')]
+        imports = [line for line in lines if line.strip().startswith('import ') or line.strip().startswith('from ')]
+        return {
+            'functions': functions,
+            'classes': classes,
+            'imports': imports,
+            'lines_of_code': len(lines)
+        }
+    except Exception as e:
+        return str(e)
+
 def evaluate_files(filepaths):
     report = []
     for filepath in filepaths:
         status = get_file_status(filepath)
-        report.append(f'- {filepath} {status}.')
+        if status == 'exists and has content':
+            code_evaluation = evaluate_code(filepath)
+            report.append(f'- {filepath} {status}.')
+            report.append(f'  - Lines of code: {code_evaluation["lines_of_code"]}')
+            report.append(f'  - Functions: {len(code_evaluation["functions"])}')
+            report.append(f'  - Classes: {len(code_evaluation["classes"])}')
+            report.append(f'  - Imports: {len(code_evaluation["imports"])}')
+        else:
+            report.append(f'- {filepath} {status}.')
     return report
 
 def main():
