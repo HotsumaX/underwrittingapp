@@ -1,57 +1,62 @@
 import os
 import subprocess
-from dotenv import load_dotenv
 
-load_dotenv()
+def list_files_in_directory(directory):
+    files = []
+    for root, _, filenames in os.walk(directory):
+        for filename in filenames:
+            if filename.endswith('.py'):  # Only consider Python files
+                filepath = os.path.join(root, filename)
+                files.append(filepath)
+    return files
 
-def get_file_status(filepath):
-    try:
-        with open(filepath, 'r', errors='ignore') as file:
-            content = file.read()
-        return content
-    except Exception as e:
-        return str(e)
+def run_flake8(filepath):
+    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+    return result.stdout if result.stdout else "No issues found by flake8."
 
-def run_tool(tool, filepath):
-    result = subprocess.run([tool, filepath], capture_output=True, text=True)
-    return result.stdout.strip()
+def run_pylint(filepath):
+    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+    return result.stdout if result.stdout else "No issues found by pylint."
 
-def generate_comments(filepath):
-    flake8_comments = run_tool("flake8", filepath)
-    pylint_comments = run_tool("pylint", filepath)
-    bandit_comments = run_tool("bandit", filepath)
-    comments = f"### Flake8 Comments:\n{flake8_comments}\n\n### Pylint Comments:\n{pylint_comments}\n\n### Bandit Comments:\n{bandit_comments}"
-    return comments
+def run_bandit(filepath):
+    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+    return result.stdout if result.stdout else "No issues found by bandit."
 
-def evaluate_files(filepaths):
-    evaluations = []
-    for filepath in filepaths:
-        status = get_file_status(filepath)
-        comments = generate_comments(filepath) if "Error reading file" not in status else status
-        evaluations.append({
-            'filepath': filepath,
-            'status': status,
-            'comments': comments
-        })
+def evaluate_files(files):
+    evaluations = {}
+    for filepath in files:
+        flake8_report = run_flake8(filepath)
+        pylint_report = run_pylint(filepath)
+        bandit_report = run_bandit(filepath)
+        
+        evaluations[filepath] = {
+            'flake8': flake8_report,
+            'pylint': pylint_report,
+            'bandit': bandit_report,
+        }
     return evaluations
 
-def list_files(directory):
-    return [os.path.join(dp, f) for dp, dn, filenames in os.walk(directory) for f in filenames]
-
 def main():
-    repo_files = list_files('.')
-    evaluations = evaluate_files(repo_files)
+    repo_files = list_files_in_directory('.')
+    app_outline = ''
     
-    with open('progress_report.md', 'w') as report:
-        report.write("# Progress Report\n\n")
-        report.write("## List of all files in the repository\n")
-        for filepath in repo_files:
-            report.write(f"- {filepath}\n")
-        report.write("\n## File Evaluation\n")
-        for evaluation in evaluations:
-            report.write(f"\n### {evaluation['filepath']}\n")
-            report.write(f"- Status: {evaluation['status']}\n")
-            report.write(f"- Comments: {evaluation['comments']}\n")
+    with open('appoutline.txt', 'r', encoding='utf-8') as file:
+        app_outline = file.read()
+    
+    progress_report = "# Progress Report\n\n## Repository Files\n"
+    
+    for filepath in repo_files:
+        file_evaluation = evaluate_files([filepath])
+        progress_report += f"\n### {filepath}\n"
+        progress_report += "#### flake8 Report:\n"
+        progress_report += file_evaluation[filepath]['flake8'] + "\n"
+        progress_report += "#### pylint Report:\n"
+        progress_report += file_evaluation[filepath]['pylint'] + "\n"
+        progress_report += "#### bandit Report:\n"
+        progress_report += file_evaluation[filepath]['bandit'] + "\n"
+
+    with open('progress_report.md', 'w', encoding='utf-8') as report_file:
+        report_file.write(progress_report)
 
 if __name__ == "__main__":
     main()
