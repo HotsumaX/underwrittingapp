@@ -1,60 +1,65 @@
 import os
 
-def evaluate_repo():
-    backend_files = [
-        "server_connection.py",
-        "site_scraper.py",
-        "single_family_evaluation.py",
-        "multi_family_evaluation.py",
-        "email_contact.py",
-        "property_management.py",
-        "log_section.py",
-        "offer_generator.py"
-    ]
+def list_files_in_repo(root_dir='.'):
+    file_list = []
+    for root, _, files in os.walk(root_dir):
+        for file in files:
+            if '.git' not in root:
+                file_list.append(os.path.relpath(os.path.join(root, file), root_dir))
+    return file_list
 
-    frontend_path = "frontend/src"
-
-    progress_report = "# Progress Report\n\n"
-
-    for file in backend_files:
-        file_path = os.path.join("backend", file)
-        if os.path.exists(file_path):
-            size = os.path.getsize(file_path)
-            progress_report += f"## {file.replace('_', ' ').title()}\n\n"
-            progress_report += f"- backend/{file} exists.\n\n"
-            progress_report += f"- Size: {size} bytes\n\n"
-        else:
-            with open(file_path, 'w') as f:
-                pass
-            progress_report += f"## {file.replace('_', ' ').title()}\n\n"
-            progress_report += f"- backend/{file} created.\n\n"
-            progress_report += f"- Size: 0 bytes\n\n"
-
-    if os.path.exists(frontend_path):
-        size = sum(os.path.getsize(os.path.join(dp, f)) for dp, dn, filenames in os.walk(frontend_path) for f in filenames)
-        progress_report += "## Frontend\n\n"
-        progress_report += f"- frontend/src exists.\n\n"
-        progress_report += f"- Size: {size} bytes\n\n"
+def evaluate_file(file_path):
+    if not os.path.exists(file_path):
+        open(file_path, 'w').close()
+        return f"- {file_path} does not exist. Created blank file: {file_path}.\n"
     else:
-        progress_report += "## Frontend\n\n"
-        progress_report += "- frontend/src does not exist.\n\n"
+        size = os.path.getsize(file_path)
+        return f"- {file_path} exists.\n- Size: {size} bytes\n"
 
-    # Write the progress report to progress_report.md
+def evaluate_directory(directory_path):
+    if not os.path.exists(directory_path):
+        os.makedirs(directory_path)
+        return f"- {directory_path} does not exist. Created directory: {directory_path}.\n"
+    else:
+        size = sum(os.path.getsize(os.path.join(directory_path, f)) for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f)))
+        return f"- {directory_path} exists.\n- Size: {size} bytes\n"
+
+def generate_report():
+    report = "# Progress Report\n\n"
+
+    # List all files in the repo
+    report += "## List of all files in the repository\n\n"
+    file_list = list_files_in_repo()
+    for file in file_list:
+        report += f"- {file}\n"
+    report += "\n"
+
+    sections = {
+        "Server Connection": ["backend/server_connection.py"],
+        "Site Scraper": ["backend/site_scraper.py"],
+        "Single Family Evaluation": ["backend/single_family_evaluation.py"],
+        "Multi Family Evaluation": ["backend/multi_family_evaluation.py"],
+        "Email Contact": ["backend/email_contact.py"],
+        "Property Management": ["backend/property_management.py"],
+        "Log Section": ["backend/log_section.py"],
+        "Offer Generator": ["backend/offer_generator.py"],
+        "Frontend": ["frontend/src"]
+    }
+
+    for section, paths in sections.items():
+        report += f"## {section}\n\n"
+        for path in paths:
+            if path.endswith('/'):
+                report += evaluate_directory(path)
+            else:
+                report += evaluate_file(path)
+        report += "\n"
+
     with open("progress_report.md", "w") as f:
-        f.write(progress_report)
-
-    # Update the README.md file
-    readme_content = ""
-    with open("README.md", "r") as f:
-        readme_content = f.read()
-
-    if "# Progress Report" in readme_content:
-        readme_content = readme_content.split("# Progress Report")[0]
-
-    readme_content += progress_report
+        f.write(report)
 
     with open("README.md", "w") as f:
-        f.write(readme_content)
+        f.write(report)
 
 if __name__ == "__main__":
-    evaluate_repo()
+    generate_report()
