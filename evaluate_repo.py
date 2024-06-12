@@ -1,55 +1,65 @@
 import os
 
-# Define the outline for comparison
-outline = {
-    "1. Server Connection Status": [
-        "server connection status display",
-        "server connection reset button",
-        "sample payload fetch button",
-        "success/failure indicators"
-    ],
-    "2. Site Scraper": [
-        "listing scraper for CREXi",
-        "listing scraper for Zillow",
-        "backend storage for scraped data",
-        "data querying functionality"
-    ],
-    # Add other sections as needed...
-}
+def create_blank_file_if_not_exists(path):
+    if not os.path.exists(path):
+        with open(path, 'w') as f:
+            f.write("")
+        print(f"Created blank file: {path}")
+    else:
+        print(f"File already exists: {path}")
 
-def check_progress(directory, outline):
-    progress_report = {}
-    
-    for section, tasks in outline.items():
-        progress_report[section] = {task: False for task in tasks}
-    
-    # Walk through the directory and check for task completion
-    for root, _, files in os.walk(directory):
+def list_directory_contents(directory):
+    try:
+        files = os.listdir(directory)
+        print(f"Contents of {directory}:")
         for file in files:
-            filepath = os.path.join(root, file)
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                content = f.read()
-                for section, tasks in outline.items():
-                    for task in tasks:
-                        if task in content:
-                            progress_report[section][task] = True
-    
-    return progress_report
+            print(f" - {file}")
+    except FileNotFoundError:
+        print(f"Directory {directory} does not exist.")
 
-def generate_report(progress_report):
+def generate_progress_report():
+    # Paths to relevant directories and files
+    paths = {
+        'server_connection': 'backend/server_connection.py',
+        'site_scraper': 'backend/site_scraper.py',
+        'single_family_evaluation': 'backend/single_family_evaluation.py',
+        'multi_family_evaluation': 'backend/multi_family_evaluation.py',
+        'email_contact': 'backend/email_contact.py',
+        'property_management': 'backend/property_management.py',
+        'log_section': 'backend/log_section.py',
+        'offer_generator': 'backend/offer_generator.py',
+        'frontend': 'frontend/src'
+    }
+
     report = []
-    for section, tasks in progress_report.items():
-        report.append(f"## {section}\n")
-        for task, completed in tasks.items():
-            status = "Completed" if completed else "Pending"
-            report.append(f"- {task}: {status}\n")
+    report.append("# Progress Report\n")
+
+    # List contents of the backend directory
+    list_directory_contents('backend')
+    list_directory_contents('frontend/src')
+
+    for feature, path in paths.items():
+        print(f"Checking {path}...")  # Debugging: Print path being checked
+        report.append(f"## {feature.replace('_', ' ').title()}\n")
+        create_blank_file_if_not_exists(path)  # Create blank file if not exists
+        if os.path.exists(path):
+            report.append(f"- {path} exists.\n")
+            report.append(f"- Size: {os.path.getsize(path)} bytes\n")
+            print(f" - {path} exists.")  # Debugging: Confirm existence
+        else:
+            report.append(f"- {path} does not exist.\n")
+            print(f" - {path} does not exist.")  # Debugging: Confirm non-existence
         report.append("\n")
-    
-    with open("progress_report.md", "w") as f:
-        f.writelines(report)
+
+    with open("progress_report.md", "w") as report_file:
+        report_file.write("\n".join(report))
+
+    # Append the report to README.md
+    with open("README.md", "a") as readme_file:
+        readme_file.write("\n".join(report))
+
+    # Debugging: Print the generated report to the console
+    print("\n".join(report))
 
 if __name__ == "__main__":
-    directory = "."
-    progress_report = check_progress(directory, outline)
-    generate_report(progress_report)
-    print("Progress report generated in progress_report.md")
+    generate_progress_report()
