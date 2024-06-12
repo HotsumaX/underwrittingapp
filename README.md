@@ -44,7 +44,7 @@ Your code has been rated at 7.21/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:03:48.898704
+Run started:2024-06-12 23:17:34.875888
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -134,7 +134,7 @@ Your code has been rated at 6.34/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:03:50.203027
+Run started:2024-06-12 23:17:36.243553
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -227,6 +227,51 @@ Run metrics:
 Files skipped (0):
 
 
+## ./cleanup_script.py
+### flake8 Report:
+./cleanup_script.py:3:1: E302 expected 2 blank lines, found 1
+./cleanup_script.py:12:1: E302 expected 2 blank lines, found 1
+./cleanup_script.py:18:1: E302 expected 2 blank lines, found 1
+./cleanup_script.py:21:1: E305 expected 2 blank lines after class or function definition, found 1
+./cleanup_script.py:23:1: W391 blank line at end of file
+
+### pylint Report:
+************* Module cleanup_script
+cleanup_script.py:23:0: C0305: Trailing newlines (trailing-newlines)
+cleanup_script.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+cleanup_script.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+cleanup_script.py:12:0: C0116: Missing function or method docstring (missing-function-docstring)
+cleanup_script.py:18:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 7.22/10
+
+
+### bandit Report:
+Run started:2024-06-12 23:17:37.120716
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 18
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
 ## ./backend/site_scraper.py
 ### flake8 Report:
 ./backend/site_scraper.py:10:5: E999 IndentationError: unexpected indent
@@ -236,7 +281,7 @@ Files skipped (0):
 backend/site_scraper.py:10:4: E0001: Parsing failed: 'unexpected indent (site_scraper, line 10)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:03:50.898053
+Run started:2024-06-12 23:17:37.782280
 
 Test results:
 	No issues identified.
@@ -275,7 +320,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:03:51.605852
+Run started:2024-06-12 23:17:38.447201
 
 Test results:
 	No issues identified.
@@ -313,7 +358,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:03:52.305865
+Run started:2024-06-12 23:17:39.113211
 
 Test results:
 	No issues identified.
@@ -346,7 +391,7 @@ Files skipped (0):
 backend/single_family_evaluation.py:6:4: E0001: Parsing failed: 'unexpected indent (single_family_evaluation, line 6)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:03:52.947713
+Run started:2024-06-12 23:17:39.772639
 
 Test results:
 	No issues identified.
@@ -380,7 +425,7 @@ Files skipped (1):
 backend/scrape_crexi.py:12:4: E0001: Parsing failed: 'unexpected indent (scrape_crexi, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:03:53.585955
+Run started:2024-06-12 23:17:40.429973
 
 Test results:
 	No issues identified.
@@ -414,7 +459,7 @@ Files skipped (1):
 backend/multi_family_evaluation.py:6:4: E0001: Parsing failed: 'unexpected indent (multi_family_evaluation, line 6)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:03:54.220710
+Run started:2024-06-12 23:17:41.096218
 
 Test results:
 	No issues identified.
@@ -448,7 +493,7 @@ Files skipped (1):
 backend/scrape_zillow.py:18:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 18)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:03:54.860997
+Run started:2024-06-12 23:17:41.765839
 
 Test results:
 	No issues identified.
@@ -528,7 +573,7 @@ Your code has been rated at 2.44/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:03:59.484295
+Run started:2024-06-12 23:17:46.561957
 
 Test results:
 	No issues identified.
@@ -561,7 +606,7 @@ Files skipped (0):
 backend/app.py:25:4: E0001: Parsing failed: 'unexpected indent (app, line 25)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:04:00.124837
+Run started:2024-06-12 23:17:47.229791
 
 Test results:
 	No issues identified.
@@ -595,7 +640,7 @@ Files skipped (1):
 backend/scrape_zillow_with_selenium.py:15:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow_with_selenium, line 15)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:04:00.780571
+Run started:2024-06-12 23:17:47.895620
 
 Test results:
 	No issues identified.
@@ -629,7 +674,7 @@ Files skipped (1):
 backend/logging_config.py:11:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 11)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:04:01.421892
+Run started:2024-06-12 23:17:48.556395
 
 Test results:
 	No issues identified.
@@ -663,7 +708,7 @@ Files skipped (1):
 backend/offer_generator.py:6:4: E0001: Parsing failed: 'unexpected indent (offer_generator, line 6)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:04:02.060527
+Run started:2024-06-12 23:17:49.223417
 
 Test results:
 	No issues identified.
@@ -697,7 +742,7 @@ Files skipped (1):
 backend/server_connection.py:9:4: E0001: Parsing failed: 'unexpected indent (server_connection, line 9)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:04:02.698493
+Run started:2024-06-12 23:17:49.941623
 
 Test results:
 	No issues identified.
@@ -736,7 +781,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:04:03.333477
+Run started:2024-06-12 23:17:50.607254
 
 Test results:
 	No issues identified.
