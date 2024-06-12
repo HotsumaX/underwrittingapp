@@ -7,3 +7,6 @@ webdriver-manager
 langchain
 llama-index
 openai
+flake8
+pylint
+bandit
