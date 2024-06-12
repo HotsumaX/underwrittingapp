@@ -1,4 +1,8 @@
 import os
+import openai
+
+# Ensure you have your OpenAI API key set as an environment variable
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_file_status(filepath):
     try:
@@ -26,7 +30,32 @@ def categorize_file(filepath):
             return category
     return "miscellaneous"
 
-def evaluate_files(files):
+def read_app_outline(filepath="appoutline.txt"):
+    with open(filepath, 'r') as file:
+        app_outline = file.read()
+    return app_outline
+
+def generate_comments(filepath, lines, app_outline):
+    if isinstance(lines, str):
+        return lines
+    
+    file_content = ''.join(lines)
+    prompt = f"Evaluate the following code file and provide detailed comments, suggestions for improvements, and how to align it with the given app outline. App outline: {app_outline}\n\nFile content:\n{file_content}"
+    
+    try:
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=prompt,
+            max_tokens=1500,
+            temperature=0.7
+        )
+        comments = response.choices[0].text.strip()
+    except Exception as e:
+        comments = f"Error generating comments: {str(e)}"
+    
+    return comments
+
+def evaluate_files(files, app_outline):
     evaluations = []
     for filepath in files:
         lines = get_file_status(filepath)
@@ -37,7 +66,7 @@ def evaluate_files(files):
             status = "File read successfully."
             importance = "High" if "backend" in filepath or "frontend" in filepath else "Medium"
         
-        comments = generate_comments(filepath, lines)
+        comments = generate_comments(filepath, lines, app_outline)
         evaluations.append({
             "path": filepath,
             "status": status,
@@ -45,24 +74,6 @@ def evaluate_files(files):
             "comments": comments
         })
     return evaluations
-
-def generate_comments(filepath, lines):
-    comments = ""
-    if isinstance(lines, list):
-        line_count = len(lines)
-        comments = f"The file contains {line_count} lines.\n"
-        
-        if line_count == 0:
-            comments += "The file is empty and might need implementation or can be removed if not needed."
-        else:
-            if "import" in lines[0]:
-                comments += "File starts with import statements, indicating it might be a script or module.\n"
-            if "TODO" in ''.join(lines):
-                comments += "The file contains TODO comments that need attention.\n"
-            comments += "Review the file for potential improvements, optimizations, or necessary implementations."
-    else:
-        comments = f"Error encountered: {lines}"
-    return comments
 
 def list_repo_files(root_dir="."):
     repo_files = []
@@ -72,17 +83,6 @@ def list_repo_files(root_dir="."):
             if ".git" not in filepath and not filepath.endswith(".pyc"):
                 repo_files.append(filepath)
     return repo_files
-
-def main():
-    repo_files = list_repo_files()
-    evaluations = evaluate_files(repo_files)
-    progress_report = generate_progress_report(evaluations)
-
-    with open("progress_report.md", "w") as report_file:
-        report_file.write(progress_report)
-
-    with open("README.md", "a") as readme_file:
-        readme_file.write(progress_report)
 
 def generate_progress_report(evaluations):
     report = "# Progress Report\n"
@@ -106,6 +106,18 @@ def generate_progress_report(evaluations):
             report += f"  - Importance: {evaluation['importance']}\n"
             report += f"  - Comments: {evaluation['comments']}\n"
     return report
+
+def main():
+    app_outline = read_app_outline()
+    repo_files = list_repo_files()
+    evaluations = evaluate_files(repo_files, app_outline)
+    progress_report = generate_progress_report(evaluations)
+
+    with open("progress_report.md", "w") as report_file:
+        report_file.write(progress_report)
+
+    with open("README.md", "a") as readme_file:
+        readme_file.write(progress_report)
 
 if __name__ == "__main__":
     main()
