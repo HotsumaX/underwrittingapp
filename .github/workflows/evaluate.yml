@@ -8,32 +8,31 @@ on:
 jobs:
   evaluate:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        cd backend
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Run evaluation script
-      run: |
-        python3 evaluate_repo.py
+      - name: Run evaluation script
+        run: |
+          python evaluate_repo.py
 
-    - name: Update README.md and App Outline with progress report
-      run: |
-        sed -i '/## Progress Report/,$d' README.md
-        cat progress_report.md >> README.md
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-        git add README.md appoutline.txt
-        git commit -m 'Update README.md and app outline with progress report'
-        git push
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md progress_report.md
+          git commit -m 'Update README.md and progress report'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
