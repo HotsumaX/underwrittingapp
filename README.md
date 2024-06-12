@@ -68,5 +68,65 @@
 
 ## Frontend
 
-- frontend/src is a directory.
+- frontend/src/App.js exists and has content.
+  - Lines of code: 83
+  - Functions: 0
+  - Classes: 0
+  - Imports: 8
+- frontend/src/App.css exists but is empty.
+- frontend/src/store.js exists and has content.
+  - Lines of code: 33
+  - Functions: 0
+  - Classes: 0
+  - Imports: 1
+- frontend/src/.env.local exists and has content.
+  - Lines of code: 2
+  - Functions: 0
+  - Classes: 0
+  - Imports: 0
+- frontend/src/index.css exists and has content.
+  - Lines of code: 11
+  - Functions: 0
+  - Classes: 0
+  - Imports: 0
+- frontend/src/vercel.json exists and has content.
+  - Lines of code: 23
+  - Functions: 0
+  - Classes: 0
+  - Imports: 0
+- frontend/src/index.js exists and has content.
+  - Lines of code: 15
+  - Functions: 0
+  - Classes: 0
+  - Imports: 5
+- frontend/src/components/DataDisplay.js exists and has content.
+  - Lines of code: 23
+  - Functions: 0
+  - Classes: 0
+  - Imports: 1
+- frontend/src/components/HealthCheck.js exists and has content.
+  - Lines of code: 38
+  - Functions: 0
+  - Classes: 0
+  - Imports: 3
+- frontend/src/components/CrexiScraper.js exists and has content.
+  - Lines of code: 28
+  - Functions: 0
+  - Classes: 0
+  - Imports: 2
+- frontend/src/components/Logs.js exists and has content.
+  - Lines of code: 20
+  - Functions: 0
+  - Classes: 0
+  - Imports: 2
+- frontend/src/components/ServerStatus.js exists and has content.
+  - Lines of code: 33
+  - Functions: 0
+  - Classes: 0
+  - Imports: 3
+- frontend/src/components/ZillowScraper.js exists and has content.
+  - Lines of code: 180
+  - Functions: 0
+  - Classes: 0
+  - Imports: 3
 
