@@ -1,54 +1,62 @@
 import os
 
+def list_files_in_repo():
+    repo_files = []
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            repo_files.append(os.path.join(root, file))
+    return repo_files
+
 def get_file_status(filepath):
-    if os.path.isdir(filepath):
-        return 'Directory'
     try:
         with open(filepath, 'r') as file:
             content = file.read()
-            if content.strip():
-                return 'Has content'
-            else:
-                return 'Empty'
-    except Exception as e:
-        return str(e)
+        if len(content) == 0:
+            return 'exists but is empty'
+        else:
+            return 'exists and has content'
+    except FileNotFoundError:
+        return 'does not exist'
+    except IsADirectoryError:
+        return 'is a directory'
 
-def list_files_and_status(directory):
-    files_status = []
-    for root, dirs, files in os.walk(directory):
-        for name in files:
-            filepath = os.path.join(root, name)
-            status = get_file_status(filepath)
-            files_status.append((filepath, status))
-    return files_status
-
-def update_readme(files_status):
-    with open('README.md', 'r') as readme_file:
-        readme_content = readme_file.read()
-
-    start_marker = '<!-- PROGRESS_REPORT_START -->'
-    end_marker = '<!-- PROGRESS_REPORT_END -->'
-
-    if start_marker in readme_content and end_marker in readme_content:
-        before_content = readme_content.split(start_marker)[0]
-        after_content = readme_content.split(end_marker)[1]
-    else:
-        before_content = readme_content
-        after_content = ''
-
-    new_report = f"{start_marker}\n## Progress Report\n\n"
-    for filepath, status in files_status:
-        new_report += f"- {filepath}: {status}\n"
-    new_report += f"\n{end_marker}"
-
-    new_readme_content = before_content + new_report + after_content
-
-    with open('README.md', 'w') as readme_file:
-        readme_file.write(new_readme_content)
+def evaluate_files(filepaths):
+    report = []
+    for filepath in filepaths:
+        status = get_file_status(filepath)
+        report.append(f'- {filepath} {status}.')
+    return report
 
 def main():
-    files_status = list_files_and_status('.')
-    update_readme(files_status)
+    repo_files = list_files_in_repo()
+    with open('progress_report.md', 'w') as report_file:
+        report_file.write('# Progress Report\n\n')
+        
+        # List all files in the repository
+        report_file.write('## List of all files in the repository\n\n')
+        for repo_file in repo_files:
+            report_file.write(f'- {repo_file}\n')
+        report_file.write('\n')
+        
+        # Evaluate files for each section
+        sections = {
+            'Server Connection': ['backend/server_connection.py'],
+            'Site Scraper': ['backend/site_scraper.py'],
+            'Single Family Evaluation': ['backend/single_family_evaluation.py'],
+            'Multi Family Evaluation': ['backend/multi_family_evaluation.py'],
+            'Email Contact': ['backend/email_contact.py'],
+            'Property Management': ['backend/property_management.py'],
+            'Log Section': ['backend/log_section.py'],
+            'Offer Generator': ['backend/offer_generator.py'],
+            'Frontend': ['frontend/src']
+        }
+        
+        for section, files in sections.items():
+            report_file.write(f'## {section}\n\n')
+            evaluation = evaluate_files(files)
+            for line in evaluation:
+                report_file.write(f'{line}\n')
+            report_file.write('\n')
 
 if __name__ == '__main__':
     main()
