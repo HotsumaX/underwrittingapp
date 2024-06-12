@@ -1,50 +1,94 @@
 import os
 
-# Define the directory and file list
-repo_dir = os.getcwd()
-file_list = []
+def list_all_files(directory):
+    files_list = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            files_list.append(os.path.join(root, file))
+    return files_list
 
-for root, dirs, files in os.walk(repo_dir):
-    for file in files:
-        file_list.append(os.path.relpath(os.path.join(root, file), repo_dir))
-
-# Generate progress report content
-progress_report_content = "# Progress Report\n\n## List of all files in the repository\n"
-for file in file_list:
-    progress_report_content += f"- {file}\n"
-
-# List of backend files to check
-backend_files = [
-    "backend/server_connection.py",
-    "backend/site_scraper.py",
-    "backend/single_family_evaluation.py",
-    "backend/multi_family_evaluation.py",
-    "backend/email_contact.py",
-    "backend/property_management.py",
-    "backend/log_section.py",
-    "backend/offer_generator.py"
-]
-
-# Add backend file checks to the report
-for backend_file in backend_files:
-    if os.path.exists(backend_file):
-        size = os.path.getsize(backend_file)
-        progress_report_content += f"\n## {os.path.basename(backend_file).replace('_', ' ').title()}\n\n- {backend_file} exists.\n\n- Size: {size} bytes\n"
+def create_blank_file_if_not_exists(filepath):
+    if not os.path.exists(filepath):
+        open(filepath, 'a').close()
+        print(f'Created blank file: {filepath}')
     else:
-        with open(backend_file, 'w') as f:
-            pass
-        progress_report_content += f"\n## {os.path.basename(backend_file).replace('_', ' ').title()}\n\n- Created blank file: {backend_file}\n\n- Size: 0 bytes\n"
+        print(f'File already exists: {filepath}')
 
-# Check frontend directory
-frontend_dir = "frontend/src"
-if os.path.exists(frontend_dir):
-    size = sum(os.path.getsize(os.path.join(root, file)) for root, _, files in os.walk(frontend_dir) for file in files)
-    progress_report_content += f"\n## Frontend\n\n- {frontend_dir} exists.\n\n- Size: {size} bytes\n"
+def evaluate_file(filepath):
+    size = os.path.getsize(filepath)
+    with open(filepath, 'r') as file:
+        content = file.read()
+        if content.strip() == "":
+            status = "Empty"
+        else:
+            status = "Contains content"
+    return size, status
 
-# Write the progress report to progress_report.md
-with open("progress_report.md", "w") as f:
-    f.write(progress_report_content)
+def main():
+    # List of directories and files to check
+    backend_files = [
+        "backend/server_connection.py",
+        "backend/site_scraper.py",
+        "backend/single_family_evaluation.py",
+        "backend/multi_family_evaluation.py",
+        "backend/email_contact.py",
+        "backend/property_management.py",
+        "backend/log_section.py",
+        "backend/offer_generator.py"
+    ]
+    
+    frontend_dir = "frontend/src"
 
-# Replace the content of README.md with the progress report
-with open("README.md", "w") as f:
-    f.write(progress_report_content)
+    # Ensure necessary files exist
+    for file in backend_files:
+        create_blank_file_if_not_exists(file)
+    
+    # List all files in the repository
+    all_files = list_all_files(".")
+
+    # Generate the progress report
+    with open("progress_report.md", "w") as report:
+        report.write("# Progress Report\n\n")
+        
+        report.write("## List of all files in the repository\n")
+        for file in all_files:
+            report.write(f"- {file}\n")
+        
+        report.write("\n## Server Connection.Py\n")
+        size, status = evaluate_file("backend/server_connection.py")
+        report.write(f"- backend/server_connection.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Site Scraper.Py\n")
+        size, status = evaluate_file("backend/site_scraper.py")
+        report.write(f"- backend/site_scraper.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Single Family Evaluation.Py\n")
+        size, status = evaluate_file("backend/single_family_evaluation.py")
+        report.write(f"- backend/single_family_evaluation.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Multi Family Evaluation.Py\n")
+        size, status = evaluate_file("backend/multi_family_evaluation.py")
+        report.write(f"- backend/multi_family_evaluation.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Email Contact.Py\n")
+        size, status = evaluate_file("backend/email_contact.py")
+        report.write(f"- backend/email_contact.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Property Management.Py\n")
+        size, status = evaluate_file("backend/property_management.py")
+        report.write(f"- backend/property_management.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Log Section.Py\n")
+        size, status = evaluate_file("backend/log_section.py")
+        report.write(f"- backend/log_section.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Offer Generator.Py\n")
+        size, status = evaluate_file("backend/offer_generator.py")
+        report.write(f"- backend/offer_generator.py exists.\n- Size: {size} bytes\n- Status: {status}\n\n")
+
+        report.write("## Frontend\n")
+        size = sum(os.path.getsize(f) for f in list_all_files(frontend_dir))
+        report.write(f"- {frontend_dir} exists.\n- Size: {size} bytes\n")
+
+if __name__ == "__main__":
+    main()
