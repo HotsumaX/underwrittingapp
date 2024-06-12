@@ -84,11 +84,13 @@
 - ./.git/objects/93/33d7f4aae6f896ddbf86bd555520cc652e3864
 - ./.git/objects/d3/7f074f43dd43c3a34e713694ec2e8ec59a332b
 - ./.git/objects/b0/71e230a8094c593b2695c740bf7780d17e81a6
+- ./.git/objects/7f/5fe9cf88271f489f7b21bcb8e75d139f888e8a
 - ./.git/objects/7f/d7bf7ac7b1877be349eb392b55d0e19177d94c
 - ./.git/objects/1c/630e6a85f17fcf510abb79765fc214ac228aff
 - ./.git/objects/1c/5bc3131a29e1048316d56cd4d207cc64bbcca0
 - ./.git/objects/7d/62e933a88739bd7395f39898f086a9cd77dc99
 - ./.git/objects/ff/dfc4860282c8b0e0c698eb0ed347158758cfe7
+- ./.git/objects/3b/ef13545f606d1ef7b4b919de6a1097bd3b04ec
 - ./.git/objects/c2/d4df41923cce6418dfd1907c38cc713c7b224d
 - ./.git/objects/c2/b768ee3d45d313528fb52c59300ed97325ae1a
 - ./.git/objects/1b/99bf15fced7450a4adeefb747678602cfc0875
@@ -97,6 +99,7 @@
 - ./.git/objects/c6/bb06726c0e98dafd16a3dbc262b1efb1c88407
 - ./.git/objects/3e/cc0bd37d98ff4085fe54c0db4dcdc0d5462004
 - ./.git/objects/b1/2cd2e6ae7e854d85293c0ef450f4415980823d
+- ./.git/objects/70/825b492cedc638db03326f8fe641cffb9f7743
 - ./.git/objects/d8/8224fbaa2a6ae6904f6deca029ac13a52d93d7
 - ./.git/objects/c8/6fd25e568ef2889c740eebe50256e6e69de829
 - ./.git/objects/c8/1337cbe7fdc3b8389206758cd0cb85de2be04e
@@ -109,7 +112,7 @@
 - ./.git/objects/00/141ffc5f9896eff880f9c71a902c180e86b3f0
 - ./.git/objects/fd/ff5d9ee340b5427a536942ddbb4a7b85188067
 - ./.git/objects/07/19c4cc3724cb44293f39db0e88b0acf87aa500
-- ./.git/objects/51/14e85a6f7a5a67215facba8243c5e6e2bd169d
+- ./.git/objects/76/5d3360ba1dfe7fa825ed94199bc76b6e498152
 - ./.git/objects/54/b92c248fb9e458332192243cacf23411e1729e
 - ./.git/objects/85/ed84b9527f4a4b2e07147bcfc9bf42658ed98c
 - ./.git/objects/01/8d9f64040701e3c595932cdf0cf998aed4ddf8
@@ -119,14 +122,11 @@
 - ./.git/objects/81/d1d1b3494418da40b123d0dd885384e166c1fa
 - ./.git/objects/6b/337362db1bda279f1636bc29b7e89103ede99a
 - ./.git/objects/6b/8ea0e2e4be8946bb7ce9ef078a85bb671b8ece
-- ./.git/objects/6b/3135895ee5d339cc053eb72dc2f3f4ac388e6a
 - ./.git/objects/92/ccf37a897ff909275621e60cda72965703123b
 - ./.git/objects/84/45cc77d411c1a15b45fcce01001d65208f1da3
 - ./.git/objects/23/1e6f861f9c0d2ce9bbc8450a16396a7f3d7df9
 - ./.git/objects/cc/b37e8fcf95f653a8ace179c6aec8f58bffe208
 - ./.git/objects/f8/6ba30fa6d2aa7d47fabe25eb20986ac988efdd
-- ./.git/objects/3a/1e6904ecfd8e900a02fd1d4b1520494021e5fd
-- ./.git/objects/ac/1d3fe38d7af36de19cbdbe7c4f9dfa414bf963
 - ./.git/objects/4b/f5ef977d1dc2fa495a1592e7ef89162b096865
 - ./.git/objects/4b/7d7d5fa1ff0c400ecb677363779ffbcb3abe70
 - ./.git/objects/44/25534a06629232ae6b506b6ef89d940690068e
@@ -138,46 +138,91 @@
 - ./.git/logs/refs/heads/master
 - ./.git/info/exclude
 
-## Server Connection.Py
+## Server Connection
 - backend/server_connection.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Site Scraper.Py
 - backend/site_scraper.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Single Family Evaluation.Py
 - backend/single_family_evaluation.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Multi Family Evaluation.Py
 - backend/multi_family_evaluation.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Email Contact.Py
 - backend/email_contact.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Property Management.Py
 - backend/property_management.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Log Section.Py
 - backend/log_section.py exists.
 - Size: 0 bytes
 - Status: Empty
 
-## Offer Generator.Py
 - backend/offer_generator.py exists.
 - Size: 0 bytes
 - Status: Empty
 
+
 ## Frontend
-- frontend/src exists.
-- Size: 15902 bytes
+- frontend/src/App.js exists.
+- Size: 3540 bytes
+- Status: Has content
+
+- frontend/src/App.css exists.
+- Size: 0 bytes
+- Status: Empty
+
+- frontend/src/store.js exists.
+- Size: 717 bytes
+- Status: Has content
+
+- frontend/src/.env.local exists.
+- Size: 40 bytes
+- Status: Has content
+
+- frontend/src/index.css exists.
+- Size: 312 bytes
+- Status: Has content
+
+- frontend/src/vercel.json exists.
+- Size: 310 bytes
+- Status: Has content
+
+- frontend/src/index.js exists.
+- Size: 374 bytes
+- Status: Has content
+
+- frontend/src/components/DataDisplay.js exists.
+- Size: 447 bytes
+- Status: Has content
+
+- frontend/src/components/HealthCheck.js exists.
+- Size: 1460 bytes
+- Status: Has content
+
+- frontend/src/components/CrexiScraper.js exists.
+- Size: 845 bytes
+- Status: Has content
+
+- frontend/src/components/Logs.js exists.
+- Size: 392 bytes
+- Status: Has content
+
+- frontend/src/components/ServerStatus.js exists.
+- Size: 1126 bytes
+- Status: Has content
+
+- frontend/src/components/ZillowScraper.js exists.
+- Size: 6339 bytes
+- Status: Has content
+
+
