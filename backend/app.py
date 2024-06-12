@@ -1,3 +1,11 @@
+"""
+Module documentation
+"""
+
+"""
+Module documentation
+"""
+
 import logging
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -14,6 +22,12 @@ CORS(app)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def setup_driver():
     options = Options()
     options.headless = True
@@ -21,6 +35,12 @@ def setup_driver():
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def fetch_zillow_page(url):
     driver = setup_driver()
     driver.get(url)
@@ -37,12 +57,24 @@ def fetch_zillow_page(url):
         return f"Error loading key elements after CAPTCHA: {e}"
 
 @app.route('/api/sample_zillow', methods=['GET'])
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def sample_zillow():
     url = request.args.get('url')
     html_content = fetch_zillow_page(url)
     return jsonify({"html_content": html_content})
 
 @app.route('/api/health', methods=['GET'])
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def health_check():
     return jsonify({"status": "healthy"})
 

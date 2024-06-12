@@ -1,6 +1,20 @@
+"""
+Module documentation
+"""
+
+"""
+Module documentation
+"""
+
 import requests
 from bs4 import BeautifulSoup
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def scrape_crexi_data():
     url = 'https://www.crexi.com/properties'
     response = requests.get(url)

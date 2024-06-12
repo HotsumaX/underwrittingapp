@@ -1,3 +1,11 @@
+"""
+Module documentation
+"""
+
+"""
+Module documentation
+"""
+
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -8,9 +16,21 @@ from langchain.prompts import Prompt
 from llama_index import Document, GPTVectorStoreIndex  # Correct import paths
 
 class WebScrapingChain:
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
     def __init__(self):
         self.prompt = Prompt(template="Navigate to {url} and extract data.")
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
     def run(self, url):
         # Set up Selenium
         options = webdriver.ChromeOptions()
@@ -38,6 +58,12 @@ class WebScrapingChain:
 
         return property_info
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def scrape_zillow_listing(url):
     chain = WebScrapingChain()
     data = chain.run(url)

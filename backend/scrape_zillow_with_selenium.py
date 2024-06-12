@@ -1,9 +1,23 @@
+"""
+Module documentation
+"""
+
+"""
+Module documentation
+"""
+
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def scrape_zillow_listing(url):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")

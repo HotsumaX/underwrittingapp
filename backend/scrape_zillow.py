@@ -1,3 +1,11 @@
+"""
+Module documentation
+"""
+
+"""
+Module documentation
+"""
+
 import time
 import random
 from selenium import webdriver
@@ -7,6 +15,12 @@ from logging_config import setup_logging
 setup_logging()
 logger = logging.getLogger(__name__)
 
+    """
+    Function documentation
+    """
+    """
+    Function documentation
+    """
 def scrape_zillow_listing(url):
     logger.info('Starting scrape for URL: %s', url)
     driver = webdriver.Chrome()  # Ensure WebDriver is properly set up
