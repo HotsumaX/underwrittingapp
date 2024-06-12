@@ -3,10 +3,16 @@ import os
 def get_file_status(filepath):
     if os.path.isdir(filepath):
         return "directory"
-    with open(filepath, 'r') as file:
-        lines = file.readlines()
-        size = len(lines)
-        return f"{size} lines"
+    try:
+        with open(filepath, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            size = len(lines)
+            return f"{size} lines"
+    except UnicodeDecodeError:
+        with open(filepath, 'r', encoding='latin-1') as file:
+            lines = file.readlines()
+            size = len(lines)
+            return f"{size} lines (latin-1)"
 
 def evaluate_files(filepaths):
     evaluation = {}
