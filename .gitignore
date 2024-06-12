@@ -8,10 +8,3 @@ node_modules/
 # Ignore large libraries
 backend/venv/lib/python3.11/site-packages/torch/
 
-# Ignore other large files
-*.log
-*.csv
-*.json
-*.txt
-*.pdf
-*.docx
