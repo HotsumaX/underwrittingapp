@@ -1,13 +1,11 @@
 # Progress Report
 
-## Repository Files
-
-### ./gpt_code_review.py
-#### flake8 Report:
+## ./gpt_code_review.py
+### flake8 Report:
 ./gpt_code_review.py:3:1: E302 expected 2 blank lines, found 1
 ./gpt_code_review.py:8:80: E501 line too long (87 > 79 characters)
 
-#### pylint Report:
+### pylint Report:
 ************* Module gpt_code_review
 gpt_code_review.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 gpt_code_review.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -17,8 +15,8 @@ gpt_code_review.py:4:15: E1101: Module 'openai' has no 'ChatCompletion' member (
 Your code has been rated at 0.00/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:39.951596
+### bandit Report:
+Run started:2024-06-12 22:49:07.431421
 
 Test results:
 	No issues identified.
@@ -42,53 +40,54 @@ Run metrics:
 Files skipped (0):
 
 
-### ./evaluate_repo.py
-#### flake8 Report:
+## ./evaluate_repo.py
+### flake8 Report:
+./evaluate_repo.py:3:1: F401 're' imported but unused
 ./evaluate_repo.py:5:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:10:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:11:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:14:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:15:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:18:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:19:80: E501 line too long (87 > 79 characters)
-./evaluate_repo.py:22:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:38:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:46:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:66:80: E501 line too long (124 > 79 characters)
-./evaluate_repo.py:78:80: E501 line too long (115 > 79 characters)
-./evaluate_repo.py:88:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:89:11: W292 no newline at end of file
+./evaluate_repo.py:6:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:9:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:10:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:13:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:14:80: E501 line too long (87 > 79 characters)
+./evaluate_repo.py:17:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:25:80: E501 line too long (83 > 79 characters)
+./evaluate_repo.py:28:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:37:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:38:80: E501 line too long (120 > 79 characters)
+./evaluate_repo.py:50:80: E501 line too long (91 > 79 characters)
+./evaluate_repo.py:52:80: E501 line too long (109 > 79 characters)
+./evaluate_repo.py:53:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:54:80: E501 line too long (109 > 79 characters)
+./evaluate_repo.py:55:80: E501 line too long (112 > 79 characters)
+./evaluate_repo.py:56:80: E501 line too long (95 > 79 characters)
+./evaluate_repo.py:59:80: E501 line too long (84 > 79 characters)
+./evaluate_repo.py:69:1: E305 expected 2 blank lines after class or function definition, found 1
+./evaluate_repo.py:70:11: W292 no newline at end of file
 
-#### pylint Report:
+### pylint Report:
 ************* Module evaluate_repo
-evaluate_repo.py:66:0: C0301: Line too long (124/100) (line-too-long)
-evaluate_repo.py:78:0: C0301: Line too long (115/100) (line-too-long)
-evaluate_repo.py:89:0: C0304: Final newline missing (missing-final-newline)
+evaluate_repo.py:38:0: C0301: Line too long (120/100) (line-too-long)
+evaluate_repo.py:70:0: C0304: Final newline missing (missing-final-newline)
 evaluate_repo.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 evaluate_repo.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:6:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:11:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:15:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:18:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:19:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:22:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:26:19: W0612: Unused variable 'status' (unused-variable)
-evaluate_repo.py:38:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:46:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:50:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:60:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:63:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:83:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:85:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:6:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:10:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:14:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:28:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:37:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:42:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:66:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:3:0: W0611: Unused import re (unused-import)
 
 -----------------------------------
-Your code has been rated at 7.04/10
+Your code has been rated at 6.34/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:41.444704
+### bandit Report:
+Run started:2024-06-12 22:49:08.774979
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -105,65 +104,65 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:11:13
-10	def run_flake8(filepath):
-11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-12	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:6:13
+5	def run_flake8(filepath):
+6	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+7	    return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:11:13
-10	def run_flake8(filepath):
-11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-12	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:6:13
+5	def run_flake8(filepath):
+6	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+7	    return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:15:13
-14	def run_pylint(filepath):
-15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-16	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:10:13
+9	def run_pylint(filepath):
+10	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+11	    return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:15:13
-14	def run_pylint(filepath):
-15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-16	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:10:13
+9	def run_pylint(filepath):
+10	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+11	    return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:19:13
-18	def run_bandit(filepath):
-19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-20	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:14:13
+13	def run_bandit(filepath):
+14	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+15	    return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:19:13
-18	def run_bandit(filepath):
-19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-20	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:14:13
+13	def run_bandit(filepath):
+14	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+15	    return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 76
+	Total lines of code: 53
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -181,13 +180,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/site_scraper.py
-#### flake8 Report:
+## ./backend/site_scraper.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:42.116446
+### bandit Report:
+Run started:2024-06-12 22:49:09.440284
 
 Test results:
 	No issues identified.
@@ -211,13 +210,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/log_section.py
-#### flake8 Report:
+## ./backend/log_section.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:42.883892
+### bandit Report:
+Run started:2024-06-12 22:49:10.102043
 
 Test results:
 	No issues identified.
@@ -241,13 +240,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/email_contact.py
-#### flake8 Report:
+## ./backend/email_contact.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:43.615016
+### bandit Report:
+Run started:2024-06-12 22:49:10.767937
 
 Test results:
 	No issues identified.
@@ -271,13 +270,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/single_family_evaluation.py
-#### flake8 Report:
+## ./backend/single_family_evaluation.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:44.322938
+### bandit Report:
+Run started:2024-06-12 22:49:11.425904
 
 Test results:
 	No issues identified.
@@ -301,14 +300,14 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/scrape_crexi.py
-#### flake8 Report:
+## ./backend/scrape_crexi.py
+### flake8 Report:
 ./backend/scrape_crexi.py:4:1: E302 expected 2 blank lines, found 1
 ./backend/scrape_crexi.py:10:80: E501 line too long (86 > 79 characters)
 ./backend/scrape_crexi.py:11:80: E501 line too long (138 > 79 characters)
 ./backend/scrape_crexi.py:12:80: E501 line too long (132 > 79 characters)
 
-#### pylint Report:
+### pylint Report:
 ************* Module scrape_crexi
 backend/scrape_crexi.py:11:0: C0301: Line too long (138/100) (line-too-long)
 backend/scrape_crexi.py:12:0: C0301: Line too long (132/100) (line-too-long)
@@ -320,8 +319,8 @@ backend/scrape_crexi.py:6:15: W3101: Missing timeout argument for method 'reques
 Your code has been rated at 5.83/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:45.370921
+### bandit Report:
+Run started:2024-06-12 22:49:12.464004
 
 Test results:
 >> Issue: [B113:request_without_timeout] Requests call without timeout
@@ -354,13 +353,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/multi_family_evaluation.py
-#### flake8 Report:
+## ./backend/multi_family_evaluation.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:46.041983
+### bandit Report:
+Run started:2024-06-12 22:49:13.122224
 
 Test results:
 	No issues identified.
@@ -384,11 +383,11 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/scrape_zillow.py
-#### flake8 Report:
+## ./backend/scrape_zillow.py
+### flake8 Report:
 ./backend/scrape_zillow.py:10:1: E302 expected 2 blank lines, found 1
 
-#### pylint Report:
+### pylint Report:
 ************* Module scrape_zillow
 backend/scrape_zillow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 backend/scrape_zillow.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -398,8 +397,8 @@ backend/scrape_zillow.py:4:0: C0411: standard import "logging" should be placed 
 Your code has been rated at 8.50/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:47.410301
+### bandit Report:
+Run started:2024-06-12 22:49:14.441431
 
 Test results:
 >> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
@@ -432,8 +431,8 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/scrape_zillow_with_langchain.py
-#### flake8 Report:
+## ./backend/scrape_zillow_with_langchain.py
+### flake8 Report:
 ./backend/scrape_zillow_with_langchain.py:1:1: F401 'requests' imported but unused
 ./backend/scrape_zillow_with_langchain.py:10:1: E302 expected 2 blank lines, found 1
 ./backend/scrape_zillow_with_langchain.py:18:80: E501 line too long (106 > 79 characters)
@@ -445,7 +444,7 @@ Files skipped (0):
 ./backend/scrape_zillow_with_langchain.py:55:1: E305 expected 2 blank lines after class or function definition, found 1
 ./backend/scrape_zillow_with_langchain.py:56:80: E501 line too long (94 > 79 characters)
 
-#### pylint Report:
+### pylint Report:
 ************* Module scrape_zillow_with_langchain
 backend/scrape_zillow_with_langchain.py:18:0: C0301: Line too long (106/100) (line-too-long)
 backend/scrape_zillow_with_langchain.py:19:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -466,8 +465,8 @@ backend/scrape_zillow_with_langchain.py:1:0: W0611: Unused import requests (unus
 Your code has been rated at 4.36/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:52.119122
+### bandit Report:
+Run started:2024-06-12 22:49:19.037565
 
 Test results:
 	No issues identified.
@@ -491,8 +490,8 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/app.py
-#### flake8 Report:
+## ./backend/app.py
+### flake8 Report:
 ./backend/app.py:5:1: F401 'selenium.webdriver.common.by.By' imported but unused
 ./backend/app.py:17:1: E302 expected 2 blank lines, found 1
 ./backend/app.py:24:1: E302 expected 2 blank lines, found 1
@@ -501,7 +500,7 @@ Files skipped (0):
 ./backend/app.py:49:1: E305 expected 2 blank lines after class or function definition, found 1
 ./backend/app.py:50:24: W292 no newline at end of file
 
-#### pylint Report:
+### pylint Report:
 ************* Module app
 backend/app.py:50:0: C0304: Final newline missing (missing-final-newline)
 backend/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
@@ -519,8 +518,8 @@ backend/app.py:5:0: W0611: Unused By imported from selenium.webdriver.common.by 
 Your code has been rated at 7.18/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:55.994710
+### bandit Report:
+Run started:2024-06-12 22:49:23.060778
 
 Test results:
 >> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
@@ -552,8 +551,8 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/scrape_zillow_with_selenium.py
-#### flake8 Report:
+## ./backend/scrape_zillow_with_selenium.py
+### flake8 Report:
 ./backend/scrape_zillow_with_selenium.py:7:1: E302 expected 2 blank lines, found 1
 ./backend/scrape_zillow_with_selenium.py:10:80: E501 line too long (102 > 79 characters)
 ./backend/scrape_zillow_with_selenium.py:11:1: W293 blank line contains whitespace
@@ -563,7 +562,7 @@ Files skipped (0):
 ./backend/scrape_zillow_with_selenium.py:24:5: E722 do not use bare 'except'
 ./backend/scrape_zillow_with_selenium.py:26:1: W293 blank line contains whitespace
 
-#### pylint Report:
+### pylint Report:
 ************* Module scrape_zillow_with_selenium
 backend/scrape_zillow_with_selenium.py:10:0: C0301: Line too long (102/100) (line-too-long)
 backend/scrape_zillow_with_selenium.py:11:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -578,8 +577,8 @@ backend/scrape_zillow_with_selenium.py:24:4: W0702: No exception type(s) specifi
 Your code has been rated at 6.19/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:57.304903
+### bandit Report:
+Run started:2024-06-12 22:49:24.364157
 
 Test results:
 	No issues identified.
@@ -603,11 +602,11 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/logging_config.py
-#### flake8 Report:
+## ./backend/logging_config.py
+### flake8 Report:
 ./backend/logging_config.py:3:1: E302 expected 2 blank lines, found 1
 
-#### pylint Report:
+### pylint Report:
 ************* Module logging_config
 backend/logging_config.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 backend/logging_config.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -616,8 +615,8 @@ backend/logging_config.py:3:0: C0116: Missing function or method docstring (miss
 Your code has been rated at 3.33/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:40:58.118226
+### bandit Report:
+Run started:2024-06-12 22:49:25.197953
 
 Test results:
 	No issues identified.
@@ -641,13 +640,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/offer_generator.py
-#### flake8 Report:
+## ./backend/offer_generator.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:40:58.774117
+### bandit Report:
+Run started:2024-06-12 22:49:25.909382
 
 Test results:
 	No issues identified.
@@ -671,11 +670,11 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/server_connection.py
-#### flake8 Report:
+## ./backend/server_connection.py
+### flake8 Report:
 ./backend/server_connection.py:8:1: E302 expected 2 blank lines, found 1
 
-#### pylint Report:
+### pylint Report:
 ************* Module server_connection
 backend/server_connection.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 backend/server_connection.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -686,8 +685,8 @@ backend/server_connection.py:2:0: C0411: standard import "logging" should be pla
 Your code has been rated at 7.33/10
 
 
-#### bandit Report:
-Run started:2024-06-12 22:41:00.633590
+### bandit Report:
+Run started:2024-06-12 22:49:27.703279
 
 Test results:
 >> Issue: [B113:request_without_timeout] Requests call without timeout
@@ -720,13 +719,13 @@ Run metrics:
 Files skipped (0):
 
 
-### ./backend/property_management.py
-#### flake8 Report:
+## ./backend/property_management.py
+### flake8 Report:
 No issues found by flake8.
-#### pylint Report:
+### pylint Report:
 No issues found by pylint.
-#### bandit Report:
-Run started:2024-06-12 22:41:01.309440
+### bandit Report:
+Run started:2024-06-12 22:49:28.405541
 
 Test results:
 	No issues identified.
@@ -756,121 +755,16 @@ Files skipped (0):
 ### Current Status
 The following sections outline the current state of the repository based on the evaluation:
 
- - **./gpt_code_review.py**: 11 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./evaluate_repo.py**: 89 lines, has flake8 issues, has pylint issues
- - **./backend/site_scraper.py**: 0 lines, has bandit issues
- - **./backend/log_section.py**: 0 lines, has bandit issues
- - **./backend/email_contact.py**: 0 lines, has bandit issues
- - **./backend/single_family_evaluation.py**: 0 lines, has bandit issues
- - **./backend/scrape_crexi.py**: 15 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/multi_family_evaluation.py**: 0 lines, has bandit issues
- - **./backend/scrape_zillow.py**: 23 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/scrape_zillow_with_langchain.py**: 59 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/app.py**: 50 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/scrape_zillow_with_selenium.py**: 32 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/logging_config.py**: 11 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/offer_generator.py**: 0 lines, has bandit issues
- - **./backend/server_connection.py**: 17 lines, has flake8 issues, has pylint issues, has bandit issues
- - **./backend/property_management.py**: 0 lines, has bandit issues
+ - **Server Connection Improvement**: Improve the reliability and efficiency of the server connection module.
+ - **Site Scraper Enhancement**: Ensure robust scraping logic and error handling.
+ - **Evaluation of Single Family Homes**: Implement a comprehensive evaluation logic for single-family homes.
+ - **Multi-Family Homes Evaluation**: Adapt the single-family evaluation logic to handle multi-family specifics.
+ - **Property Offer Generator**: Create a module that generates offers based on evaluated data.
 
 ### Next Steps
 To align the project with the outlined goals, the following actions are recommended:
-- ## 1. Server Connection Status
-- ## Goals:
-- ## Tasks:
-- ## Change Log:
-- ## 2. Site Scraper
-- ## Goals:
-- ## Tasks:
-- ## Change Log:
-- ## 3. Single Family Homes Evaluation
-- ## Goals:
-- ## Tasks:
-- ## 4. Multi Family Homes Evaluation
-- ## Goals:
-- ## Tasks:
-- ## 5. Email to Point of Contact for the Listing
-- ## Goals:
-- ## Tasks:
-- ## 6. Property Management Section (Future)
-- ## Goals:
-- ## Tasks:
-- ## 7. Log Section
-- ## Goals:
-- ## Tasks:
-- ## 8. Property Offer Generator Feature
-- ## Goals:
-- ## Data Collection Modules:
-- ## Market Comparables Module
-- ## Financial Data Module
-- ## Property Condition Module
-- ## Market Trends Module
-- ## Financing Options Module
-- ## Data Analysis and Interpretation:
-- ## Comparative Market Analysis (CMA)
-- ## Financial Analysis
-- ## Property Condition Assessment
-- ## Market and Economic Analysis
-- ## Financing Impact Analysis
-- ## Offer Generation:
-- ## Offer Price Calculation
-- ## Offer Letter Drafting
-- ## Customization Options
-- ## User Interface:
-- ## Dashboard Overview
-- ## Detailed Reports
-- ## Offer Letter Preview and Edit
-- ## Submission and Tracking
-- ## Integration and Automation:
-- ## APIs for Data Fetching
-- ## Automated Report Generation
-- ## Notification System
-- ## Testing and Validation:
-- ## Module Testing
-- ## User Acceptance Testing
-- ## Performance Optimization
-- ## Documentation and Support:
-- ## User Guide
-- ## Technical Documentation
-- ## Customer Support Integration
-- ## Change Log
-- ## Server Connection Status:
-- ## Site Scraper:
-- ## Property Offer Generator:
-- ## Server Connection.Py
-- ## Site Scraper.Py
-- ## Single Family Evaluation.Py
-- ## Multi Family Evaluation.Py
-- ## Email Contact.Py
-- ## Property Management.Py
-- ## Log Section.Py
-- ## Offer Generator.Py
-- ## Frontend
-- ## Server Connection.Py
-- ## Site Scraper.Py
-- ## Single Family Evaluation.Py
-- ## Multi Family Evaluation.Py
-- ## Email Contact.Py
-- ## Property Management.Py
-- ## Log Section.Py
-- ## Offer Generator.Py
-- ## Frontend
-- ## Server Connection.Py
-- ## Site Scraper.Py
-- ## Single Family Evaluation.Py
-- ## Multi Family Evaluation.Py
-- ## Email Contact.Py
-- ## Property Management.Py
-- ## Log Section.Py
-- ## Offer Generator.Py
-- ## Frontend
-- ## Server Connection.Py
-- ## Site Scraper.Py
-- ## Single Family Evaluation.Py
-- ## Multi Family Evaluation.Py
-- ## Email Contact.Py
-- ## Property Management.Py
-- ## Log Section.Py
-- ## Offer Generator.Py
-- ## Frontend
+- Improve server connection reliability and efficiency.
+- Enhance site scraper with better logging and error handling.
+- Implement evaluation logic for single-family and multi-family homes.
+- Develop the property offer generator module.
 
