@@ -3,7 +3,6 @@
 - ./gitlog.txt
 - ./README.md
 - ./package.json
-- ./.gitignore
 - ./gpt_code_review.py
 - ./package-lock.json
 - ./evaluate_repo.py
@@ -48,657 +47,270 @@
 - ./backend/index/MAIN_510fvptejrpy1gb6.seg
 - ./backend/index/MAIN_WRITELOCK
 - ./backend/index/_MAIN_1.toc
-- ./backend/__pycache__/scrape_zillow.cpython-311.pyc
-- ./backend/__pycache__/gpt_code_review.cpython-311.pyc
-- ./backend/__pycache__/scrape_zillow_with_langchain.cpython-311.pyc
-- ./backend/__pycache__/scrape_crexi.cpython-311.pyc
-- ./backend/__pycache__/scrape_zillow_with_selenium.cpython-311.pyc
-- ./.github/workflows/evaluate.yml
-- ./.git/description
-- ./.git/config
-- ./.git/index
-- ./.git/FETCH_HEAD
-- ./.git/HEAD
-- ./.git/shallow
-- ./.git/refs/remotes/origin/master
-- ./.git/refs/heads/master
-- ./.git/hooks/applypatch-msg.sample
-- ./.git/hooks/post-update.sample
-- ./.git/hooks/pre-applypatch.sample
-- ./.git/hooks/update.sample
-- ./.git/hooks/pre-push.sample
-- ./.git/hooks/prepare-commit-msg.sample
-- ./.git/hooks/pre-commit.sample
-- ./.git/hooks/pre-merge-commit.sample
-- ./.git/hooks/sendemail-validate.sample
-- ./.git/hooks/pre-receive.sample
-- ./.git/hooks/push-to-checkout.sample
-- ./.git/hooks/commit-msg.sample
-- ./.git/hooks/fsmonitor-watchman.sample
-- ./.git/hooks/pre-rebase.sample
-- ./.git/objects/b7/16c39c96474459508a4174fdd2c504830a934c
-- ./.git/objects/11/762da6d05e0029359f7cfd73df3388d1538aca
-- ./.git/objects/11/472cf8907f0288adf9bb2717729eadee7d9cdc
-- ./.git/objects/f0/87c58c762801dbf1cb92fd3fe55f877a858a89
-- ./.git/objects/d0/541a800539eb64bfc1b3fc8b3f0575bf51646e
-- ./.git/objects/93/33d7f4aae6f896ddbf86bd555520cc652e3864
-- ./.git/objects/d3/7f074f43dd43c3a34e713694ec2e8ec59a332b
-- ./.git/objects/b0/71e230a8094c593b2695c740bf7780d17e81a6
-- ./.git/objects/7f/d7bf7ac7b1877be349eb392b55d0e19177d94c
-- ./.git/objects/1c/630e6a85f17fcf510abb79765fc214ac228aff
-- ./.git/objects/1c/5bc3131a29e1048316d56cd4d207cc64bbcca0
-- ./.git/objects/7d/62e933a88739bd7395f39898f086a9cd77dc99
-- ./.git/objects/2a/e686e0a36ed7b0fa7a9d6bba981c6fafc36ccf
-- ./.git/objects/ff/dfc4860282c8b0e0c698eb0ed347158758cfe7
-- ./.git/objects/c2/d4df41923cce6418dfd1907c38cc713c7b224d
-- ./.git/objects/c2/b768ee3d45d313528fb52c59300ed97325ae1a
-- ./.git/objects/1b/99bf15fced7450a4adeefb747678602cfc0875
-- ./.git/objects/b3/e29e999a05964429ac8566d996edb841449cca
-- ./.git/objects/98/a867bd11851d52a59488c38abc0658cd852ed9
-- ./.git/objects/c6/bb06726c0e98dafd16a3dbc262b1efb1c88407
-- ./.git/objects/3e/cc0bd37d98ff4085fe54c0db4dcdc0d5462004
-- ./.git/objects/b1/2cd2e6ae7e854d85293c0ef450f4415980823d
-- ./.git/objects/d8/8224fbaa2a6ae6904f6deca029ac13a52d93d7
-- ./.git/objects/c8/6fd25e568ef2889c740eebe50256e6e69de829
-- ./.git/objects/c8/1337cbe7fdc3b8389206758cd0cb85de2be04e
-- ./.git/objects/fb/3982c520d88613efa8e5e19517f22490070fab
-- ./.git/objects/d1/2773a78e572c8ec3006ebf0e5d68a7eec8dd68
-- ./.git/objects/c1/19bd889fc331a9d12e35bc31eddbae9f079afb
-- ./.git/objects/8d/b2f044f60d9a344729851655d9a9b8e61cd902
-- ./.git/objects/c5/98d72456a8919531a7f807f6f516242679ee95
-- ./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
-- ./.git/objects/00/141ffc5f9896eff880f9c71a902c180e86b3f0
-- ./.git/objects/fd/ff5d9ee340b5427a536942ddbb4a7b85188067
-- ./.git/objects/07/19c4cc3724cb44293f39db0e88b0acf87aa500
-- ./.git/objects/3f/530c9bfd85ea72b8a3fede2808fb98d3cc5908
-- ./.git/objects/54/b92c248fb9e458332192243cacf23411e1729e
-- ./.git/objects/85/ed84b9527f4a4b2e07147bcfc9bf42658ed98c
-- ./.git/objects/01/8d9f64040701e3c595932cdf0cf998aed4ddf8
-- ./.git/objects/35/77be3e0b589f73b6a7610e696ef474e2263299
-- ./.git/objects/35/de46540378eb91dd69aa033169a1348b35d9cd
-- ./.git/objects/81/7820b803529c63888015f46d52db9d705170d1
-- ./.git/objects/81/d1d1b3494418da40b123d0dd885384e166c1fa
-- ./.git/objects/6b/337362db1bda279f1636bc29b7e89103ede99a
-- ./.git/objects/6b/8ea0e2e4be8946bb7ce9ef078a85bb671b8ece
-- ./.git/objects/92/ccf37a897ff909275621e60cda72965703123b
-- ./.git/objects/84/45cc77d411c1a15b45fcce01001d65208f1da3
-- ./.git/objects/23/1e6f861f9c0d2ce9bbc8450a16396a7f3d7df9
-- ./.git/objects/cc/b37e8fcf95f653a8ace179c6aec8f58bffe208
-- ./.git/objects/f8/6ba30fa6d2aa7d47fabe25eb20986ac988efdd
-- ./.git/objects/4b/f5ef977d1dc2fa495a1592e7ef89162b096865
-- ./.git/objects/4b/7d7d5fa1ff0c400ecb677363779ffbcb3abe70
-- ./.git/objects/44/25534a06629232ae6b506b6ef89d940690068e
-- ./.git/objects/06/7c2c9bf05b807a1b695847322f7f0ddd935b47
-- ./.git/objects/2e/a500c8490bc278ba33773fb91a18f292bc8c03
-- ./.git/objects/47/922b8f6c9649471f8af0ab28e846a969286a6d
-- ./.git/objects/02/be76ed238184c6920c9a2f04d428dcb8f02a64
-- ./.git/logs/HEAD
-- ./.git/logs/refs/remotes/origin/master
-- ./.git/logs/refs/heads/master
-- ./.git/info/exclude
 
 ## File Evaluation
 
-## Server Connection
-- ./backend/server_connection.py: 0 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-
-## Site Scraper
-- ./backend/site_scraper.py: 0 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/scrape_crexi.py: 15 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/scrape_zillow.py: 62 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/scrape_zillow_with_langchain.py: 59 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/scrape_zillow_with_selenium.py: 32 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/__pycache__/scrape_zillow.cpython-311.pyc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xa7 in position 0: invalid start byte
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/__pycache__/scrape_zillow_with_langchain.cpython-311.pyc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xa7 in position 0: invalid start byte
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/__pycache__/scrape_crexi.cpython-311.pyc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xa7 in position 0: invalid start byte
-  - Importance: High
-  - Comments: Review for improvements.
-- ./backend/__pycache__/scrape_zillow_with_selenium.cpython-311.pyc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xa7 in position 0: invalid start byte
-  - Importance: High
-  - Comments: Review for improvements.
-
-## Single Family Evaluation
-- ./backend/single_family_evaluation.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Multi Family Evaluation
-- ./backend/multi_family_evaluation.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Email Contact
-- ./backend/email_contact.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Property Management
-- ./backend/property_management.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Log Section
-- ./gitlog.txt: 43712 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/log_section.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/app.log: 12 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/logs/HEAD: 2 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/logs/refs/remotes/origin/master: 1 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/logs/refs/heads/master: 1 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Offer Generator
-- ./backend/offer_generator.py: 0 lines
-  - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-
-## Frontend
-- ./frontend/package.json: 38 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/package-lock.json: 17638 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/frontend.zip: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/public/index.html: 11 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/App.js: 83 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/App.css: 0 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/store.js: 32 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/.env.local: 1 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/index.css: 10 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/vercel.json: 22 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/index.js: 14 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/DataDisplay.js: 22 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/HealthCheck.js: 37 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/CrexiScraper.js: 27 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/Logs.js: 19 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/ServerStatus.js: 32 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-- ./frontend/src/components/ZillowScraper.js: 180 lines
-  - Status: File read successfully.
-  - Importance: High
-  - Comments: Optimization needed.
-
 ## Miscellaneous
-- ./README.md: 318 lines
+- ./gitlog.txt: 119 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./package.json: 38 lines
+  - Comments: The file contains 43712 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./README.md: 117 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./.gitignore: 10 lines
+  - Comments: The file contains 704 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./package.json: 116 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./gpt_code_review.py: 11 lines
+  - Comments: The file contains 38 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./gpt_code_review.py: 195 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./package-lock.json: 470 lines
+  - Comments: The file contains 11 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./package-lock.json: 117 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./evaluate_repo.py: 93 lines
+  - Comments: The file contains 470 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./evaluate_repo.py: 249 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./progress_report.md: 103 lines
+  - Comments: The file contains 111 lines.
+File starts with import statements, indicating it might be a script or module.
+The file contains TODO comments that need attention.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./progress_report.md: 117 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./appoutline.txt: 444 lines
+  - Comments: The file contains 103 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./appoutline.txt: 117 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./vercel.json: 11 lines
+  - Comments: The file contains 444 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./vercel.json: 116 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/zillow_listing.html: 49 lines
+  - Comments: The file contains 11 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/zillow_listing.html: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/app.py: 50 lines
+  - Importance: High
+  - Comments: The file contains 49 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/app.py: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/vercel.json: 15 lines
+  - Importance: High
+  - Comments: The file contains 50 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/vercel.json: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/requirements.txt: 9 lines
+  - Importance: High
+  - Comments: The file contains 15 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/requirements.txt: 115 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/backend.zip: 0 lines
+  - Importance: High
+  - Comments: The file contains 9 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/backend.zip: 90 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0xfc in position 10: invalid start byte
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/index/MAIN_510fvptejrpy1gb6.seg: 0 lines
+  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xfc in position 10: invalid start byte
+- ./backend/index/MAIN_510fvptejrpy1gb6.seg: 89 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0x9a in position 7: invalid start byte
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/index/MAIN_WRITELOCK: 0 lines
+  - Comments: Error encountered: 'utf-8' codec can't decode byte 0x9a in position 7: invalid start byte
+- ./backend/index/MAIN_WRITELOCK: 107 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/index/_MAIN_1.toc: 0 lines
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+- ./backend/index/_MAIN_1.toc: 89 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./backend/__pycache__/gpt_code_review.cpython-311.pyc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xa7 in position 0: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.github/workflows/evaluate.yml: 46 lines
+  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
+
+## Frontend
+- ./frontend/package.json: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/description: 1 lines
+  - Importance: High
+  - Comments: The file contains 38 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/package-lock.json: 119 lines
   - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 17638 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/frontend.zip: 97 lines
+  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
   - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/config: 15 lines
+  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
+- ./frontend/public/index.html: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/index: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xf3 in position 15: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/FETCH_HEAD: 1 lines
+  - Importance: High
+  - Comments: The file contains 11 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/App.js: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/HEAD: 1 lines
+  - Importance: High
+  - Comments: The file contains 83 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/App.css: 107 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/shallow: 1 lines
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+- ./frontend/src/store.js: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/refs/remotes/origin/master: 1 lines
+  - Importance: High
+  - Comments: The file contains 32 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/.env.local: 115 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/refs/heads/master: 1 lines
+  - Importance: High
+  - Comments: The file contains 1 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/index.css: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/applypatch-msg.sample: 15 lines
+  - Importance: High
+  - Comments: The file contains 10 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/vercel.json: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/post-update.sample: 8 lines
+  - Importance: High
+  - Comments: The file contains 22 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/index.js: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-applypatch.sample: 14 lines
+  - Importance: High
+  - Comments: The file contains 14 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/DataDisplay.js: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/update.sample: 128 lines
+  - Importance: High
+  - Comments: The file contains 22 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/HealthCheck.js: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-push.sample: 53 lines
+  - Importance: High
+  - Comments: The file contains 37 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/CrexiScraper.js: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/prepare-commit-msg.sample: 42 lines
+  - Importance: High
+  - Comments: The file contains 27 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/Logs.js: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-commit.sample: 49 lines
+  - Importance: High
+  - Comments: The file contains 19 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/ServerStatus.js: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-merge-commit.sample: 13 lines
+  - Importance: High
+  - Comments: The file contains 32 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./frontend/src/components/ZillowScraper.js: 196 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/sendemail-validate.sample: 77 lines
+  - Importance: High
+  - Comments: The file contains 180 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+
+## Site Scraper
+- ./backend/site_scraper.py: 107 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-receive.sample: 24 lines
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+- ./backend/scrape_crexi.py: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/push-to-checkout.sample: 78 lines
+  - Importance: High
+  - Comments: The file contains 15 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/scrape_zillow.py: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/commit-msg.sample: 24 lines
+  - Importance: High
+  - Comments: The file contains 62 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/scrape_zillow_with_langchain.py: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/fsmonitor-watchman.sample: 174 lines
+  - Importance: High
+  - Comments: The file contains 59 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+- ./backend/scrape_zillow_with_selenium.py: 195 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/hooks/pre-rebase.sample: 169 lines
+  - Importance: High
+  - Comments: The file contains 32 lines.
+File starts with import statements, indicating it might be a script or module.
+Review the file for potential improvements, optimizations, or necessary implementations.
+
+## Log Section
+- ./backend/log_section.py: 107 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/b7/16c39c96474459508a4174fdd2c504830a934c: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/11/762da6d05e0029359f7cfd73df3388d1538aca: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/11/472cf8907f0288adf9bb2717729eadee7d9cdc: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc3 in position 6: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/f0/87c58c762801dbf1cb92fd3fe55f877a858a89: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/d0/541a800539eb64bfc1b3fc8b3f0575bf51646e: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8a in position 5: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/93/33d7f4aae6f896ddbf86bd555520cc652e3864: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcb in position 4: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/d3/7f074f43dd43c3a34e713694ec2e8ec59a332b: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xf0 in position 18: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/b0/71e230a8094c593b2695c740bf7780d17e81a6: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/7f/d7bf7ac7b1877be349eb392b55d0e19177d94c: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc4 in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/1c/630e6a85f17fcf510abb79765fc214ac228aff: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/1c/5bc3131a29e1048316d56cd4d207cc64bbcca0: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/7d/62e933a88739bd7395f39898f086a9cd77dc99: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb1 in position 4: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/2a/e686e0a36ed7b0fa7a9d6bba981c6fafc36ccf: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/ff/dfc4860282c8b0e0c698eb0ed347158758cfe7: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb4 in position 8: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c2/d4df41923cce6418dfd1907c38cc713c7b224d: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c2/b768ee3d45d313528fb52c59300ed97325ae1a: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xad in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/1b/99bf15fced7450a4adeefb747678602cfc0875: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xdb in position 6: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/b3/e29e999a05964429ac8566d996edb841449cca: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x89 in position 21: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/98/a867bd11851d52a59488c38abc0658cd852ed9: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xdf in position 4: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c6/bb06726c0e98dafd16a3dbc262b1efb1c88407: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/3e/cc0bd37d98ff4085fe54c0db4dcdc0d5462004: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/b1/2cd2e6ae7e854d85293c0ef450f4415980823d: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/d8/8224fbaa2a6ae6904f6deca029ac13a52d93d7: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc7 in position 31: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c8/6fd25e568ef2889c740eebe50256e6e69de829: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c8/1337cbe7fdc3b8389206758cd0cb85de2be04e: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/fb/3982c520d88613efa8e5e19517f22490070fab: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/d1/2773a78e572c8ec3006ebf0e5d68a7eec8dd68: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c1/19bd889fc331a9d12e35bc31eddbae9f079afb: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xc2 in position 6: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/8d/b2f044f60d9a344729851655d9a9b8e61cd902: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb1 in position 9: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/c5/98d72456a8919531a7f807f6f516242679ee95: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/00/141ffc5f9896eff880f9c71a902c180e86b3f0: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/fd/ff5d9ee340b5427a536942ddbb4a7b85188067: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xdb in position 6: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/07/19c4cc3724cb44293f39db0e88b0acf87aa500: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x85 in position 14: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/3f/530c9bfd85ea72b8a3fede2808fb98d3cc5908: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb4 in position 9: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/54/b92c248fb9e458332192243cacf23411e1729e: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcc in position 20: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/85/ed84b9527f4a4b2e07147bcfc9bf42658ed98c: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x9c in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/01/8d9f64040701e3c595932cdf0cf998aed4ddf8: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/35/77be3e0b589f73b6a7610e696ef474e2263299: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8c in position 3: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/35/de46540378eb91dd69aa033169a1348b35d9cd: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb6 in position 8: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/81/7820b803529c63888015f46d52db9d705170d1: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/81/d1d1b3494418da40b123d0dd885384e166c1fa: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/6b/337362db1bda279f1636bc29b7e89103ede99a: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcb in position 4: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/6b/8ea0e2e4be8946bb7ce9ef078a85bb671b8ece: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xdb in position 6: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/92/ccf37a897ff909275621e60cda72965703123b: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xed in position 2: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/84/45cc77d411c1a15b45fcce01001d65208f1da3: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/23/1e6f861f9c0d2ce9bbc8450a16396a7f3d7df9: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x95 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/cc/b37e8fcf95f653a8ace179c6aec8f58bffe208: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/f8/6ba30fa6d2aa7d47fabe25eb20986ac988efdd: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/4b/f5ef977d1dc2fa495a1592e7ef89162b096865: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xcf in position 4: invalid continuation byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/4b/7d7d5fa1ff0c400ecb677363779ffbcb3abe70: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xbb in position 4: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/44/25534a06629232ae6b506b6ef89d940690068e: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/06/7c2c9bf05b807a1b695847322f7f0ddd935b47: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/2e/a500c8490bc278ba33773fb91a18f292bc8c03: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb4 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/47/922b8f6c9649471f8af0ab28e846a969286a6d: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0x8f in position 3: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/objects/02/be76ed238184c6920c9a2f04d428dcb8f02a64: 0 lines
-  - Status: Error reading file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte
-  - Importance: Medium
-  - Comments: Review for improvements.
-- ./.git/info/exclude: 6 lines
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+- ./backend/app.log: 116 lines
   - Status: File read successfully.
-  - Importance: Medium
-  - Comments: Review for improvements.
+  - Importance: High
+  - Comments: The file contains 12 lines.
+Review the file for potential improvements, optimizations, or necessary implementations.
+
+## Email Contact
+- ./backend/email_contact.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+
+## Single Family Evaluation
+- ./backend/single_family_evaluation.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+
+## Multi Family Evaluation
+- ./backend/multi_family_evaluation.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+
+## Offer Generator
+- ./backend/offer_generator.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+
+## Server Connection
+- ./backend/server_connection.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
+
+## Property Management
+- ./backend/property_management.py: 107 lines
+  - Status: File read successfully.
+  - Importance: High
+  - Comments: The file contains 0 lines.
+The file is empty and might need implementation or can be removed if not needed.
