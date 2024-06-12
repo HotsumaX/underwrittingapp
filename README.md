@@ -2,15 +2,25 @@
 
 ## List of all files in the repository
 
+- ./gitlog.txt
+- ./README.md
 - ./package.json
+- ./.gitignore
 - ./gpt_code_review.py
 - ./package-lock.json
 - ./evaluate_repo.py
+- ./progress_report.md
+- ./appoutline.txt
 - ./vercel.json
 - ./frontend/package.json
 - ./frontend/package-lock.json
+- ./frontend/frontend.zip
+- ./frontend/public/index.html
 - ./frontend/src/App.js
+- ./frontend/src/App.css
 - ./frontend/src/store.js
+- ./frontend/src/.env.local
+- ./frontend/src/index.css
 - ./frontend/src/vercel.json
 - ./frontend/src/index.js
 - ./frontend/src/components/DataDisplay.js
@@ -23,110 +33,247 @@
 - ./backend/log_section.py
 - ./backend/email_contact.py
 - ./backend/single_family_evaluation.py
+- ./backend/app.log
 - ./backend/scrape_crexi.py
 - ./backend/multi_family_evaluation.py
 - ./backend/scrape_zillow.py
+- ./backend/zillow_listing.html
 - ./backend/scrape_zillow_with_langchain.py
 - ./backend/app.py
 - ./backend/scrape_zillow_with_selenium.py
 - ./backend/offer_generator.py
 - ./backend/server_connection.py
 - ./backend/vercel.json
+- ./backend/requirements.txt
+- ./backend/backend.zip
 - ./backend/property_management.py
+- ./backend/index/MAIN_510fvptejrpy1gb6.seg
+- ./backend/index/MAIN_WRITELOCK
+- ./backend/index/_MAIN_1.toc
+- ./backend/__pycache__/scrape_zillow.cpython-311.pyc
+- ./backend/__pycache__/gpt_code_review.cpython-311.pyc
+- ./backend/__pycache__/scrape_zillow_with_langchain.cpython-311.pyc
+- ./backend/__pycache__/scrape_crexi.cpython-311.pyc
+- ./backend/__pycache__/scrape_zillow_with_selenium.cpython-311.pyc
+- ./.github/workflows/evaluate.yml
+- ./.git/description
+- ./.git/config
+- ./.git/index
+- ./.git/FETCH_HEAD
+- ./.git/HEAD
+- ./.git/shallow
+- ./.git/refs/remotes/origin/master
+- ./.git/refs/heads/master
+- ./.git/hooks/applypatch-msg.sample
+- ./.git/hooks/post-update.sample
+- ./.git/hooks/pre-applypatch.sample
+- ./.git/hooks/update.sample
+- ./.git/hooks/pre-push.sample
+- ./.git/hooks/prepare-commit-msg.sample
+- ./.git/hooks/pre-commit.sample
+- ./.git/hooks/pre-merge-commit.sample
+- ./.git/hooks/sendemail-validate.sample
+- ./.git/hooks/pre-receive.sample
+- ./.git/hooks/push-to-checkout.sample
+- ./.git/hooks/commit-msg.sample
+- ./.git/hooks/fsmonitor-watchman.sample
+- ./.git/hooks/pre-rebase.sample
+- ./.git/objects/b7/16c39c96474459508a4174fdd2c504830a934c
+- ./.git/objects/11/762da6d05e0029359f7cfd73df3388d1538aca
+- ./.git/objects/11/472cf8907f0288adf9bb2717729eadee7d9cdc
+- ./.git/objects/d0/541a800539eb64bfc1b3fc8b3f0575bf51646e
+- ./.git/objects/93/33d7f4aae6f896ddbf86bd555520cc652e3864
+- ./.git/objects/d3/7f074f43dd43c3a34e713694ec2e8ec59a332b
+- ./.git/objects/b0/71e230a8094c593b2695c740bf7780d17e81a6
+- ./.git/objects/7f/d7bf7ac7b1877be349eb392b55d0e19177d94c
+- ./.git/objects/1c/630e6a85f17fcf510abb79765fc214ac228aff
+- ./.git/objects/1c/5bc3131a29e1048316d56cd4d207cc64bbcca0
+- ./.git/objects/7d/62e933a88739bd7395f39898f086a9cd77dc99
+- ./.git/objects/ff/dfc4860282c8b0e0c698eb0ed347158758cfe7
+- ./.git/objects/c2/d4df41923cce6418dfd1907c38cc713c7b224d
+- ./.git/objects/c2/b768ee3d45d313528fb52c59300ed97325ae1a
+- ./.git/objects/1b/99bf15fced7450a4adeefb747678602cfc0875
+- ./.git/objects/b3/e29e999a05964429ac8566d996edb841449cca
+- ./.git/objects/98/a867bd11851d52a59488c38abc0658cd852ed9
+- ./.git/objects/c6/bb06726c0e98dafd16a3dbc262b1efb1c88407
+- ./.git/objects/3e/cc0bd37d98ff4085fe54c0db4dcdc0d5462004
+- ./.git/objects/b1/2cd2e6ae7e854d85293c0ef450f4415980823d
+- ./.git/objects/d8/8224fbaa2a6ae6904f6deca029ac13a52d93d7
+- ./.git/objects/d8/01d05f288b53ffd55d3ee3fb75c373908d9e06
+- ./.git/objects/c8/6fd25e568ef2889c740eebe50256e6e69de829
+- ./.git/objects/c8/1337cbe7fdc3b8389206758cd0cb85de2be04e
+- ./.git/objects/fb/3982c520d88613efa8e5e19517f22490070fab
+- ./.git/objects/d1/2773a78e572c8ec3006ebf0e5d68a7eec8dd68
+- ./.git/objects/c1/19bd889fc331a9d12e35bc31eddbae9f079afb
+- ./.git/objects/8d/b2f044f60d9a344729851655d9a9b8e61cd902
+- ./.git/objects/c5/98d72456a8919531a7f807f6f516242679ee95
+- ./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+- ./.git/objects/00/141ffc5f9896eff880f9c71a902c180e86b3f0
+- ./.git/objects/fd/ff5d9ee340b5427a536942ddbb4a7b85188067
+- ./.git/objects/07/19c4cc3724cb44293f39db0e88b0acf87aa500
+- ./.git/objects/54/b92c248fb9e458332192243cacf23411e1729e
+- ./.git/objects/85/ed84b9527f4a4b2e07147bcfc9bf42658ed98c
+- ./.git/objects/01/8d9f64040701e3c595932cdf0cf998aed4ddf8
+- ./.git/objects/35/77be3e0b589f73b6a7610e696ef474e2263299
+- ./.git/objects/35/de46540378eb91dd69aa033169a1348b35d9cd
+- ./.git/objects/81/7820b803529c63888015f46d52db9d705170d1
+- ./.git/objects/81/d1d1b3494418da40b123d0dd885384e166c1fa
+- ./.git/objects/6b/337362db1bda279f1636bc29b7e89103ede99a
+- ./.git/objects/6b/8ea0e2e4be8946bb7ce9ef078a85bb671b8ece
+- ./.git/objects/92/ccf37a897ff909275621e60cda72965703123b
+- ./.git/objects/84/45cc77d411c1a15b45fcce01001d65208f1da3
+- ./.git/objects/23/1e6f861f9c0d2ce9bbc8450a16396a7f3d7df9
+- ./.git/objects/cc/b37e8fcf95f653a8ace179c6aec8f58bffe208
+- ./.git/objects/f8/6ba30fa6d2aa7d47fabe25eb20986ac988efdd
+- ./.git/objects/03/98a36a74489f6ee1ba0afd0fc18ce98ba68446
+- ./.git/objects/4b/f5ef977d1dc2fa495a1592e7ef89162b096865
+- ./.git/objects/4b/7d7d5fa1ff0c400ecb677363779ffbcb3abe70
+- ./.git/objects/44/25534a06629232ae6b506b6ef89d940690068e
+- ./.git/objects/06/7c2c9bf05b807a1b695847322f7f0ddd935b47
+- ./.git/objects/2e/a500c8490bc278ba33773fb91a18f292bc8c03
+- ./.git/objects/0b/5a2dbd120b788f3f08f925b4d00abfde4f031f
+- ./.git/objects/47/922b8f6c9649471f8af0ab28e846a969286a6d
+- ./.git/objects/7e/be8611870f6a841e2b6e92ac48418322b3ead7
+- ./.git/logs/HEAD
+- ./.git/logs/refs/remotes/origin/master
+- ./.git/logs/refs/heads/master
+- ./.git/info/exclude
 
-## Server Connection
+## File Evaluation
 
-- backend/server_connection.py exists but is empty.
-
-## Site Scraper
-
-- backend/site_scraper.py exists but is empty.
-
-## Single Family Evaluation
-
-- backend/single_family_evaluation.py exists but is empty.
-
-## Multi Family Evaluation
-
-- backend/multi_family_evaluation.py exists but is empty.
-
-## Email Contact
-
-- backend/email_contact.py exists but is empty.
-
-## Property Management
-
-- backend/property_management.py exists but is empty.
-
-## Log Section
-
-- backend/log_section.py exists but is empty.
-
-## Offer Generator
-
-- backend/offer_generator.py exists but is empty.
-
-## Frontend
-
-- frontend/src/App.js exists and has content.
-  - Lines of code: 83
-  - Functions: 0
-  - Classes: 0
-  - Imports: 8
-- frontend/src/App.css exists but is empty.
-- frontend/src/store.js exists and has content.
-  - Lines of code: 33
-  - Functions: 0
-  - Classes: 0
-  - Imports: 1
-- frontend/src/.env.local exists and has content.
-  - Lines of code: 2
-  - Functions: 0
-  - Classes: 0
-  - Imports: 0
-- frontend/src/index.css exists and has content.
-  - Lines of code: 11
-  - Functions: 0
-  - Classes: 0
-  - Imports: 0
-- frontend/src/vercel.json exists and has content.
-  - Lines of code: 23
-  - Functions: 0
-  - Classes: 0
-  - Imports: 0
-- frontend/src/index.js exists and has content.
-  - Lines of code: 15
-  - Functions: 0
-  - Classes: 0
-  - Imports: 5
-- frontend/src/components/DataDisplay.js exists and has content.
-  - Lines of code: 23
-  - Functions: 0
-  - Classes: 0
-  - Imports: 1
-- frontend/src/components/HealthCheck.js exists and has content.
-  - Lines of code: 38
-  - Functions: 0
-  - Classes: 0
-  - Imports: 3
-- frontend/src/components/CrexiScraper.js exists and has content.
-  - Lines of code: 28
-  - Functions: 0
-  - Classes: 0
-  - Imports: 2
-- frontend/src/components/Logs.js exists and has content.
-  - Lines of code: 20
-  - Functions: 0
-  - Classes: 0
-  - Imports: 2
-- frontend/src/components/ServerStatus.js exists and has content.
-  - Lines of code: 33
-  - Functions: 0
-  - Classes: 0
-  - Imports: 3
-- frontend/src/components/ZillowScraper.js exists and has content.
-  - Lines of code: 180
-  - Functions: 0
-  - Classes: 0
-  - Imports: 3
-
+- ./gitlog.txt: 43712 lines
+- ./README.md: 132 lines
+- ./package.json: 38 lines
+- ./.gitignore: 10 lines
+- ./gpt_code_review.py: 11 lines
+- ./package-lock.json: 470 lines
+- ./evaluate_repo.py: 42 lines
+- ./progress_report.md: 0 lines
+- ./appoutline.txt: 444 lines
+- ./vercel.json: 11 lines
+- ./frontend/package.json: 38 lines
+- ./frontend/package-lock.json: 17638 lines
+- ./frontend/frontend.zip: 1160 lines (latin-1)
+- ./frontend/public/index.html: 11 lines
+- ./frontend/src/App.js: 83 lines
+- ./frontend/src/App.css: 0 lines
+- ./frontend/src/store.js: 32 lines
+- ./frontend/src/.env.local: 1 lines
+- ./frontend/src/index.css: 10 lines
+- ./frontend/src/vercel.json: 22 lines
+- ./frontend/src/index.js: 14 lines
+- ./frontend/src/components/DataDisplay.js: 22 lines
+- ./frontend/src/components/HealthCheck.js: 37 lines
+- ./frontend/src/components/CrexiScraper.js: 27 lines
+- ./frontend/src/components/Logs.js: 19 lines
+- ./frontend/src/components/ServerStatus.js: 32 lines
+- ./frontend/src/components/ZillowScraper.js: 180 lines
+- ./backend/site_scraper.py: 0 lines
+- ./backend/log_section.py: 0 lines
+- ./backend/email_contact.py: 0 lines
+- ./backend/single_family_evaluation.py: 0 lines
+- ./backend/app.log: 12 lines
+- ./backend/scrape_crexi.py: 15 lines
+- ./backend/multi_family_evaluation.py: 0 lines
+- ./backend/scrape_zillow.py: 62 lines
+- ./backend/zillow_listing.html: 49 lines
+- ./backend/scrape_zillow_with_langchain.py: 59 lines
+- ./backend/app.py: 50 lines
+- ./backend/scrape_zillow_with_selenium.py: 32 lines
+- ./backend/offer_generator.py: 0 lines
+- ./backend/server_connection.py: 0 lines
+- ./backend/vercel.json: 15 lines
+- ./backend/requirements.txt: 9 lines
+- ./backend/backend.zip: 316 lines (latin-1)
+- ./backend/property_management.py: 0 lines
+- ./backend/index/MAIN_510fvptejrpy1gb6.seg: 11 lines (latin-1)
+- ./backend/index/MAIN_WRITELOCK: 0 lines
+- ./backend/index/_MAIN_1.toc: 27 lines (latin-1)
+- ./backend/__pycache__/scrape_zillow.cpython-311.pyc: 59 lines (latin-1)
+- ./backend/__pycache__/gpt_code_review.cpython-311.pyc: 11 lines (latin-1)
+- ./backend/__pycache__/scrape_zillow_with_langchain.cpython-311.pyc: 39 lines (latin-1)
+- ./backend/__pycache__/scrape_crexi.cpython-311.pyc: 9 lines (latin-1)
+- ./backend/__pycache__/scrape_zillow_with_selenium.cpython-311.pyc: 18 lines (latin-1)
+- ./.github/workflows/evaluate.yml: 46 lines
+- ./.git/description: 1 lines
+- ./.git/config: 15 lines
+- ./.git/index: 23 lines (latin-1)
+- ./.git/FETCH_HEAD: 1 lines
+- ./.git/HEAD: 1 lines
+- ./.git/shallow: 1 lines
+- ./.git/refs/remotes/origin/master: 1 lines
+- ./.git/refs/heads/master: 1 lines
+- ./.git/hooks/applypatch-msg.sample: 15 lines
+- ./.git/hooks/post-update.sample: 8 lines
+- ./.git/hooks/pre-applypatch.sample: 14 lines
+- ./.git/hooks/update.sample: 128 lines
+- ./.git/hooks/pre-push.sample: 53 lines
+- ./.git/hooks/prepare-commit-msg.sample: 42 lines
+- ./.git/hooks/pre-commit.sample: 49 lines
+- ./.git/hooks/pre-merge-commit.sample: 13 lines
+- ./.git/hooks/sendemail-validate.sample: 77 lines
+- ./.git/hooks/pre-receive.sample: 24 lines
+- ./.git/hooks/push-to-checkout.sample: 78 lines
+- ./.git/hooks/commit-msg.sample: 24 lines
+- ./.git/hooks/fsmonitor-watchman.sample: 174 lines
+- ./.git/hooks/pre-rebase.sample: 169 lines
+- ./.git/objects/b7/16c39c96474459508a4174fdd2c504830a934c: 2 lines (latin-1)
+- ./.git/objects/11/762da6d05e0029359f7cfd73df3388d1538aca: 6 lines (latin-1)
+- ./.git/objects/11/472cf8907f0288adf9bb2717729eadee7d9cdc: 3 lines (latin-1)
+- ./.git/objects/d0/541a800539eb64bfc1b3fc8b3f0575bf51646e: 3 lines (latin-1)
+- ./.git/objects/93/33d7f4aae6f896ddbf86bd555520cc652e3864: 4 lines (latin-1)
+- ./.git/objects/d3/7f074f43dd43c3a34e713694ec2e8ec59a332b: 1 lines (latin-1)
+- ./.git/objects/b0/71e230a8094c593b2695c740bf7780d17e81a6: 3 lines (latin-1)
+- ./.git/objects/7f/d7bf7ac7b1877be349eb392b55d0e19177d94c: 3 lines (latin-1)
+- ./.git/objects/1c/630e6a85f17fcf510abb79765fc214ac228aff: 1 lines (latin-1)
+- ./.git/objects/1c/5bc3131a29e1048316d56cd4d207cc64bbcca0: 15 lines (latin-1)
+- ./.git/objects/7d/62e933a88739bd7395f39898f086a9cd77dc99: 2 lines (latin-1)
+- ./.git/objects/ff/dfc4860282c8b0e0c698eb0ed347158758cfe7: 3 lines (latin-1)
+- ./.git/objects/c2/d4df41923cce6418dfd1907c38cc713c7b224d: 1 lines (latin-1)
+- ./.git/objects/c2/b768ee3d45d313528fb52c59300ed97325ae1a: 20 lines (latin-1)
+- ./.git/objects/1b/99bf15fced7450a4adeefb747678602cfc0875: 5 lines (latin-1)
+- ./.git/objects/b3/e29e999a05964429ac8566d996edb841449cca: 1 lines (latin-1)
+- ./.git/objects/98/a867bd11851d52a59488c38abc0658cd852ed9: 8 lines (latin-1)
+- ./.git/objects/c6/bb06726c0e98dafd16a3dbc262b1efb1c88407: 2 lines (latin-1)
+- ./.git/objects/3e/cc0bd37d98ff4085fe54c0db4dcdc0d5462004: 5 lines (latin-1)
+- ./.git/objects/b1/2cd2e6ae7e854d85293c0ef450f4415980823d: 2 lines (latin-1)
+- ./.git/objects/d8/8224fbaa2a6ae6904f6deca029ac13a52d93d7: 1143 lines (latin-1)
+- ./.git/objects/d8/01d05f288b53ffd55d3ee3fb75c373908d9e06: 3 lines (latin-1)
+- ./.git/objects/c8/6fd25e568ef2889c740eebe50256e6e69de829: 3 lines (latin-1)
+- ./.git/objects/c8/1337cbe7fdc3b8389206758cd0cb85de2be04e: 13 lines (latin-1)
+- ./.git/objects/fb/3982c520d88613efa8e5e19517f22490070fab: 5 lines (latin-1)
+- ./.git/objects/d1/2773a78e572c8ec3006ebf0e5d68a7eec8dd68: 2 lines (latin-1)
+- ./.git/objects/c1/19bd889fc331a9d12e35bc31eddbae9f079afb: 3 lines (latin-1)
+- ./.git/objects/8d/b2f044f60d9a344729851655d9a9b8e61cd902: 1 lines (latin-1)
+- ./.git/objects/c5/98d72456a8919531a7f807f6f516242679ee95: 17 lines (latin-1)
+- ./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391: 1 lines (latin-1)
+- ./.git/objects/00/141ffc5f9896eff880f9c71a902c180e86b3f0: 15 lines (latin-1)
+- ./.git/objects/fd/ff5d9ee340b5427a536942ddbb4a7b85188067: 15 lines (latin-1)
+- ./.git/objects/07/19c4cc3724cb44293f39db0e88b0acf87aa500: 1 lines (latin-1)
+- ./.git/objects/54/b92c248fb9e458332192243cacf23411e1729e: 1 lines (latin-1)
+- ./.git/objects/85/ed84b9527f4a4b2e07147bcfc9bf42658ed98c: 188 lines (latin-1)
+- ./.git/objects/01/8d9f64040701e3c595932cdf0cf998aed4ddf8: 14 lines (latin-1)
+- ./.git/objects/35/77be3e0b589f73b6a7610e696ef474e2263299: 4 lines (latin-1)
+- ./.git/objects/35/de46540378eb91dd69aa033169a1348b35d9cd: 1 lines (latin-1)
+- ./.git/objects/81/7820b803529c63888015f46d52db9d705170d1: 9 lines (latin-1)
+- ./.git/objects/81/d1d1b3494418da40b123d0dd885384e166c1fa: 10 lines (latin-1)
+- ./.git/objects/6b/337362db1bda279f1636bc29b7e89103ede99a: 3 lines (latin-1)
+- ./.git/objects/6b/8ea0e2e4be8946bb7ce9ef078a85bb671b8ece: 2 lines (latin-1)
+- ./.git/objects/92/ccf37a897ff909275621e60cda72965703123b: 22 lines (latin-1)
+- ./.git/objects/84/45cc77d411c1a15b45fcce01001d65208f1da3: 6 lines (latin-1)
+- ./.git/objects/23/1e6f861f9c0d2ce9bbc8450a16396a7f3d7df9: 6 lines (latin-1)
+- ./.git/objects/cc/b37e8fcf95f653a8ace179c6aec8f58bffe208: 2 lines (latin-1)
+- ./.git/objects/f8/6ba30fa6d2aa7d47fabe25eb20986ac988efdd: 1342 lines (latin-1)
+- ./.git/objects/03/98a36a74489f6ee1ba0afd0fc18ce98ba68446: 3 lines (latin-1)
+- ./.git/objects/4b/f5ef977d1dc2fa495a1592e7ef89162b096865: 7 lines (latin-1)
+- ./.git/objects/4b/7d7d5fa1ff0c400ecb677363779ffbcb3abe70: 7 lines (latin-1)
+- ./.git/objects/44/25534a06629232ae6b506b6ef89d940690068e: 3 lines (latin-1)
+- ./.git/objects/06/7c2c9bf05b807a1b695847322f7f0ddd935b47: 38 lines (latin-1)
+- ./.git/objects/2e/a500c8490bc278ba33773fb91a18f292bc8c03: 4073 lines (latin-1)
+- ./.git/objects/0b/5a2dbd120b788f3f08f925b4d00abfde4f031f: 5 lines (latin-1)
+- ./.git/objects/47/922b8f6c9649471f8af0ab28e846a969286a6d: 2 lines (latin-1)
+- ./.git/objects/7e/be8611870f6a841e2b6e92ac48418322b3ead7: 7 lines (latin-1)
+- ./.git/logs/HEAD: 2 lines
+- ./.git/logs/refs/remotes/origin/master: 1 lines
+- ./.git/logs/refs/heads/master: 1 lines
+- ./.git/info/exclude: 6 lines
