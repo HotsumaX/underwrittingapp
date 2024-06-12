@@ -30,6 +30,8 @@ def generate_file_list(directory):
 def evaluate_files(filepaths):
     evaluation = ""
     for filepath in filepaths:
+        if os.path.isdir(filepath):
+            continue  # Skip directories
         status = get_file_status(filepath)
         evaluation += f"- {filepath} exists.\n- Size: {os.path.getsize(filepath)} bytes\n- Status: {status}\n\n"
     return evaluation
@@ -53,7 +55,8 @@ def main():
     file_list_str = "\n".join([f"- {file}" for file in file_list])
 
     backend_evaluation = evaluate_files(backend_files)
-    frontend_evaluation = evaluate_files(['frontend/src'])
+    frontend_files = generate_file_list('frontend/src')
+    frontend_evaluation = evaluate_files(frontend_files)
 
     progress_report = f"# Progress Report\n\n## List of all files in the repository\n{file_list_str}\n\n"
     progress_report += "## Server Connection\n" + backend_evaluation + "\n"
