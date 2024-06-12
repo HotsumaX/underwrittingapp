@@ -1,21 +1,24 @@
-"""
-Module documentation
-"""
+"""Module to scrape websites."""
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
-import logging
-import requests
-from bs4 import BeautifulSoup
 
-    """
-    Function documentation
-    """
 def scrape_site(url):
+    """
+    Scrape the site for its title.
+
+    Args:
+        url (str): The URL of the site to scrape.
+
+    Returns:
+        str: The title of the site.
+    """
+    driver = webdriver.Chrome()
+    driver.get(url)
     try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        return soup
-    except requests.RequestException as e:
-        logging.error("Error scraping site: %s", e)
-        return None
+        title = driver.find_element(By.TAG_NAME, 'title').text
+        return title
+    finally:
+        driver.quit()

@@ -1,7 +1,53 @@
 import os
 import subprocess
 import re
+import subprocess
+import os
 
+def run_command(command):
+    result = subprocess.run(command, capture_output=True, text=True, shell=True)
+    return result.stdout if result.stdout else result.stderr
+
+def analyze_file(filepath):
+    analysis_results = {
+        'flake8': run_command(f'flake8 {filepath}'),
+        'pylint': run_command(f'pylint {filepath}'),
+        'bandit': run_command(f'bandit -r {filepath}')
+    }
+    return analysis_results
+
+def generate_analysis_report(file_analysis):
+    report = ''
+    for filepath, analysis in file_analysis.items():
+        report += f"\n## Analysis of {filepath}\n"
+        report += "\n### Flake8 Results:\n"
+        report += f"{analysis['flake8']}\n"
+        report += "\n### Pylint Results:\n"
+        report += f"{analysis['pylint']}\n"
+        report += "\n### Bandit Results:\n"
+        report += f"{analysis['bandit']}\n"
+    return report
+
+def enhance_documentation():
+    repo_files = [
+        'backend/server_connection.py', 'backend/site_scraper.py', 
+        'backend/scrape_zillow_with_selenium.py', 'backend/single_family_evaluation.py', 
+        'backend/multi_family_evaluation.py', 'backend/offer_generator.py'
+    ]
+
+    file_analysis = {}
+    for filepath in repo_files:
+        if os.path.exists(filepath):
+            file_analysis[filepath] = analyze_file(filepath)
+    
+    analysis_report = generate_analysis_report(file_analysis)
+
+    with open('README.md', 'a') as f:
+        f.write("\n## Project Analysis Report\n")
+        f.write(analysis_report)
+
+if __name__ == '__main__':
+    enhance_documentation()
 def run_flake8(filepath):
     result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
     return result.stdout if result.stdout else "No issues found by flake8."

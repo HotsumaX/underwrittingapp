@@ -1,19 +1,23 @@
-"""
-Module documentation
-"""
+"""Module to handle server connections."""
 
-
-import logging
 import requests
 
+
+
+def check_server_connection(url):
     """
-    Function documentation
+    Check the server connection by making a GET request.
+
+    Args:
+        url (str): The URL to check the connection.
+
+    Returns:
+        str: The status of the server connection.
     """
-def get_server_status(url):
     try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return response.json()
-    except requests.RequestException as e:
-        logging.error("Error connecting to server: %s", e)
-        return None
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200:
+            return "Server is up!"
+        return f"Server returned status code: {response.status_code}"
+    except requests.exceptions.RequestException as e:
+        return f"Error connecting to server: {e}"

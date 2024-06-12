@@ -1,18 +1,16 @@
-"""
-Module documentation
-"""
+"""Module for single-family property evaluation."""
 
 
-    """
-    Function documentation
-    """
-def evaluate_single_family_home(data):
-    # Add evaluation logic here
-    pass
 
+def evaluate_single_family(property_data):
     """
-    Function documentation
+    Evaluate the value of a single-family property.
+
+    Args:
+        property_data (dict): A dictionary containing the property details.
+
+    Returns:
+        float: The evaluated value of the property.
     """
-def evaluate_multi_family_home(data):
-    # Add evaluation logic here
-    pass
+    value = property_data['price'] * 0.8
+    return value

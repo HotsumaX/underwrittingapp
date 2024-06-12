@@ -1,11 +1,17 @@
-"""
-Module documentation
-"""
+"""Module to generate property offers."""
 
 
+
+def generate_offer(property_data, evaluation):
     """
-    Function documentation
+    Generate an offer based on the property data and evaluation.
+
+    Args:
+        property_data (dict): A dictionary containing the property details.
+        evaluation (float): The evaluated value of the property.
+
+    Returns:
+        float: The offer price.
     """
-def generate_offer(evaluation_data):
-    # Add offer generation logic here
-    pass
+    offer_price = evaluation - (property_data['price'] * 0.1)
+    return offer_price
