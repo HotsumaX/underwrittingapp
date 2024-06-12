@@ -16,7 +16,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:07.431421
+Run started:2024-06-12 22:56:57.396903
 
 Test results:
 	No issues identified.
@@ -87,7 +87,7 @@ Your code has been rated at 6.34/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:08.774979
+Run started:2024-06-12 22:56:58.933837
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -186,7 +186,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:09.440284
+Run started:2024-06-12 22:56:59.646954
 
 Test results:
 	No issues identified.
@@ -216,7 +216,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:10.102043
+Run started:2024-06-12 22:57:00.341777
 
 Test results:
 	No issues identified.
@@ -246,7 +246,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:10.767937
+Run started:2024-06-12 22:57:01.040530
 
 Test results:
 	No issues identified.
@@ -276,7 +276,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:11.425904
+Run started:2024-06-12 22:57:01.742256
 
 Test results:
 	No issues identified.
@@ -320,7 +320,7 @@ Your code has been rated at 5.83/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:12.464004
+Run started:2024-06-12 22:57:02.924339
 
 Test results:
 >> Issue: [B113:request_without_timeout] Requests call without timeout
@@ -359,7 +359,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:13.122224
+Run started:2024-06-12 22:57:03.646641
 
 Test results:
 	No issues identified.
@@ -398,7 +398,7 @@ Your code has been rated at 8.50/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:14.441431
+Run started:2024-06-12 22:57:05.163323
 
 Test results:
 >> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
@@ -466,7 +466,7 @@ Your code has been rated at 4.36/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:19.037565
+Run started:2024-06-12 22:57:10.858687
 
 Test results:
 	No issues identified.
@@ -519,7 +519,7 @@ Your code has been rated at 7.18/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:23.060778
+Run started:2024-06-12 22:57:15.597244
 
 Test results:
 >> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
@@ -578,7 +578,7 @@ Your code has been rated at 6.19/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:24.364157
+Run started:2024-06-12 22:57:17.068418
 
 Test results:
 	No issues identified.
@@ -616,7 +616,7 @@ Your code has been rated at 3.33/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:25.197953
+Run started:2024-06-12 22:57:17.927983
 
 Test results:
 	No issues identified.
@@ -646,7 +646,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:25.909382
+Run started:2024-06-12 22:57:18.641870
 
 Test results:
 	No issues identified.
@@ -672,36 +672,32 @@ Files skipped (0):
 
 ## ./backend/server_connection.py
 ### flake8 Report:
-./backend/server_connection.py:8:1: E302 expected 2 blank lines, found 1
+./backend/server_connection.py:7:80: E501 line too long (91 > 79 characters)
+./backend/server_connection.py:9:1: E302 expected 2 blank lines, found 1
+./backend/server_connection.py:18:20: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module server_connection
+backend/server_connection.py:18:0: C0304: Final newline missing (missing-final-newline)
 backend/server_connection.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-backend/server_connection.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
-backend/server_connection.py:11:19: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
-backend/server_connection.py:2:0: C0411: standard import "logging" should be placed before third party import "requests" (wrong-import-order)
+backend/server_connection.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/server_connection.py:10:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+backend/server_connection.py:14:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+backend/server_connection.py:17:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+backend/server_connection.py:4:0: C0411: standard import "logging" should be placed before third party import "requests" (wrong-import-order)
 
 -----------------------------------
-Your code has been rated at 7.33/10
+Your code has been rated at 4.62/10
 
 
 ### bandit Report:
-Run started:2024-06-12 22:49:27.703279
+Run started:2024-06-12 22:57:20.747120
 
 Test results:
->> Issue: [B113:request_without_timeout] Requests call without timeout
-   Severity: Medium   Confidence: Low
-   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b113_request_without_timeout.html
-   Location: ././backend/server_connection.py:11:19
-10	    try:
-11	        response = requests.get(url)
-12	        response.raise_for_status()
-
---------------------------------------------------
+	No issues identified.
 
 Code scanned:
-	Total lines of code: 15
+	Total lines of code: 13
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -709,11 +705,11 @@ Run metrics:
 	Total issues (by severity):
 		Undefined: 0
 		Low: 0
-		Medium: 1
+		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
-		Low: 1
+		Low: 0
 		Medium: 0
 		High: 0
 Files skipped (0):
@@ -725,7 +721,7 @@ No issues found by flake8.
 ### pylint Report:
 No issues found by pylint.
 ### bandit Report:
-Run started:2024-06-12 22:49:28.405541
+Run started:2024-06-12 22:57:21.448476
 
 Test results:
 	No issues identified.
