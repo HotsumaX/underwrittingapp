@@ -26,10 +26,10 @@
 - Implement data querying for predictive analysis.
 
 ### Tasks:
-- [ ] Implement listing scraper for CREXi.
-- [ ] Implement listing scraper for Zillow.
-- [ ] Implement backend storage for scraped data.
-- [ ] Implement data querying functionality.
+- [X] Implement listing scraper for CREXi.
+- [X] Implement listing scraper for Zillow.
+- [X] Implement backend storage for scraped data.
+- [X] Implement data querying functionality.
 
 ### Change Log:
 - Added "Test Zillow" button for quickly testing a sample URL.
@@ -99,6 +99,110 @@
 - [ ] Implement focused area for console logs and stackflow logs.
 - [ ] Implement log record keeping functionality.
 
+## 8. Property Offer Generator Feature
+### Goals:
+- Automate the process of gathering and analyzing data to generate well-researched property offers.
+
+### Data Collection Modules:
+#### Market Comparables Module
+- Fetch recent sales data of similar properties.
+- Gather current listings for similar properties.
+- Compile local cap rates for comparable properties.
+
+#### Financial Data Module
+- Collect property income statements.
+- Gather detailed operating expenses.
+- Calculate current and pro-forma NOI.
+
+#### Property Condition Module
+- Integrate inspection report uploads and parsing.
+- Estimate costs for necessary repairs and upgrades.
+
+#### Market Trends Module
+- Analyze local rental market trends (rental rates, vacancy rates).
+- Review local economic indicators (employment rates, population growth).
+
+#### Financing Options Module
+- Research and compile available loan options and terms.
+- Create cash flow projections based on financing scenarios.
+
+### Data Analysis and Interpretation:
+#### Comparative Market Analysis (CMA)
+- Compare fetched data to determine fair market value.
+- Highlight key comparables in charts and tables.
+
+#### Financial Analysis
+- Calculate and display NOI, cap rate, and cash flow projections.
+- Compare current financial performance to pro-forma projections.
+
+#### Property Condition Assessment
+- Summarize inspection findings.
+- Estimate and display potential CapEx.
+
+#### Market and Economic Analysis
+- Display rental market trends and economic indicators.
+
+#### Financing Impact Analysis
+- Display impact of different financing options on property profitability.
+
+### Offer Generation:
+#### Offer Price Calculation
+- Automated calculation based on desired cap rate and NOI.
+
+#### Offer Letter Drafting
+- Generate a detailed offer letter including:
+  - Summary of CMA
+  - Financial analysis
+  - Inspection findings
+  - Market and economic analysis
+  - Financing scenarios
+
+#### Customization Options
+- Allow users to adjust offer parameters and terms before finalizing.
+
+### User Interface:
+#### Dashboard Overview
+- Provide a summary view of all collected and analyzed data.
+
+#### Detailed Reports
+- Allow users to view detailed reports for each analysis module.
+
+#### Offer Letter Preview and Edit
+- Enable preview and editing of the generated offer letter.
+
+#### Submission and Tracking
+- Track submitted offers and responses.
+
+### Integration and Automation:
+#### APIs for Data Fetching
+- Integrate with real estate data providers for automated data collection.
+
+#### Automated Report Generation
+- Schedule and automate periodic report generation for ongoing property searches.
+
+#### Notification System
+- Alert users of new data, report availability, and offer responses.
+
+### Testing and Validation:
+#### Module Testing
+- Ensure each module functions correctly and efficiently.
+
+#### User Acceptance Testing
+- Gather feedback from beta users to refine the feature.
+
+#### Performance Optimization
+- Optimize for speed and accuracy in data processing and analysis.
+
+### Documentation and Support:
+#### User Guide
+- Provide a comprehensive guide on using the offer generator feature.
+
+#### Technical Documentation
+- Document the backend processes and data flow for developers.
+
+#### Customer Support Integration
+- Enable easy access to customer support for troubleshooting and assistance.
+
 ## Change Log
 ### Server Connection Status:
 - Implemented server connection status display.
@@ -106,119 +210,12 @@
 - Implemented sample payload fetch button.
 - Implemented success/failure indicators.
 
-Here’s an outline that you can pass to GPT to start incorporating the features needed for quickly gathering and analyzing data to generate property offers in your app:
+### Site Scraper:
+- Added "Test Zillow" button for quickly testing a sample URL.
+- Improved readability of scraped data section.
+- Added copy button to the scraped data section.
+- Provided temporary feedback for data copy action.
+- Moved copy button next to the scraped data header.
 
-Property Offer Generator Feature Outline
-
-1. Introduction
-
-	•	Purpose: Automate the process of gathering and analyzing data to generate well-researched property offers.
-
-2. Data Collection Modules
-
-	•	Market Comparables Module
-	•	Fetch recent sales data of similar properties.
-	•	Gather current listings for similar properties.
-	•	Compile local cap rates for comparable properties.
-	•	Financial Data Module
-	•	Collect property income statements.
-	•	Gather detailed operating expenses.
-	•	Calculate current and pro-forma NOI.
-	•	Property Condition Module
-	•	Integrate inspection report uploads and parsing.
-	•	Estimate costs for necessary repairs and upgrades.
-	•	Market Trends Module
-	•	Analyze local rental market trends (rental rates, vacancy rates).
-	•	Review local economic indicators (employment rates, population growth).
-	•	Financing Options Module
-	•	Research and compile available loan options and terms.
-	•	Create cash flow projections based on financing scenarios.
-
-3. Data Analysis and Interpretation
-
-	•	Comparative Market Analysis (CMA)
-	•	Compare fetched data to determine fair market value.
-	•	Highlight key comparables in charts and tables.
-	•	Financial Analysis
-	•	Calculate and display NOI, cap rate, and cash flow projections.
-	•	Compare current financial performance to pro-forma projections.
-	•	Property Condition Assessment
-	•	Summarize inspection findings.
-	•	Estimate and display potential CapEx.
-	•	Market and Economic Analysis
-	•	Display rental market trends and economic indicators.
-	•	Financing Impact Analysis
-	•	Display impact of different financing options on property profitability.
-
-4. Offer Generation
-
-	•	Offer Price Calculation
-	•	Automated calculation based on desired cap rate and NOI.
-	•	Offer Letter Drafting
-	•	Generate a detailed offer letter including:
-	•	Summary of CMA
-	•	Financial analysis
-	•	Inspection findings
-	•	Market and economic analysis
-	•	Financing scenarios
-	•	Customization Options
-	•	Allow users to adjust offer parameters and terms before finalizing.
-
-5. User Interface
-
-	•	Dashboard Overview
-	•	Provide a summary view of all collected and analyzed data.
-	•	Detailed Reports
-	•	Allow users to view detailed reports for each analysis module.
-	•	Offer Letter Preview and Edit
-	•	Enable preview and editing of the generated offer letter.
-	•	Submission and Tracking
-	•	Track submitted offers and responses.
-
-6. Integration and Automation
-
-	•	APIs for Data Fetching
-	•	Integrate with real estate data providers for automated data collection.
-	•	Automated Report Generation
-	•	Schedule and automate periodic report generation for ongoing property searches.
-	•	Notification System
-	•	Alert users of new data, report availability, and offer responses.
-
-7. Testing and Validation
-
-	•	Module Testing
-	•	Ensure each module functions correctly and efficiently.
-	•	User Acceptance Testing
-	•	Gather feedback from beta users to refine the feature.
-	•	Performance Optimization
-	•	Optimize for speed and accuracy in data processing and analysis.
-
-8. Documentation and Support
-
-	•	User Guide
-	•	Provide a comprehensive guide on using the offer generator feature.
-	•	Technical Documentation
-	•	Document the backend processes and data flow for developers.
-	•	Customer Support Integration
-	•	Enable easy access to customer support for troubleshooting and assistance.
-
-Implementation Steps
-
-	1.	Initial Setup
-	•	Define project scope and timeline.
-	•	Set up development environment and tools.
-	2.	Module Development
-	•	Develop and integrate each data collection module.
-	•	Implement data analysis and interpretation logic.
-	•	Create user interface components for data display and interaction.
-	3.	Feature Integration
-	•	Integrate modules into a cohesive feature.
-	•	Ensure seamless data flow and user experience.
-	4.	Testing and Refinement
-	•	Conduct thorough testing for functionality and performance.
-	•	Refine based on feedback and test results.
-	5.	Launch and Monitor
-	•	Deploy the feature to production.
-	•	Monitor usage and gather user feedback for continuous improvement.
-
-By following this outline, you can guide GPT to develop the necessary components for your app, enabling you to quickly gather, analyze, and generate offers for properties efficiently.
+### Property Offer Generator:
+- Added detailed feature outline for Property Offer Generator.
