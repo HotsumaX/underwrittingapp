@@ -6,7 +6,6 @@ import CrexiScraper from './components/CrexiScraper';
 import Logs from './components/Logs';
 import ServerStatus from './components/ServerStatus';
 import { setBackendStatus, setError, logMessage } from './store';
-import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -73,7 +72,7 @@ const App = () => {
                 <h2>Processed Data</h2>
                 <button id="copy-data-button" onClick={handleCopyData}>Copy Data</button>
                 <button id="copy-log-button" onClick={handleCopyLog}>Copy Console Log</button>
-                <pre id="scraped-data">{JSON.stringify(scrapedData, null, 2)}</pre>
+                <pre id="scraped-data">{scrapedData.html_content}</pre>
             </div>
             <Logs />
             <HealthCheck />
