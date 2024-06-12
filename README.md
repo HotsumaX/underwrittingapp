@@ -18,7 +18,7 @@ Your code has been rated at 0.00/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:38.755591
+Run started:2024-06-12 21:27:31.893764
 
 Test results:
 	No issues identified.
@@ -44,48 +44,51 @@ Files skipped (0):
 
 ### ./evaluate_repo.py
 #### flake8 Report:
-./evaluate_repo.py:4:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:13:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:14:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:17:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:18:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:21:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:22:80: E501 line too long (87 > 79 characters)
-./evaluate_repo.py:25:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:31:1: W293 blank line contains whitespace
-./evaluate_repo.py:39:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:42:1: W293 blank line contains whitespace
-./evaluate_repo.py:44:9: F841 local variable 'app_outline' is assigned to but never used
-./evaluate_repo.py:45:1: W293 blank line contains whitespace
-./evaluate_repo.py:47:1: W293 blank line contains whitespace
-./evaluate_repo.py:61:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:62:11: W292 no newline at end of file
+./evaluate_repo.py:5:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:10:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:11:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:14:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:15:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:18:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:19:80: E501 line too long (87 > 79 characters)
+./evaluate_repo.py:22:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:38:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:46:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:66:80: E501 line too long (124 > 79 characters)
+./evaluate_repo.py:78:80: E501 line too long (115 > 79 characters)
+./evaluate_repo.py:88:1: E305 expected 2 blank lines after class or function definition, found 1
+./evaluate_repo.py:89:11: W292 no newline at end of file
 
 #### pylint Report:
 ************* Module evaluate_repo
-evaluate_repo.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:42:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:45:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:47:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:62:0: C0304: Final newline missing (missing-final-newline)
+evaluate_repo.py:66:0: C0301: Line too long (124/100) (line-too-long)
+evaluate_repo.py:78:0: C0301: Line too long (115/100) (line-too-long)
+evaluate_repo.py:89:0: C0304: Final newline missing (missing-final-newline)
 evaluate_repo.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-evaluate_repo.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:14:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:18:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:22:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:39:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:41:4: W0612: Unused variable 'app_outline' (unused-variable)
+evaluate_repo.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:6:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:11:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:15:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:18:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:19:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+evaluate_repo.py:22:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:26:19: W0612: Unused variable 'status' (unused-variable)
+evaluate_repo.py:38:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:46:0: C0116: Missing function or method docstring (missing-function-docstring)
+evaluate_repo.py:50:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:60:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:63:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:83:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+evaluate_repo.py:85:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
 
 -----------------------------------
-Your code has been rated at 6.52/10
+Your code has been rated at 7.04/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:40.069586
+Run started:2024-06-12 21:27:33.315139
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -95,72 +98,72 @@ Test results:
    Location: ././evaluate_repo.py:2:0
 1	import os
 2	import subprocess
-3	
+3	import re
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:14:13
-13	def run_flake8(filepath):
-14	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-15	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:11:13
+10	def run_flake8(filepath):
+11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+12	    return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:14:13
-13	def run_flake8(filepath):
-14	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-15	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:11:13
+10	def run_flake8(filepath):
+11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+12	    return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:18:13
-17	def run_pylint(filepath):
-18	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-19	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:15:13
+14	def run_pylint(filepath):
+15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+16	    return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:18:13
-17	def run_pylint(filepath):
-18	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-19	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:15:13
+14	def run_pylint(filepath):
+15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+16	    return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:22:13
-21	def run_bandit(filepath):
-22	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-23	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:19:13
+18	def run_bandit(filepath):
+19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+20	    return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:22:13
-21	def run_bandit(filepath):
-22	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-23	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:19:13
+18	def run_bandit(filepath):
+19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+20	    return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 50
+	Total lines of code: 76
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -184,7 +187,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:40.774040
+Run started:2024-06-12 21:27:33.957667
 
 Test results:
 	No issues identified.
@@ -214,7 +217,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:41.538990
+Run started:2024-06-12 21:27:34.597006
 
 Test results:
 	No issues identified.
@@ -244,7 +247,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:42.297515
+Run started:2024-06-12 21:27:35.235039
 
 Test results:
 	No issues identified.
@@ -274,7 +277,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:42.976718
+Run started:2024-06-12 21:27:35.879535
 
 Test results:
 	No issues identified.
@@ -318,7 +321,7 @@ Your code has been rated at 5.83/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:44.041844
+Run started:2024-06-12 21:27:36.872090
 
 Test results:
 >> Issue: [B113:request_without_timeout] Requests call without timeout
@@ -357,7 +360,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:44.734352
+Run started:2024-06-12 21:27:37.519228
 
 Test results:
 	No issues identified.
@@ -441,7 +444,7 @@ Your code has been rated at 4.13/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:46.726252
+Run started:2024-06-12 21:27:39.366240
 
 Test results:
 >> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
@@ -519,7 +522,7 @@ Your code has been rated at 4.36/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:51.704492
+Run started:2024-06-12 21:27:43.874728
 
 Test results:
 	No issues identified.
@@ -572,7 +575,7 @@ Your code has been rated at 7.18/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:55.690630
+Run started:2024-06-12 21:27:47.590543
 
 Test results:
 >> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
@@ -631,7 +634,7 @@ Your code has been rated at 6.19/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:19:57.035372
+Run started:2024-06-12 21:27:48.847893
 
 Test results:
 	No issues identified.
@@ -661,7 +664,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:57.702842
+Run started:2024-06-12 21:27:49.487664
 
 Test results:
 	No issues identified.
@@ -691,7 +694,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:58.376179
+Run started:2024-06-12 21:27:50.195189
 
 Test results:
 	No issues identified.
@@ -721,7 +724,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:19:59.063177
+Run started:2024-06-12 21:27:50.830036
 
 Test results:
 	No issues identified.
@@ -743,4 +746,128 @@ Run metrics:
 		Medium: 0
 		High: 0
 Files skipped (0):
+
+
+
+## Summary
+
+### Current Status
+The following sections outline the current state of the repository based on the evaluation:
+
+ - **./gpt_code_review.py**: 11 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./evaluate_repo.py**: 89 lines, has flake8 issues, has pylint issues
+ - **./backend/site_scraper.py**: 0 lines, has bandit issues
+ - **./backend/log_section.py**: 0 lines, has bandit issues
+ - **./backend/email_contact.py**: 0 lines, has bandit issues
+ - **./backend/single_family_evaluation.py**: 0 lines, has bandit issues
+ - **./backend/scrape_crexi.py**: 15 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/multi_family_evaluation.py**: 0 lines, has bandit issues
+ - **./backend/scrape_zillow.py**: 62 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/scrape_zillow_with_langchain.py**: 59 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/app.py**: 50 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/scrape_zillow_with_selenium.py**: 32 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/offer_generator.py**: 0 lines, has bandit issues
+ - **./backend/server_connection.py**: 0 lines, has bandit issues
+ - **./backend/property_management.py**: 0 lines, has bandit issues
+
+### Next Steps
+To align the project with the outlined goals, the following actions are recommended:
+- ## 1. Server Connection Status
+- ## Goals:
+- ## Tasks:
+- ## Change Log:
+- ## 2. Site Scraper
+- ## Goals:
+- ## Tasks:
+- ## Change Log:
+- ## 3. Single Family Homes Evaluation
+- ## Goals:
+- ## Tasks:
+- ## 4. Multi Family Homes Evaluation
+- ## Goals:
+- ## Tasks:
+- ## 5. Email to Point of Contact for the Listing
+- ## Goals:
+- ## Tasks:
+- ## 6. Property Management Section (Future)
+- ## Goals:
+- ## Tasks:
+- ## 7. Log Section
+- ## Goals:
+- ## Tasks:
+- ## 8. Property Offer Generator Feature
+- ## Goals:
+- ## Data Collection Modules:
+- ## Market Comparables Module
+- ## Financial Data Module
+- ## Property Condition Module
+- ## Market Trends Module
+- ## Financing Options Module
+- ## Data Analysis and Interpretation:
+- ## Comparative Market Analysis (CMA)
+- ## Financial Analysis
+- ## Property Condition Assessment
+- ## Market and Economic Analysis
+- ## Financing Impact Analysis
+- ## Offer Generation:
+- ## Offer Price Calculation
+- ## Offer Letter Drafting
+- ## Customization Options
+- ## User Interface:
+- ## Dashboard Overview
+- ## Detailed Reports
+- ## Offer Letter Preview and Edit
+- ## Submission and Tracking
+- ## Integration and Automation:
+- ## APIs for Data Fetching
+- ## Automated Report Generation
+- ## Notification System
+- ## Testing and Validation:
+- ## Module Testing
+- ## User Acceptance Testing
+- ## Performance Optimization
+- ## Documentation and Support:
+- ## User Guide
+- ## Technical Documentation
+- ## Customer Support Integration
+- ## Change Log
+- ## Server Connection Status:
+- ## Site Scraper:
+- ## Property Offer Generator:
+- ## Server Connection.Py
+- ## Site Scraper.Py
+- ## Single Family Evaluation.Py
+- ## Multi Family Evaluation.Py
+- ## Email Contact.Py
+- ## Property Management.Py
+- ## Log Section.Py
+- ## Offer Generator.Py
+- ## Frontend
+- ## Server Connection.Py
+- ## Site Scraper.Py
+- ## Single Family Evaluation.Py
+- ## Multi Family Evaluation.Py
+- ## Email Contact.Py
+- ## Property Management.Py
+- ## Log Section.Py
+- ## Offer Generator.Py
+- ## Frontend
+- ## Server Connection.Py
+- ## Site Scraper.Py
+- ## Single Family Evaluation.Py
+- ## Multi Family Evaluation.Py
+- ## Email Contact.Py
+- ## Property Management.Py
+- ## Log Section.Py
+- ## Offer Generator.Py
+- ## Frontend
+- ## Server Connection.Py
+- ## Site Scraper.Py
+- ## Single Family Evaluation.Py
+- ## Multi Family Evaluation.Py
+- ## Email Contact.Py
+- ## Property Management.Py
+- ## Log Section.Py
+- ## Offer Generator.Py
+- ## Frontend
 
