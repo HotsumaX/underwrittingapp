@@ -18,7 +18,7 @@ Your code has been rated at 0.00/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:31.893764
+Run started:2024-06-12 22:28:08.026704
 
 Test results:
 	No issues identified.
@@ -88,13 +88,13 @@ Your code has been rated at 7.04/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:33.315139
+Run started:2024-06-12 22:28:09.524768
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b404-import-subprocess
+   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
    Location: ././evaluate_repo.py:2:0
 1	import os
 2	import subprocess
@@ -104,7 +104,7 @@ Test results:
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
    Location: ././evaluate_repo.py:11:13
 10	def run_flake8(filepath):
 11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
@@ -114,7 +114,7 @@ Test results:
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
    Location: ././evaluate_repo.py:11:13
 10	def run_flake8(filepath):
 11	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
@@ -124,7 +124,7 @@ Test results:
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
    Location: ././evaluate_repo.py:15:13
 14	def run_pylint(filepath):
 15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
@@ -134,7 +134,7 @@ Test results:
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
    Location: ././evaluate_repo.py:15:13
 14	def run_pylint(filepath):
 15	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
@@ -144,7 +144,7 @@ Test results:
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b607_start_process_with_partial_path.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
    Location: ././evaluate_repo.py:19:13
 18	def run_bandit(filepath):
 19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
@@ -154,7 +154,7 @@ Test results:
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b603_subprocess_without_shell_equals_true.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
    Location: ././evaluate_repo.py:19:13
 18	def run_bandit(filepath):
 19	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
@@ -187,7 +187,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:33.957667
+Run started:2024-06-12 22:28:10.189140
 
 Test results:
 	No issues identified.
@@ -217,7 +217,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:34.597006
+Run started:2024-06-12 22:28:10.934805
 
 Test results:
 	No issues identified.
@@ -247,7 +247,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:35.235039
+Run started:2024-06-12 22:28:11.719740
 
 Test results:
 	No issues identified.
@@ -277,7 +277,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:35.879535
+Run started:2024-06-12 22:28:12.404989
 
 Test results:
 	No issues identified.
@@ -321,13 +321,13 @@ Your code has been rated at 5.83/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:36.872090
+Run started:2024-06-12 22:28:13.439349
 
 Test results:
 >> Issue: [B113:request_without_timeout] Requests call without timeout
    Severity: Medium   Confidence: Low
    CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b113_request_without_timeout.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b113_request_without_timeout.html
    Location: ././backend/scrape_crexi.py:6:15
 5	    url = 'https://www.crexi.com/properties'
 6	    response = requests.get(url)
@@ -360,7 +360,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:37.519228
+Run started:2024-06-12 22:28:14.104304
 
 Test results:
 	No issues identified.
@@ -386,104 +386,49 @@ Files skipped (0):
 
 ### ./backend/scrape_zillow.py
 #### flake8 Report:
-./backend/scrape_zillow.py:6:1: F401 'selenium.webdriver.common.by.By' imported but unused
-./backend/scrape_zillow.py:13:1: E302 expected 2 blank lines, found 1
-./backend/scrape_zillow.py:21:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:24:80: E501 line too long (85 > 79 characters)
-./backend/scrape_zillow.py:25:80: E501 line too long (166 > 79 characters)
-./backend/scrape_zillow.py:26:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:27:80: E501 line too long (114 > 79 characters)
-./backend/scrape_zillow.py:28:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:30:80: E501 line too long (91 > 79 characters)
-./backend/scrape_zillow.py:31:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:34:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:36:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:40:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:41:80: E501 line too long (107 > 79 characters)
-./backend/scrape_zillow.py:42:80: E501 line too long (99 > 79 characters)
-./backend/scrape_zillow.py:43:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:45:1: W293 blank line contains whitespace
-./backend/scrape_zillow.py:47:80: E501 line too long (88 > 79 characters)
-./backend/scrape_zillow.py:49:80: E501 line too long (82 > 79 characters)
-./backend/scrape_zillow.py:53:1: E302 expected 2 blank lines, found 1
-./backend/scrape_zillow.py:59:1: E305 expected 2 blank lines after class or function definition, found 1
-./backend/scrape_zillow.py:60:80: E501 line too long (94 > 79 characters)
+./backend/scrape_zillow.py:10:1: E302 expected 2 blank lines, found 1
 
 #### pylint Report:
 ************* Module scrape_zillow
-backend/scrape_zillow.py:21:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:25:0: C0301: Line too long (166/100) (line-too-long)
-backend/scrape_zillow.py:26:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:27:0: C0301: Line too long (114/100) (line-too-long)
-backend/scrape_zillow.py:28:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:34:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:40:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:41:0: C0301: Line too long (107/100) (line-too-long)
-backend/scrape_zillow.py:43:0: C0303: Trailing whitespace (trailing-whitespace)
-backend/scrape_zillow.py:45:0: C0303: Trailing whitespace (trailing-whitespace)
 backend/scrape_zillow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-backend/scrape_zillow.py:13:0: C0115: Missing class docstring (missing-class-docstring)
-backend/scrape_zillow.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
-backend/scrape_zillow.py:17:18: W0621: Redefining name 'url' from outer scope (line 60) (redefined-outer-name)
-backend/scrape_zillow.py:46:19: W0718: Catching too general exception Exception (broad-exception-caught)
-backend/scrape_zillow.py:20:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-backend/scrape_zillow.py:47:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-backend/scrape_zillow.py:17:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-backend/scrape_zillow.py:13:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-backend/scrape_zillow.py:53:0: C0116: Missing function or method docstring (missing-function-docstring)
-backend/scrape_zillow.py:53:26: W0621: Redefining name 'url' from outer scope (line 60) (redefined-outer-name)
-backend/scrape_zillow.py:60:4: C0103: Constant name "url" doesn't conform to UPPER_CASE naming style (invalid-name)
-backend/scrape_zillow.py:7:0: C0411: standard import "logging" should be placed before third party imports "selenium.webdriver", "selenium.webdriver.chrome.service.Service", "webdriver_manager.chrome.ChromeDriverManager", "selenium.webdriver.common.by.By" (wrong-import-order)
-backend/scrape_zillow.py:6:0: C0412: Imports from package selenium are not grouped (ungrouped-imports)
-backend/scrape_zillow.py:6:0: W0611: Unused By imported from selenium.webdriver.common.by (unused-import)
+backend/scrape_zillow.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/scrape_zillow.py:4:0: C0411: standard import "logging" should be placed before third party import "selenium.webdriver" (wrong-import-order)
 
 -----------------------------------
-Your code has been rated at 4.13/10
+Your code has been rated at 8.50/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:39.366240
+Run started:2024-06-12 22:28:15.444076
 
 Test results:
 >> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
    Severity: Low   Confidence: High
    CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
-   Location: ././backend/scrape_zillow.py:30:27
-29	                driver.get(url)
-30	                time.sleep(random.uniform(2, 5))  # Random delay to simulate human behavior
-31	                
-
---------------------------------------------------
->> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-   Severity: Low   Confidence: High
-   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
-   Location: ././backend/scrape_zillow.py:49:31
-48	                if attempt < self.retries - 1:
-49	                    time.sleep(random.uniform(3, 6))  # Wait a bit before retrying
-50	                else:
+   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_calls.html#b311-random
+   Location: ././backend/scrape_zillow.py:15:19
+14	        driver.get(url)
+15	        time.sleep(random.uniform(2, 5))
+16	        content = driver.page_source
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 47
+	Total lines of code: 21
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 2
+		Low: 1
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 2
+		High: 1
 Files skipped (0):
 
 
@@ -522,7 +467,7 @@ Your code has been rated at 4.36/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:43.874728
+Run started:2024-06-12 22:28:20.153555
 
 Test results:
 	No issues identified.
@@ -575,13 +520,13 @@ Your code has been rated at 7.18/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:47.590543
+Run started:2024-06-12 22:28:23.978898
 
 Test results:
 >> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
    Severity: High   Confidence: Medium
    CWE: CWE-94 (https://cwe.mitre.org/data/definitions/94.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b201_flask_debug_true.html
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b201_flask_debug_true.html
    Location: ././backend/app.py:50:4
 49	if __name__ == '__main__':
 50	    app.run(debug=True)
@@ -634,7 +579,7 @@ Your code has been rated at 6.19/10
 
 
 #### bandit Report:
-Run started:2024-06-12 21:27:48.847893
+Run started:2024-06-12 22:28:25.274135
 
 Test results:
 	No issues identified.
@@ -658,13 +603,51 @@ Run metrics:
 Files skipped (0):
 
 
+### ./backend/logging_config.py
+#### flake8 Report:
+./backend/logging_config.py:3:1: E302 expected 2 blank lines, found 1
+
+#### pylint Report:
+************* Module logging_config
+backend/logging_config.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+backend/logging_config.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 3.33/10
+
+
+#### bandit Report:
+Run started:2024-06-12 22:28:26.061878
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 10
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
 ### ./backend/offer_generator.py
 #### flake8 Report:
 No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:49.487664
+Run started:2024-06-12 22:28:26.718504
 
 Test results:
 	No issues identified.
@@ -690,17 +673,36 @@ Files skipped (0):
 
 ### ./backend/server_connection.py
 #### flake8 Report:
-No issues found by flake8.
+./backend/server_connection.py:8:1: E302 expected 2 blank lines, found 1
+
 #### pylint Report:
-No issues found by pylint.
+************* Module server_connection
+backend/server_connection.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+backend/server_connection.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/server_connection.py:11:19: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+backend/server_connection.py:2:0: C0411: standard import "logging" should be placed before third party import "requests" (wrong-import-order)
+
+-----------------------------------
+Your code has been rated at 7.33/10
+
+
 #### bandit Report:
-Run started:2024-06-12 21:27:50.195189
+Run started:2024-06-12 22:28:28.632723
 
 Test results:
-	No issues identified.
+>> Issue: [B113:request_without_timeout] Requests call without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b113_request_without_timeout.html
+   Location: ././backend/server_connection.py:11:19
+10	    try:
+11	        response = requests.get(url)
+12	        response.raise_for_status()
+
+--------------------------------------------------
 
 Code scanned:
-	Total lines of code: 0
+	Total lines of code: 15
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -708,11 +710,11 @@ Run metrics:
 	Total issues (by severity):
 		Undefined: 0
 		Low: 0
-		Medium: 0
+		Medium: 1
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
-		Low: 0
+		Low: 1
 		Medium: 0
 		High: 0
 Files skipped (0):
@@ -724,7 +726,7 @@ No issues found by flake8.
 #### pylint Report:
 No issues found by pylint.
 #### bandit Report:
-Run started:2024-06-12 21:27:50.830036
+Run started:2024-06-12 22:28:29.288606
 
 Test results:
 	No issues identified.
@@ -762,12 +764,13 @@ The following sections outline the current state of the repository based on the 
  - **./backend/single_family_evaluation.py**: 0 lines, has bandit issues
  - **./backend/scrape_crexi.py**: 15 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/multi_family_evaluation.py**: 0 lines, has bandit issues
- - **./backend/scrape_zillow.py**: 62 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/scrape_zillow.py**: 23 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/scrape_zillow_with_langchain.py**: 59 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/app.py**: 50 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/scrape_zillow_with_selenium.py**: 32 lines, has flake8 issues, has pylint issues, has bandit issues
+ - **./backend/logging_config.py**: 11 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/offer_generator.py**: 0 lines, has bandit issues
- - **./backend/server_connection.py**: 0 lines, has bandit issues
+ - **./backend/server_connection.py**: 17 lines, has flake8 issues, has pylint issues, has bandit issues
  - **./backend/property_management.py**: 0 lines, has bandit issues
 
 ### Next Steps
