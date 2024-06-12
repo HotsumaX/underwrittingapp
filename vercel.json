@@ -1,26 +1,11 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "frontend/build"
-      }
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     },
-    {
-      "src": "backend/vercel.json",
-      "use": "@vercel/python"
+    "scripts": {
+      "build": "npm run build",
+      "prebuild": "sh download_libraries.sh"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/app.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/build"
-    }
-  ]
+  }
 }
