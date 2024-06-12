@@ -1,5 +1,11 @@
 import os
 import subprocess
+import re
+
+def get_file_status(filepath):
+    with open(filepath, 'r') as file:
+        lines = file.readlines()
+    return len(lines), "No issues found"
 
 def run_flake8(filepath):
     result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
@@ -13,60 +19,71 @@ def run_bandit(filepath):
     result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
     return result.stdout if result.stdout else "No issues found by bandit."
 
-def get_file_status(filepath):
-    with open(filepath, 'r') as file:
-        lines = file.readlines()
-    return lines
-
-def generate_recommendations(flake8_report, pylint_report, bandit_report, file_status):
-    recommendations = []
-    if "missing-module-docstring" in pylint_report:
-        recommendations.append("Add a module docstring to describe the purpose and functionality of the module.")
-    if "line-too-long" in pylint_report or "E501" in flake8_report:
-        recommendations.append("Refactor lines to ensure they do not exceed 79 characters.")
-    if "missing-timeout" in bandit_report:
-        recommendations.append("Add a timeout parameter to all requests to prevent hanging.")
-    if "import os" in file_status and "import subprocess" not in file_status:
-        recommendations.append("Ensure that subprocess is imported if os is used for executing shell commands.")
-    if any("W1514" in line for line in pylint_report):
-        recommendations.append("Specify an encoding when using open() to avoid potential issues with different environments.")
-    return recommendations
-
-def evaluate_files(filepaths):
+def evaluate_files(files):
     evaluations = {}
-    for filepath in filepaths:
-        flake8_report = run_flake8(filepath)
-        pylint_report = run_pylint(filepath)
-        bandit_report = run_bandit(filepath)
-        file_status = get_file_status(filepath)
-        
-        evaluations[filepath] = {
-            'flake8': flake8_report,
-            'pylint': pylint_report,
-            'bandit': bandit_report,
-            'status': file_status,
-            'recommendations': generate_recommendations(flake8_report, pylint_report, bandit_report, file_status),
-        }
+    for filepath in files:
+        if os.path.isfile(filepath):
+            lines, status = get_file_status(filepath)
+            flake8_report = run_flake8(filepath)
+            pylint_report = run_pylint(filepath)
+            bandit_report = run_bandit(filepath)
+            evaluations[filepath] = {
+                "lines": lines,
+                "flake8": flake8_report,
+                "pylint": pylint_report,
+                "bandit": bandit_report
+            }
     return evaluations
 
-def main():
+def get_repo_files(root_dir):
     repo_files = []
-    for root, dirs, files in os.walk('.'):
-        for file in files:
-            if file.endswith('.py'):
-                repo_files.append(os.path.join(root, file))
+    for dirpath, _, filenames in os.walk(root_dir):
+        for filename in filenames:
+            if filename.endswith('.py'):
+                repo_files.append(os.path.join(dirpath, filename))
+    return repo_files
 
+def main():
+    repo_files = get_repo_files(".")
     evaluations = evaluate_files(repo_files)
-    with open('README.md', 'a') as readme:
-        readme.write("\n## Detailed File Evaluations\n")
-        for filepath, evals in evaluations.items():
-            readme.write(f"\n### {filepath}\n")
-            for tool, report in evals.items():
-                if tool != 'recommendations' and tool != 'status':
-                    readme.write(f"#### {tool} Report:\n{report}\n")
-            readme.write("#### Recommendations:\n")
-            for recommendation in evals['recommendations']:
-                readme.write(f"- {recommendation}\n")
+
+    with open("progress_report.md", "w") as report_file:
+        report_file.write("# Progress Report\n\n")
+        report_file.write("## Repository Files\n\n")
+        for filepath, reports in evaluations.items():
+            report_file.write(f"### {filepath}\n")
+            report_file.write(f"#### flake8 Report:\n{reports['flake8']}\n")
+            report_file.write(f"#### pylint Report:\n{reports['pylint']}\n")
+            report_file.write(f"#### bandit Report:\n{reports['bandit']}\n")
+            report_file.write("\n")
+
+    with open("appoutline.txt", "r") as app_outline:
+        app_outline_content = app_outline.read()
+
+    with open("progress_report.md", "a") as report_file:
+        report_file.write("\n## Summary\n\n")
+        report_file.write("### Current Status\n")
+        report_file.write("The following sections outline the current state of the repository based on the evaluation:\n\n")
+        for filepath, reports in evaluations.items():
+            status_line = f" - **{filepath}**: {reports['lines']} lines"
+            if "No issues found" not in reports["flake8"]:
+                status_line += ", has flake8 issues"
+            if "No issues found" not in reports["pylint"]:
+                status_line += ", has pylint issues"
+            if "No issues found" not in reports["bandit"]:
+                status_line += ", has bandit issues"
+            report_file.write(f"{status_line}\n")
+
+        report_file.write("\n### Next Steps\n")
+        report_file.write("To align the project with the outlined goals, the following actions are recommended:\n")
+        for section in re.findall(r'## .*?\n', app_outline_content):
+            report_file.write(f"- {section.strip()}\n")
+        report_file.write("\n")
+
+    with open("README.md", "a") as readme_file:
+        readme_file.write("\n")
+        with open("progress_report.md", "r") as report_file:
+            readme_file.write(report_file.read())
 
 if __name__ == "__main__":
     main()
