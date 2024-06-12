@@ -74,7 +74,7 @@ def main():
             'Property Management': ['backend/property_management.py'],
             'Log Section': ['backend/log_section.py'],
             'Offer Generator': ['backend/offer_generator.py'],
-            'Frontend': ['frontend/src']
+            'Frontend': [os.path.join(root, file) for root, dirs, files in os.walk('frontend/src') for file in files]
         }
         
         for section, files in sections.items():
