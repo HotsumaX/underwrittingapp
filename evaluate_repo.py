@@ -1,65 +1,77 @@
 import os
 
-def create_blank_file_if_not_exists(path):
-    if not os.path.exists(path):
-        with open(path, 'w') as f:
-            f.write("")
-        print(f"Created blank file: {path}")
+# Paths to files and directories
+app_outline_path = 'appoutline.txt'
+progress_report_path = 'progress_report.md'
+readme_path = 'README.md'
+backend_dir = 'backend'
+frontend_dir = 'frontend/src'
+
+# Files to check in backend
+backend_files = [
+    'server_connection.py',
+    'site_scraper.py',
+    'single_family_evaluation.py',
+    'multi_family_evaluation.py',
+    'email_contact.py',
+    'property_management.py',
+    'log_section.py',
+    'offer_generator.py'
+]
+
+# Function to check file existence and create if not present
+def check_and_create_file(filepath):
+    if not os.path.exists(filepath):
+        with open(filepath, 'w') as f:
+            pass
+        print(f'Created blank file: {filepath}')
     else:
-        print(f"File already exists: {path}")
+        print(f'File already exists: {filepath}')
+    return os.path.exists(filepath)
 
-def list_directory_contents(directory):
-    try:
-        files = os.listdir(directory)
-        print(f"Contents of {directory}:")
-        for file in files:
-            print(f" - {file}")
-    except FileNotFoundError:
-        print(f"Directory {directory} does not exist.")
-
+# Function to generate progress report
 def generate_progress_report():
-    # Paths to relevant directories and files
-    paths = {
-        'server_connection': 'backend/server_connection.py',
-        'site_scraper': 'backend/site_scraper.py',
-        'single_family_evaluation': 'backend/single_family_evaluation.py',
-        'multi_family_evaluation': 'backend/multi_family_evaluation.py',
-        'email_contact': 'backend/email_contact.py',
-        'property_management': 'backend/property_management.py',
-        'log_section': 'backend/log_section.py',
-        'offer_generator': 'backend/offer_generator.py',
-        'frontend': 'frontend/src'
-    }
+    progress_report = "# Progress Report\n\n"
 
-    report = []
-    report.append("# Progress Report\n")
+    # Check backend files
+    for file in backend_files:
+        file_path = os.path.join(backend_dir, file)
+        exists = check_and_create_file(file_path)
+        file_size = os.path.getsize(file_path) if exists else 0
+        progress_report += f"## {file.replace('_', ' ').title()}\n\n"
+        progress_report += f"- {file_path} {'exists' if exists else 'does not exist'}.\n\n"
+        progress_report += f"- Size: {file_size} bytes\n\n"
 
-    # List contents of the backend directory
-    list_directory_contents('backend')
-    list_directory_contents('frontend/src')
+    # Check frontend directory
+    exists = os.path.exists(frontend_dir)
+    dir_size = sum(os.path.getsize(os.path.join(root, file)) for root, _, files in os.walk(frontend_dir) for file in files) if exists else 0
+    progress_report += "## Frontend\n\n"
+    progress_report += f"- {frontend_dir} {'exists' if exists else 'does not exist'}.\n\n"
+    progress_report += f"- Size: {dir_size} bytes\n\n"
 
-    for feature, path in paths.items():
-        print(f"Checking {path}...")  # Debugging: Print path being checked
-        report.append(f"## {feature.replace('_', ' ').title()}\n")
-        create_blank_file_if_not_exists(path)  # Create blank file if not exists
-        if os.path.exists(path):
-            report.append(f"- {path} exists.\n")
-            report.append(f"- Size: {os.path.getsize(path)} bytes\n")
-            print(f" - {path} exists.")  # Debugging: Confirm existence
-        else:
-            report.append(f"- {path} does not exist.\n")
-            print(f" - {path} does not exist.")  # Debugging: Confirm non-existence
-        report.append("\n")
+    return progress_report
 
-    with open("progress_report.md", "w") as report_file:
-        report_file.write("\n".join(report))
+# Write progress report to file
+progress_report = generate_progress_report()
+with open(progress_report_path, 'w') as f:
+    f.write(progress_report)
+print(f"Progress report generated in {progress_report_path}")
 
-    # Append the report to README.md
-    with open("README.md", "a") as readme_file:
-        readme_file.write("\n".join(report))
+# Update README.md
+if os.path.exists(readme_path):
+    with open(readme_path, 'r') as f:
+        readme_content = f.read()
 
-    # Debugging: Print the generated report to the console
-    print("\n".join(report))
+    # Remove old progress report
+    if "## Progress Report" in readme_content:
+        readme_content = readme_content.split("## Progress Report")[0].strip()
 
-if __name__ == "__main__":
-    generate_progress_report()
+    with open(readme_path, 'w') as f:
+        f.write(readme_content + '\n\n' + progress_report)
+    print(f"README.md updated with new progress report")
+
+# Update app outline
+if os.path.exists(app_outline_path):
+    with open(app_outline_path, 'a') as f:
+        f.write(progress_report)
+    print(f"App outline updated with new progress report")
