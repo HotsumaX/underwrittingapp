@@ -51,266 +51,596 @@
 ## File Evaluation
 
 ## Miscellaneous
-- ./gitlog.txt: 119 lines
+- ./gitlog.txt: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 43712 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./README.md: 117 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./README.md: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 704 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./package.json: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./package.json: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 38 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./gpt_code_review.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./gpt_code_review.py: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 11 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./package-lock.json: 117 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./package-lock.json: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 470 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./evaluate_repo.py: 249 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./evaluate_repo.py: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 111 lines.
-File starts with import statements, indicating it might be a script or module.
-The file contains TODO comments that need attention.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./progress_report.md: 117 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./progress_report.md: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 103 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./appoutline.txt: 117 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./appoutline.txt: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 444 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./vercel.json: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./vercel.json: 489 lines
   - Status: File read successfully.
   - Importance: Medium
-  - Comments: The file contains 11 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/zillow_listing.html: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/zillow_listing.html: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 49 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/app.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/app.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 50 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/vercel.json: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/vercel.json: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 15 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/requirements.txt: 115 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/requirements.txt: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 9 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/backend.zip: 90 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/backend.zip: 71 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0xfc in position 10: invalid start byte
   - Importance: Medium
-  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xfc in position 10: invalid start byte
-- ./backend/index/MAIN_510fvptejrpy1gb6.seg: 89 lines
+  - Comments: 'utf-8' codec can't decode byte 0xfc in position 10: invalid start byte
+- ./backend/index/MAIN_510fvptejrpy1gb6.seg: 70 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0x9a in position 7: invalid start byte
   - Importance: Medium
-  - Comments: Error encountered: 'utf-8' codec can't decode byte 0x9a in position 7: invalid start byte
-- ./backend/index/MAIN_WRITELOCK: 107 lines
+  - Comments: 'utf-8' codec can't decode byte 0x9a in position 7: invalid start byte
+- ./backend/index/MAIN_WRITELOCK: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
-- ./backend/index/_MAIN_1.toc: 89 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/index/_MAIN_1.toc: 70 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
   - Importance: Medium
-  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
+  - Comments: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
 
 ## Frontend
-- ./frontend/package.json: 116 lines
+- ./frontend/package.json: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 38 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/package-lock.json: 119 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/package-lock.json: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 17638 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/frontend.zip: 97 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/frontend.zip: 78 lines
   - Status: Error reading file: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
   - Importance: Medium
-  - Comments: Error encountered: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
-- ./frontend/public/index.html: 116 lines
+  - Comments: 'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte
+- ./frontend/public/index.html: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 11 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/App.js: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/App.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 83 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/App.css: 107 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/App.css: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
-- ./frontend/src/store.js: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/store.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 32 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/.env.local: 115 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/.env.local: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 1 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/index.css: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/index.css: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 10 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/vercel.json: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/vercel.json: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 22 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/index.js: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/index.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 14 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/DataDisplay.js: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/DataDisplay.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 22 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/HealthCheck.js: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/HealthCheck.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 37 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/CrexiScraper.js: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/CrexiScraper.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 27 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/Logs.js: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/Logs.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 19 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/ServerStatus.js: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/ServerStatus.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 32 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./frontend/src/components/ZillowScraper.js: 196 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./frontend/src/components/ZillowScraper.js: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 180 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Site Scraper
-- ./backend/site_scraper.py: 107 lines
+- ./backend/site_scraper.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
-- ./backend/scrape_crexi.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/scrape_crexi.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 15 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/scrape_zillow.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/scrape_zillow.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 62 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/scrape_zillow_with_langchain.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/scrape_zillow_with_langchain.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 59 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
-- ./backend/scrape_zillow_with_selenium.py: 195 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/scrape_zillow_with_selenium.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 32 lines.
-File starts with import statements, indicating it might be a script or module.
-Review the file for potential improvements, optimizations, or necessary implementations.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Log Section
-- ./backend/log_section.py: 107 lines
+- ./backend/log_section.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
-- ./backend/app.log: 116 lines
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+- ./backend/app.log: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 12 lines.
-Review the file for potential improvements, optimizations, or necessary implementations.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Email Contact
-- ./backend/email_contact.py: 107 lines
+- ./backend/email_contact.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Single Family Evaluation
-- ./backend/single_family_evaluation.py: 107 lines
+- ./backend/single_family_evaluation.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Multi Family Evaluation
-- ./backend/multi_family_evaluation.py: 107 lines
+- ./backend/multi_family_evaluation.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Offer Generator
-- ./backend/offer_generator.py: 107 lines
+- ./backend/offer_generator.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Server Connection
-- ./backend/server_connection.py: 107 lines
+- ./backend/server_connection.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
 
 ## Property Management
-- ./backend/property_management.py: 107 lines
+- ./backend/property_management.py: 489 lines
   - Status: File read successfully.
   - Importance: High
-  - Comments: The file contains 0 lines.
-The file is empty and might need implementation or can be removed if not needed.
+  - Comments: Error generating comments: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
