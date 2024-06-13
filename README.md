@@ -9,7 +9,7 @@
 improve_project.py:9:5: E0001: Parsing failed: 'invalid syntax. Maybe you meant '==' or ':=' instead of '='? (improve_project, line 9)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 00:26:02.158567
+Run started:2024-06-13 11:17:23.850309
 
 Test results:
 	No issues identified.
@@ -68,7 +68,7 @@ Your code has been rated at 4.35/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:03.399077
+Run started:2024-06-13 11:17:25.116591
 
 Test results:
 	No issues identified.
@@ -137,7 +137,7 @@ Your code has been rated at 9.37/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:04.830200
+Run started:2024-06-13 11:17:26.355894
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -251,7 +251,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:06.398249
+Run started:2024-06-13 11:17:27.587104
 
 Test results:
 	No issues identified.
@@ -289,7 +289,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:07.158560
+Run started:2024-06-13 11:17:28.280666
 
 Test results:
 	No issues identified.
@@ -327,7 +327,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:07.894692
+Run started:2024-06-13 11:17:28.958891
 
 Test results:
 	No issues identified.
@@ -362,7 +362,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:08.625536
+Run started:2024-06-13 11:17:29.646935
 
 Test results:
 	No issues identified.
@@ -395,7 +395,7 @@ Files skipped (0):
 backend/scrape_crexi.py:12:4: E0001: Parsing failed: 'unexpected indent (scrape_crexi, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 00:26:09.341189
+Run started:2024-06-13 11:17:30.342077
 
 Test results:
 	No issues identified.
@@ -431,7 +431,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:10.109359
+Run started:2024-06-13 11:17:31.041158
 
 Test results:
 	No issues identified.
@@ -464,7 +464,7 @@ Files skipped (0):
 backend/scrape_zillow.py:18:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 18)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 00:26:10.814906
+Run started:2024-06-13 11:17:31.721289
 
 Test results:
 	No issues identified.
@@ -544,7 +544,7 @@ Your code has been rated at 2.44/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:15.842028
+Run started:2024-06-13 11:17:36.575757
 
 Test results:
 	No issues identified.
@@ -577,7 +577,7 @@ Files skipped (0):
 backend/app.py:25:4: E0001: Parsing failed: 'unexpected indent (app, line 25)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 00:26:16.573672
+Run started:2024-06-13 11:17:37.265122
 
 Test results:
 	No issues identified.
@@ -613,7 +613,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:17.844612
+Run started:2024-06-13 11:17:38.502095
 
 Test results:
 	No issues identified.
@@ -646,7 +646,7 @@ Files skipped (0):
 backend/logging_config.py:11:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 11)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 00:26:18.555261
+Run started:2024-06-13 11:17:39.186412
 
 Test results:
 	No issues identified.
@@ -682,7 +682,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:19.294795
+Run started:2024-06-13 11:17:39.894787
 
 Test results:
 	No issues identified.
@@ -717,7 +717,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:21.174513
+Run started:2024-06-13 11:17:41.655960
 
 Test results:
 	No issues identified.
@@ -755,7 +755,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 00:26:21.969843
+Run started:2024-06-13 11:17:42.363238
 
 Test results:
 	No issues identified.
