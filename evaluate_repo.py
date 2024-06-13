@@ -1,13 +1,9 @@
 import os
-
 import subprocess
-
-import subprocess
-import os
 
 def run_command(command):
     """Function docstring"""
-    result = subprocess.run(command, capture_output=True, text=True, shell=True), check=True
+    result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
     return result.stdout if result.stdout else result.stderr
 
 def analyze_file(filepath):
@@ -53,19 +49,20 @@ def enhance_documentation():
 
 if __name__ == '__main__':
     enhance_documentation()
+
 def run_flake8(filepath):
     """Function docstring"""
-    result = subprocess.run(['flake8', filepath], capture_output=True, text=True), check=True
+    result = subprocess.run(['flake8', filepath], capture_output=True, text=True, check=True)
     return result.stdout if result.stdout else "No issues found by flake8."
 
 def run_pylint(filepath):
     """Function docstring"""
-    result = subprocess.run(['pylint', filepath], capture_output=True, text=True), check=True
+    result = subprocess.run(['pylint', filepath], capture_output=True, text=True, check=True)
     return result.stdout if result.stdout else "No issues found by pylint."
 
 def run_bandit(filepath):
     """Function docstring"""
-    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True), check=True
+    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True, check=True)
     return result.stdout if result.stdout else "No issues found by bandit."
 
 def evaluate_files(filepaths):
