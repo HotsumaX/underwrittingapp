@@ -2,253 +2,142 @@
 
 ## ./improve_project.py
 ### flake8 Report:
-./improve_project.py:3:1: E302 expected 2 blank lines, found 1
-./improve_project.py:8:1: E305 expected 2 blank lines after class or function definition, found 1
-./improve_project.py:36:53: W292 no newline at end of file
+./improve_project.py:9:6: E999 SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
 
 ### pylint Report:
 ************* Module improve_project
-improve_project.py:36:0: C0304: Final newline missing (missing-final-newline)
-improve_project.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-improve_project.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
-improve_project.py:4:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-
------------------------------------
-Your code has been rated at 8.26/10
-
+improve_project.py:9:5: E0001: Parsing failed: 'invalid syntax. Maybe you meant '==' or ':=' instead of '='? (improve_project, line 9)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:52:23.313699
+Run started:2024-06-13 00:26:02.158567
 
 Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ././improve_project.py:1:0
-1	import subprocess
-2	
-3	def run_command(command):
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././improve_project.py:4:13
-3	def run_command(command):
-4	    result = subprocess.run(command, capture_output=True, text=True)
-5	    return result.stdout if result.stdout else result.stderr
-
---------------------------------------------------
+	No issues identified.
 
 Code scanned:
-	Total lines of code: 23
+	Total lines of code: 27
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 2
+		Low: 0
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 2
-Files skipped (0):
+		High: 0
+Files skipped (1):
+	././improve_project.py (syntax error while parsing AST from file)
 
 
-## ./update_files_v4.py
+## ./update_files.py
 ### flake8 Report:
-./update_files_v4.py:1:1: F401 'os' imported but unused
-./update_files_v4.py:14:80: E501 line too long (87 > 79 characters)
-./update_files_v4.py:16:80: E501 line too long (100 > 79 characters)
-./update_files_v4.py:17:80: E501 line too long (103 > 79 characters)
-./update_files_v4.py:18:80: E501 line too long (101 > 79 characters)
-./update_files_v4.py:19:80: E501 line too long (84 > 79 characters)
-./update_files_v4.py:23:1: E302 expected 2 blank lines, found 1
-./update_files_v4.py:26:80: E501 line too long (116 > 79 characters)
-./update_files_v4.py:27:1: E302 expected 2 blank lines, found 1
-./update_files_v4.py:35:80: E501 line too long (84 > 79 characters)
-./update_files_v4.py:39:80: E501 line too long (108 > 79 characters)
-./update_files_v4.py:47:80: E501 line too long (99 > 79 characters)
-./update_files_v4.py:62:1: E302 expected 2 blank lines, found 1
-./update_files_v4.py:75:80: E501 line too long (84 > 79 characters)
-./update_files_v4.py:80:1: E302 expected 2 blank lines, found 1
-./update_files_v4.py:83:1: E305 expected 2 blank lines after class or function definition, found 1
-./update_files_v4.py:87:26: W292 no newline at end of file
+./update_files.py:2:1: F401 'os' imported but unused
+./update_files.py:4:1: E302 expected 2 blank lines, found 1
+./update_files.py:7:80: E501 line too long (81 > 79 characters)
+./update_files.py:13:1: E302 expected 2 blank lines, found 1
+./update_files.py:18:1: W293 blank line contains whitespace
+./update_files.py:20:1: W293 blank line contains whitespace
+./update_files.py:23:1: W293 blank line contains whitespace
+./update_files.py:27:1: W293 blank line contains whitespace
+./update_files.py:31:1: E305 expected 2 blank lines after class or function definition, found 1
+./update_files.py:40:29: W292 no newline at end of file
 
 ### pylint Report:
-************* Module update_files_v4
-update_files_v4.py:17:0: C0301: Line too long (103/100) (line-too-long)
-update_files_v4.py:18:0: C0301: Line too long (101/100) (line-too-long)
-update_files_v4.py:26:0: C0301: Line too long (116/100) (line-too-long)
-update_files_v4.py:39:0: C0301: Line too long (108/100) (line-too-long)
-update_files_v4.py:87:0: C0304: Final newline missing (missing-final-newline)
-update_files_v4.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-update_files_v4.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
-update_files_v4.py:24:4: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-update_files_v4.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
-update_files_v4.py:29:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-update_files_v4.py:57:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-update_files_v4.py:62:0: C0116: Missing function or method docstring (missing-function-docstring)
-update_files_v4.py:64:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-update_files_v4.py:80:0: C0116: Missing function or method docstring (missing-function-docstring)
-update_files_v4.py:81:4: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-update_files_v4.py:1:0: W0611: Unused import os (unused-import)
+************* Module update_files
+update_files.py:18:0: C0303: Trailing whitespace (trailing-whitespace)
+update_files.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
+update_files.py:23:0: C0303: Trailing whitespace (trailing-whitespace)
+update_files.py:27:0: C0303: Trailing whitespace (trailing-whitespace)
+update_files.py:40:0: C0304: Final newline missing (missing-final-newline)
+update_files.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+update_files.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:13:17: W0621: Redefining name 'file_paths' from outer scope (line 32) (redefined-outer-name)
+update_files.py:16:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+update_files.py:21:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+update_files.py:28:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+update_files.py:2:0: W0611: Unused import os (unused-import)
 
 -----------------------------------
-Your code has been rated at 6.80/10
+Your code has been rated at 4.35/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:24.397353
+Run started:2024-06-13 00:26:03.399077
 
 Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ././update_files_v4.py:2:0
-1	import os
-2	import subprocess
-3	
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././update_files_v4.py:24:4
-23	def install_packages():
-24	    subprocess.run(["pip", "install", "requests", "selenium"])
-25	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././update_files_v4.py:24:4
-23	def install_packages():
-24	    subprocess.run(["pip", "install", "requests", "selenium"])
-25	
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././update_files_v4.py:81:4
-80	def run_improve_project():
-81	    subprocess.run(["python3", "improve_project.py"])
-82	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././update_files_v4.py:81:4
-80	def run_improve_project():
-81	    subprocess.run(["python3", "improve_project.py"])
-82	
-
---------------------------------------------------
+	No issues identified.
 
 Code scanned:
-	Total lines of code: 67
+	Total lines of code: 30
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 5
+		Low: 0
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 5
+		High: 0
 Files skipped (0):
 
 
 ## ./evaluate_repo.py
 ### flake8 Report:
-./evaluate_repo.py:3:1: F401 're' imported but unused
-./evaluate_repo.py:4:1: F811 redefinition of unused 'subprocess' from line 2
-./evaluate_repo.py:5:1: F811 redefinition of unused 'os' from line 1
-./evaluate_repo.py:7:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:8:80: E501 line too long (80 > 79 characters)
-./evaluate_repo.py:11:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:19:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:31:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:33:67: W291 trailing whitespace
-./evaluate_repo.py:34:80: E501 line too long (88 > 79 characters)
-./evaluate_repo.py:34:89: W291 trailing whitespace
-./evaluate_repo.py:42:1: W293 blank line contains whitespace
-./evaluate_repo.py:49:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:51:1: E302 expected 2 blank lines, found 0
-./evaluate_repo.py:52:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:55:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:56:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:59:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:60:80: E501 line too long (87 > 79 characters)
-./evaluate_repo.py:63:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:71:80: E501 line too long (83 > 79 characters)
-./evaluate_repo.py:74:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:83:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:84:80: E501 line too long (120 > 79 characters)
-./evaluate_repo.py:96:80: E501 line too long (91 > 79 characters)
-./evaluate_repo.py:98:80: E501 line too long (109 > 79 characters)
-./evaluate_repo.py:99:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:100:80: E501 line too long (109 > 79 characters)
-./evaluate_repo.py:101:80: E501 line too long (112 > 79 characters)
-./evaluate_repo.py:102:80: E501 line too long (95 > 79 characters)
-./evaluate_repo.py:105:80: E501 line too long (84 > 79 characters)
-./evaluate_repo.py:115:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:116:11: W292 no newline at end of file
+./evaluate_repo.py:4:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:7:80: E501 line too long (96 > 79 characters)
+./evaluate_repo.py:12:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:21:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:34:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:37:67: W291 trailing whitespace
+./evaluate_repo.py:38:80: E501 line too long (88 > 79 characters)
+./evaluate_repo.py:38:89: W291 trailing whitespace
+./evaluate_repo.py:46:1: W293 blank line contains whitespace
+./evaluate_repo.py:53:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:56:80: E501 line too long (97 > 79 characters)
+./evaluate_repo.py:61:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:64:80: E501 line too long (97 > 79 characters)
+./evaluate_repo.py:69:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:72:80: E501 line too long (103 > 79 characters)
+./evaluate_repo.py:77:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:86:80: E501 line too long (83 > 79 characters)
+./evaluate_repo.py:89:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:99:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:101:80: E501 line too long (120 > 79 characters)
+./evaluate_repo.py:113:80: E501 line too long (91 > 79 characters)
+./evaluate_repo.py:115:80: E501 line too long (109 > 79 characters)
+./evaluate_repo.py:116:80: E501 line too long (81 > 79 characters)
+./evaluate_repo.py:117:80: E501 line too long (109 > 79 characters)
+./evaluate_repo.py:118:80: E501 line too long (112 > 79 characters)
+./evaluate_repo.py:119:80: E501 line too long (95 > 79 characters)
+./evaluate_repo.py:122:80: E501 line too long (84 > 79 characters)
+./evaluate_repo.py:132:1: E305 expected 2 blank lines after class or function definition, found 1
+./evaluate_repo.py:133:11: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module evaluate_repo
-evaluate_repo.py:42:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:84:0: C0301: Line too long (120/100) (line-too-long)
-evaluate_repo.py:116:0: C0304: Final newline missing (missing-final-newline)
+evaluate_repo.py:46:0: C0303: Trailing whitespace (trailing-whitespace)
+evaluate_repo.py:72:0: C0301: Line too long (103/100) (line-too-long)
+evaluate_repo.py:101:0: C0301: Line too long (120/100) (line-too-long)
+evaluate_repo.py:133:0: C0304: Final newline missing (missing-final-newline)
 evaluate_repo.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-evaluate_repo.py:4:0: W0404: Reimport 'subprocess' (imported line 2) (reimported)
-evaluate_repo.py:5:0: W0404: Reimport 'os' (imported line 1) (reimported)
-evaluate_repo.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:8:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:19:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:31:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:45:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:51:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:52:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:55:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:56:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:59:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:60:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-evaluate_repo.py:63:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:74:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:83:0: C0116: Missing function or method docstring (missing-function-docstring)
-evaluate_repo.py:88:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:112:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-evaluate_repo.py:4:0: C0412: Imports from package subprocess are not grouped (ungrouped-imports)
-evaluate_repo.py:5:0: C0412: Imports from package os are not grouped (ungrouped-imports)
-evaluate_repo.py:3:0: W0611: Unused import re (unused-import)
 
 -----------------------------------
-Your code has been rated at 6.39/10
+Your code has been rated at 9.37/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:25.779643
+Run started:2024-06-13 00:26:04.830200
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -258,121 +147,111 @@ Test results:
    Location: ././evaluate_repo.py:2:0
 1	import os
 2	import subprocess
-3	import re
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ././evaluate_repo.py:4:0
-3	import re
-4	import subprocess
-5	import os
+3	
 
 --------------------------------------------------
 >> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
    Severity: High   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b602_subprocess_popen_with_shell_equals_true.html
-   Location: ././evaluate_repo.py:8:13
-7	def run_command(command):
-8	    result = subprocess.run(command, capture_output=True, text=True, shell=True)
-9	    return result.stdout if result.stdout else result.stderr
+   Location: ././evaluate_repo.py:7:17
+6	    try:
+7	        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
+8	        return result.stdout if result.stdout else result.stderr
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:52:13
-51	def run_flake8(filepath):
-52	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-53	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:56:17
+55	    try:
+56	        result = subprocess.run(['flake8', filepath], capture_output=True, text=True, check=True)
+57	        return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:52:13
-51	def run_flake8(filepath):
-52	    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
-53	    return result.stdout if result.stdout else "No issues found by flake8."
+   Location: ././evaluate_repo.py:56:17
+55	    try:
+56	        result = subprocess.run(['flake8', filepath], capture_output=True, text=True, check=True)
+57	        return result.stdout if result.stdout else "No issues found by flake8."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:56:13
-55	def run_pylint(filepath):
-56	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-57	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:64:17
+63	    try:
+64	        result = subprocess.run(['pylint', filepath], capture_output=True, text=True, check=True)
+65	        return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:56:13
-55	def run_pylint(filepath):
-56	    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
-57	    return result.stdout if result.stdout else "No issues found by pylint."
+   Location: ././evaluate_repo.py:64:17
+63	    try:
+64	        result = subprocess.run(['pylint', filepath], capture_output=True, text=True, check=True)
+65	        return result.stdout if result.stdout else "No issues found by pylint."
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b607_start_process_with_partial_path.html
-   Location: ././evaluate_repo.py:60:13
-59	def run_bandit(filepath):
-60	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-61	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:72:17
+71	    try:
+72	        result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True, check=True)
+73	        return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././evaluate_repo.py:60:13
-59	def run_bandit(filepath):
-60	    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
-61	    return result.stdout if result.stdout else "No issues found by bandit."
+   Location: ././evaluate_repo.py:72:17
+71	    try:
+72	        result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True, check=True)
+73	        return result.stdout if result.stdout else "No issues found by bandit."
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 92
+	Total lines of code: 109
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 8
+		Low: 7
 		Medium: 0
 		High: 1
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 9
+		High: 8
 Files skipped (0):
 
 
 ## ./backend/site_scraper.py
 ### flake8 Report:
-./backend/site_scraper.py:8:1: E303 too many blank lines (3)
+./backend/site_scraper.py:6:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:26.967532
+Run started:2024-06-13 00:26:06.398249
 
 Test results:
 	No issues identified.
@@ -410,7 +289,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:27.636028
+Run started:2024-06-13 00:26:07.158560
 
 Test results:
 	No issues identified.
@@ -448,7 +327,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:28.291848
+Run started:2024-06-13 00:26:07.894692
 
 Test results:
 	No issues identified.
@@ -474,16 +353,16 @@ Files skipped (0):
 
 ## ./backend/single_family_evaluation.py
 ### flake8 Report:
-./backend/single_family_evaluation.py:5:1: E303 too many blank lines (3)
+./backend/single_family_evaluation.py:2:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:28.945902
+Run started:2024-06-13 00:26:08.625536
 
 Test results:
 	No issues identified.
@@ -516,7 +395,7 @@ Files skipped (0):
 backend/scrape_crexi.py:12:4: E0001: Parsing failed: 'unexpected indent (scrape_crexi, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:52:29.597928
+Run started:2024-06-13 00:26:09.341189
 
 Test results:
 	No issues identified.
@@ -543,16 +422,16 @@ Files skipped (1):
 
 ## ./backend/multi_family_evaluation.py
 ### flake8 Report:
-./backend/multi_family_evaluation.py:5:1: E303 too many blank lines (3)
+./backend/multi_family_evaluation.py:2:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:30.249631
+Run started:2024-06-13 00:26:10.109359
 
 Test results:
 	No issues identified.
@@ -585,7 +464,7 @@ Files skipped (0):
 backend/scrape_zillow.py:18:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 18)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:52:30.909043
+Run started:2024-06-13 00:26:10.814906
 
 Test results:
 	No issues identified.
@@ -665,7 +544,7 @@ Your code has been rated at 2.44/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:35.507632
+Run started:2024-06-13 00:26:15.842028
 
 Test results:
 	No issues identified.
@@ -698,7 +577,7 @@ Files skipped (0):
 backend/app.py:25:4: E0001: Parsing failed: 'unexpected indent (app, line 25)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:52:36.166487
+Run started:2024-06-13 00:26:16.573672
 
 Test results:
 	No issues identified.
@@ -725,16 +604,16 @@ Files skipped (1):
 
 ## ./backend/scrape_zillow_with_selenium.py
 ### flake8 Report:
-./backend/scrape_zillow_with_selenium.py:8:1: E303 too many blank lines (3)
+./backend/scrape_zillow_with_selenium.py:6:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:37.281237
+Run started:2024-06-13 00:26:17.844612
 
 Test results:
 	No issues identified.
@@ -767,7 +646,7 @@ Files skipped (0):
 backend/logging_config.py:11:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 11)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-12 23:52:37.934527
+Run started:2024-06-13 00:26:18.555261
 
 Test results:
 	No issues identified.
@@ -794,16 +673,16 @@ Files skipped (1):
 
 ## ./backend/offer_generator.py
 ### flake8 Report:
-./backend/offer_generator.py:5:1: E303 too many blank lines (3)
+./backend/offer_generator.py:2:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:38.586242
+Run started:2024-06-13 00:26:19.294795
 
 Test results:
 	No issues identified.
@@ -829,16 +708,16 @@ Files skipped (0):
 
 ## ./backend/server_connection.py
 ### flake8 Report:
-./backend/server_connection.py:7:1: E303 too many blank lines (3)
+./backend/server_connection.py:4:1: E302 expected 2 blank lines, found 0
 
 ### pylint Report:
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+------------------------------------
+Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:40.162746
+Run started:2024-06-13 00:26:21.174513
 
 Test results:
 	No issues identified.
@@ -876,7 +755,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-12 23:52:40.811433
+Run started:2024-06-13 00:26:21.969843
 
 Test results:
 	No issues identified.
