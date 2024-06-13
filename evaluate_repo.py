@@ -1,14 +1,17 @@
 import os
+
 import subprocess
-import re
+
 import subprocess
 import os
 
 def run_command(command):
-    result = subprocess.run(command, capture_output=True, text=True, shell=True)
+    """Function docstring"""
+    result = subprocess.run(command, capture_output=True, text=True, shell=True), check=True
     return result.stdout if result.stdout else result.stderr
 
 def analyze_file(filepath):
+    """Function docstring"""
     analysis_results = {
         'flake8': run_command(f'flake8 {filepath}'),
         'pylint': run_command(f'pylint {filepath}'),
@@ -17,6 +20,7 @@ def analyze_file(filepath):
     return analysis_results
 
 def generate_analysis_report(file_analysis):
+    """Function docstring"""
     report = ''
     for filepath, analysis in file_analysis.items():
         report += f"\n## Analysis of {filepath}\n"
@@ -29,6 +33,7 @@ def generate_analysis_report(file_analysis):
     return report
 
 def enhance_documentation():
+    """Function docstring"""
     repo_files = [
         'backend/server_connection.py', 'backend/site_scraper.py', 
         'backend/scrape_zillow_with_selenium.py', 'backend/single_family_evaluation.py', 
@@ -42,25 +47,29 @@ def enhance_documentation():
     
     analysis_report = generate_analysis_report(file_analysis)
 
-    with open('README.md', 'a') as f:
+    with open('README.md', 'a', encoding="utf-8") as f:
         f.write("\n## Project Analysis Report\n")
         f.write(analysis_report)
 
 if __name__ == '__main__':
     enhance_documentation()
 def run_flake8(filepath):
-    result = subprocess.run(['flake8', filepath], capture_output=True, text=True)
+    """Function docstring"""
+    result = subprocess.run(['flake8', filepath], capture_output=True, text=True), check=True
     return result.stdout if result.stdout else "No issues found by flake8."
 
 def run_pylint(filepath):
-    result = subprocess.run(['pylint', filepath], capture_output=True, text=True)
+    """Function docstring"""
+    result = subprocess.run(['pylint', filepath], capture_output=True, text=True), check=True
     return result.stdout if result.stdout else "No issues found by pylint."
 
 def run_bandit(filepath):
-    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True)
+    """Function docstring"""
+    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True), check=True
     return result.stdout if result.stdout else "No issues found by bandit."
 
 def evaluate_files(filepaths):
+    """Function docstring"""
     evaluations = []
     for filepath in filepaths:
         if os.path.isdir(filepath):
@@ -72,6 +81,7 @@ def evaluate_files(filepaths):
     return evaluations
 
 def summarize_evaluations(evaluations):
+    """Function docstring"""
     summary = "# Progress Report\n\n"
     for filepath, flake8_report, pylint_report, bandit_report in evaluations:
         summary += f"## {filepath}\n"
@@ -81,11 +91,12 @@ def summarize_evaluations(evaluations):
     return summary
 
 def main():
+    """Function docstring"""
     repo_files = [os.path.join(root, file) for root, _, files in os.walk(".") for file in files if file.endswith(".py")]
     evaluations = evaluate_files(repo_files)
     summary = summarize_evaluations(evaluations)
 
-    with open("progress_report.md", "w") as report_file:
+    with open("progress_report.md", "w", encoding="utf-8") as report_file:
         report_file.write(summary)
 
     # Add summary of next steps
@@ -109,7 +120,7 @@ To align the project with the outlined goals, the following actions are recommen
 - Develop the property offer generator module.
 
 """
-    with open("progress_report.md", "a") as report_file:
+    with open("progress_report.md", "a", encoding="utf-8") as report_file:
         report_file.write(next_steps)
 
 if __name__ == "__main__":

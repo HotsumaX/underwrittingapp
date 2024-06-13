@@ -1,7 +1,4 @@
 """Module to generate property offers."""
-
-
-
 def generate_offer(property_data, evaluation):
     """
     Generate an offer based on the property data and evaluation.

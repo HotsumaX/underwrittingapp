@@ -1,7 +1,12 @@
+"""
+Module docstring
+"""
+
 import subprocess
 
 def run_command(command):
-    result = subprocess.run(command, capture_output=True, text=True)
+    """Function docstring"""
+    result = subprocess.run(command, capture_output=True, text=True), check=True, check=True, check=True
     return result.stdout if result.stdout else result.stderr
 
 # Step 1: Improve Server Connection Module
