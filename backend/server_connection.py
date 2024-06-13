@@ -1,7 +1,9 @@
 """Module to handle server connections."""
 
 
+
 import requests
+
 
 def check_server_connection(url):
     """
