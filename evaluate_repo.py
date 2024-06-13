@@ -3,8 +3,11 @@ import subprocess
 
 def run_command(command):
     """Function docstring"""
-    result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
-    return result.stdout if result.stdout else result.stderr
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
+        return result.stdout if result.stdout else result.stderr
+    except subprocess.CalledProcessError as e:
+        return e.output if e.output else str(e)
 
 def analyze_file(filepath):
     """Function docstring"""
@@ -47,23 +50,29 @@ def enhance_documentation():
         f.write("\n## Project Analysis Report\n")
         f.write(analysis_report)
 
-if __name__ == '__main__':
-    enhance_documentation()
-
 def run_flake8(filepath):
     """Function docstring"""
-    result = subprocess.run(['flake8', filepath], capture_output=True, text=True, check=True)
-    return result.stdout if result.stdout else "No issues found by flake8."
+    try:
+        result = subprocess.run(['flake8', filepath], capture_output=True, text=True, check=True)
+        return result.stdout if result.stdout else "No issues found by flake8."
+    except subprocess.CalledProcessError as e:
+        return e.output if e.output else str(e)
 
 def run_pylint(filepath):
     """Function docstring"""
-    result = subprocess.run(['pylint', filepath], capture_output=True, text=True, check=True)
-    return result.stdout if result.stdout else "No issues found by pylint."
+    try:
+        result = subprocess.run(['pylint', filepath], capture_output=True, text=True, check=True)
+        return result.stdout if result.stdout else "No issues found by pylint."
+    except subprocess.CalledProcessError as e:
+        return e.output if e.output else str(e)
 
 def run_bandit(filepath):
     """Function docstring"""
-    result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True, check=True)
-    return result.stdout if result.stdout else "No issues found by bandit."
+    try:
+        result = subprocess.run(['bandit', '-r', filepath], capture_output=True, text=True, check=True)
+        return result.stdout if result.stdout else "No issues found by bandit."
+    except subprocess.CalledProcessError as e:
+        return e.output if e.output else str(e)
 
 def evaluate_files(filepaths):
     """Function docstring"""
