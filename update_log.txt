@@ -25,3 +25,9 @@ Updated backend/scrape_zillow_with_selenium.py
 Updated backend/single_family_evaluation.py
 Updated backend/multi_family_evaluation.py
 Updated backend/offer_generator.py
+Updated backend/server_connection.py
+Updated backend/site_scraper.py
+Updated backend/scrape_zillow_with_selenium.py
+Updated backend/single_family_evaluation.py
+Updated backend/multi_family_evaluation.py
+Updated backend/offer_generator.py
