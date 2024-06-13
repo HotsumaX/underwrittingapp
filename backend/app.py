@@ -1,88 +1,21 @@
-"""
-Module documentation
-"""
-
-"""
-Module documentation
-"""
-
-
-import logging
 from flask import Flask, request, jsonify
-from flask_cors import CORS
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-
-import time
+import logging
 
 app = Flask(__name__)
-CORS(app)
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-    """
-    Function documentation
-    """
-    """
-    Function documentation
-    """
-
-def setup_driver():
-    options = Options()
-    options.headless = True
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    return driver
-
-    """
-    Function documentation
-    """
-    """
-    Function documentation
-    """
-
-def fetch_zillow_page(url):
-    driver = setup_driver()
-    driver.get(url)
-    time.sleep(5)  # Allow some time for the page to load
-
-    try:
-        # Here you might need to wait or interact with CAPTCHA if necessary
-        html_content = driver.page_source
-        driver.quit()
-        return html_content
-    except Exception as e:
-        driver.quit()
-        logger.error(f"Error loading key elements: {e}")
-        return f"Error loading key elements after CAPTCHA: {e}"
-
-@app.route('/api/sample_zillow', methods=['GET'])
-    """
-    Function documentation
-    """
-    """
-    Function documentation
-    """
-
-def sample_zillow():
-    url = request.args.get('url')
-    html_content = fetch_zillow_page(url)
-    return jsonify({"html_content": html_content})
 
 @app.route('/api/health', methods=['GET'])
-    """
-    Function documentation
-    """
-    """
-    Function documentation
-    """
-
 def health_check():
-    return jsonify({"status": "healthy"})
+    return jsonify({"status": "healthy"}), 200
+
+@app.route('/api/example', methods=['GET'])
+def example_route():
+    return jsonify({"message": "This is an example route"}), 200
+
+@app.route('/api/reset_connection', methods=['POST'])
+def reset_connection():
+    # Implement your reset connection logic here
+    return jsonify({"status": "connection reset"}), 200
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
     app.run(debug=True)

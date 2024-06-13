@@ -1,9 +1,13 @@
+import os
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+import logging
 """Module to handle server connections."""
 
 
 
-import requests
 
+import requests
 
 def check_server_connection(url):
     """
