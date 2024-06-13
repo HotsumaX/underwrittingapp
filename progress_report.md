@@ -1,103 +1,246 @@
-# Progress Report
 
-## List of all files in the repository
+## Analysis of backend/server_connection.py
 
-- gitlog.txt
-- README.md
-- package.json
-- .gitignore
-- gpt_code_review.py
-- package-lock.json
-- evaluate_repo.py
-- progress_report.md
-- appoutline.txt
-- vercel.json
-- frontend/package.json
-- frontend/package-lock.json
-- frontend/frontend.zip
-- frontend/public/index.html
-- frontend/src/App.js
-- frontend/src/App.css
-- frontend/src/store.js
-- frontend/src/.env.local
-- frontend/src/index.css
-- frontend/src/vercel.json
-- frontend/src/index.js
-- frontend/src/components/DataDisplay.js
-- frontend/src/components/HealthCheck.js
-- frontend/src/components/CrexiScraper.js
-- frontend/src/components/Logs.js
-- frontend/src/components/ServerStatus.js
-- frontend/src/components/ZillowScraper.js
-- backend/site_scraper.py
-- backend/log_section.py
-- backend/email_contact.py
-- backend/single_family_evaluation.py
-- backend/app.log
-- backend/scrape_crexi.py
-- backend/multi_family_evaluation.py
-- backend/scrape_zillow.py
-- backend/zillow_listing.html
-- backend/scrape_zillow_with_langchain.py
-- backend/app.py
-- backend/scrape_zillow_with_selenium.py
-- backend/offer_generator.py
-- backend/server_connection.py
-- backend/vercel.json
-- backend/requirements.txt
-- backend/backend.zip
-- backend/property_management.py
-- backend/index/MAIN_510fvptejrpy1gb6.seg
-- backend/index/MAIN_WRITELOCK
-- backend/index/_MAIN_1.toc
-- backend/__pycache__/scrape_zillow.cpython-311.pyc
-- backend/__pycache__/gpt_code_review.cpython-311.pyc
-- backend/__pycache__/scrape_zillow_with_langchain.cpython-311.pyc
-- backend/__pycache__/scrape_crexi.cpython-311.pyc
-- backend/__pycache__/scrape_zillow_with_selenium.cpython-311.pyc
+### Flake8 Results:
+backend/server_connection.py:6:1: E302 expected 2 blank lines, found 1
 
-## Server Connection
 
-- backend/server_connection.py exists.
-- Size: 0 bytes
+### Pylint Results:
 
-## Site Scraper
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
-- backend/site_scraper.py exists.
-- Size: 0 bytes
 
-## Single Family Evaluation
 
-- backend/single_family_evaluation.py exists.
-- Size: 0 bytes
+### Bandit Results:
+Run started:2024-06-13 11:51:32.297569
 
-## Multi Family Evaluation
+Test results:
+	No issues identified.
 
-- backend/multi_family_evaluation.py exists.
-- Size: 0 bytes
+Code scanned:
+	Total lines of code: 17
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
-## Email Contact
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
 
-- backend/email_contact.py exists.
-- Size: 0 bytes
 
-## Property Management
+## Analysis of backend/site_scraper.py
 
-- backend/property_management.py exists.
-- Size: 0 bytes
+### Flake8 Results:
+backend/site_scraper.py:7:1: E302 expected 2 blank lines, found 1
 
-## Log Section
 
-- backend/log_section.py exists.
-- Size: 0 bytes
+### Pylint Results:
 
-## Offer Generator
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
-- backend/offer_generator.py exists.
-- Size: 0 bytes
 
-## Frontend
 
-- frontend/src exists.
-- Size: 4096 bytes
+### Bandit Results:
+Run started:2024-06-13 11:51:33.161821
 
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 18
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
+## Analysis of backend/scrape_zillow_with_selenium.py
+
+### Flake8 Results:
+backend/scrape_zillow_with_selenium.py:7:1: E302 expected 2 blank lines, found 1
+
+
+### Pylint Results:
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+
+### Bandit Results:
+Run started:2024-06-13 11:51:33.932579
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 22
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
+## Analysis of backend/single_family_evaluation.py
+
+### Flake8 Results:
+backend/single_family_evaluation.py:3:1: E302 expected 2 blank lines, found 1
+
+
+### Pylint Results:
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+
+### Bandit Results:
+Run started:2024-06-13 11:51:34.338900
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 11
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
+## Analysis of backend/multi_family_evaluation.py
+
+### Flake8 Results:
+backend/multi_family_evaluation.py:3:1: E302 expected 2 blank lines, found 1
+
+
+### Pylint Results:
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+
+### Bandit Results:
+Run started:2024-06-13 11:51:34.785008
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 11
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
+## Analysis of backend/offer_generator.py
+
+### Flake8 Results:
+backend/offer_generator.py:3:1: E302 expected 2 blank lines, found 1
+
+
+### Pylint Results:
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+
+### Bandit Results:
+Run started:2024-06-13 11:51:35.185061
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 12
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+
+## Summary
+
+### Current Status
+The following sections outline the current state of the repository based on the evaluation:
+
+ - **Server Connection Improvement**: Improve the reliability and efficiency of the server connection module.
+ - **Site Scraper Enhancement**: Ensure robust scraping logic and error handling.
+ - **Evaluation of Single Family Homes**: Implement a comprehensive evaluation logic for single-family homes.
+ - **Multi-Family Homes Evaluation**: Adapt the single-family evaluation logic to handle multi-family specifics.
+ - **Property Offer Generator**: Create a module that generates offers based on evaluated data.
+
+### Next Steps
+To align the project with the outlined goals, the following actions are recommended:
+- Improve server connection reliability and efficiency.
+- Enhance site scraper with better logging and error handling.
+- Implement evaluation logic for single-family and multi-family homes.
+- Develop the property offer generator module.
