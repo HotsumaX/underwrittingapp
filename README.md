@@ -9,7 +9,7 @@
 improve_project.py:11:5: E0001: Parsing failed: 'invalid syntax. Maybe you meant '==' or ':=' instead of '='? (improve_project, line 11)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 11:52:59.343228
+Run started:2024-06-13 12:16:29.771362
 
 Test results:
 	No issues identified.
@@ -37,42 +37,30 @@ Files skipped (1):
 ## ./update_files.py
 ### flake8 Report:
 ./update_files.py:5:1: E302 expected 2 blank lines, found 1
-./update_files.py:8:80: E501 line too long (96 > 79 characters)
-./update_files.py:13:1: E302 expected 2 blank lines, found 1
-./update_files.py:21:1: E302 expected 2 blank lines, found 1
-./update_files.py:46:1: E302 expected 2 blank lines, found 1
-./update_files.py:55:1: E302 expected 2 blank lines, found 1
-./update_files.py:68:1: E302 expected 2 blank lines, found 1
-./update_files.py:72:80: E501 line too long (88 > 79 characters)
-./update_files.py:80:1: W293 blank line contains whitespace
-./update_files.py:87:1: E302 expected 2 blank lines, found 1
-./update_files.py:91:80: E501 line too long (88 > 79 characters)
-./update_files.py:96:1: W293 blank line contains whitespace
-./update_files.py:101:1: W293 blank line contains whitespace
-./update_files.py:112:80: E501 line too long (91 > 79 characters)
-./update_files.py:114:80: E501 line too long (109 > 79 characters)
-./update_files.py:115:80: E501 line too long (81 > 79 characters)
-./update_files.py:116:80: E501 line too long (109 > 79 characters)
-./update_files.py:117:80: E501 line too long (112 > 79 characters)
-./update_files.py:118:80: E501 line too long (95 > 79 characters)
-./update_files.py:121:80: E501 line too long (84 > 79 characters)
-./update_files.py:130:1: E305 expected 2 blank lines after class or function definition, found 1
-./update_files.py:131:11: W292 no newline at end of file
+./update_files.py:7:80: E501 line too long (80 > 79 characters)
+./update_files.py:10:1: E302 expected 2 blank lines, found 1
+./update_files.py:16:1: E302 expected 2 blank lines, found 1
+./update_files.py:31:1: W293 blank line contains whitespace
+./update_files.py:34:1: E302 expected 2 blank lines, found 1
+./update_files.py:43:1: E302 expected 2 blank lines, found 1
+./update_files.py:49:1: E302 expected 2 blank lines, found 1
+./update_files.py:71:1: E305 expected 2 blank lines after class or function definition, found 1
+./update_files.py:72:11: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module update_files
-update_files.py:80:0: C0303: Trailing whitespace (trailing-whitespace)
-update_files.py:96:0: C0303: Trailing whitespace (trailing-whitespace)
-update_files.py:101:0: C0303: Trailing whitespace (trailing-whitespace)
-update_files.py:131:0: C0304: Final newline missing (missing-final-newline)
+update_files.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
+update_files.py:72:0: C0304: Final newline missing (missing-final-newline)
 update_files.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+update_files.py:7:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+update_files.py:49:0: C0116: Missing function or method docstring (missing-function-docstring)
 
 -----------------------------------
-Your code has been rated at 9.24/10
+Your code has been rated at 8.78/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:01.000111
+Run started:2024-06-13 12:16:31.228701
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -80,7 +68,7 @@ Test results:
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
    Location: ././update_files.py:3:0
-2	import re
+2	import os
 3	import subprocess
 4	
 
@@ -89,15 +77,15 @@ Test results:
    Severity: High   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b602_subprocess_popen_with_shell_equals_true.html
-   Location: ././update_files.py:8:17
-7	    try:
-8	        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
-9	        return result.stdout if result.stdout else result.stderr
+   Location: ././update_files.py:7:13
+6	    """Run a shell command and return its output."""
+7	    result = subprocess.run(command, capture_output=True, text=True, shell=True)
+8	    return result.stdout if result.returncode == 0 else result.stderr
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 98
+	Total lines of code: 58
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -150,7 +138,7 @@ Your code has been rated at 9.37/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:02.143932
+Run started:2024-06-13 12:16:32.439171
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -264,7 +252,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:03.324324
+Run started:2024-06-13 12:16:33.711536
 
 Test results:
 	No issues identified.
@@ -302,7 +290,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:03.981910
+Run started:2024-06-13 12:16:34.433379
 
 Test results:
 	No issues identified.
@@ -340,7 +328,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:04.638876
+Run started:2024-06-13 12:16:35.098104
 
 Test results:
 	No issues identified.
@@ -375,7 +363,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:05.304581
+Run started:2024-06-13 12:16:35.763389
 
 Test results:
 	No issues identified.
@@ -408,7 +396,7 @@ Files skipped (0):
 backend/scrape_crexi.py:13:4: E0001: Parsing failed: 'unexpected indent (scrape_crexi, line 13)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 11:53:05.967788
+Run started:2024-06-13 12:16:36.481303
 
 Test results:
 	No issues identified.
@@ -444,7 +432,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:06.637729
+Run started:2024-06-13 12:16:37.190159
 
 Test results:
 	No issues identified.
@@ -477,7 +465,7 @@ Files skipped (0):
 backend/scrape_zillow.py:21:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 21)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 11:53:07.298250
+Run started:2024-06-13 12:16:37.892651
 
 Test results:
 	No issues identified.
@@ -557,7 +545,7 @@ Your code has been rated at 2.44/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:12.264680
+Run started:2024-06-13 12:16:43.328443
 
 Test results:
 	No issues identified.
@@ -590,7 +578,7 @@ Files skipped (0):
 backend/app.py:27:4: E0001: Parsing failed: 'unexpected indent (app, line 27)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 11:53:12.940618
+Run started:2024-06-13 12:16:44.003526
 
 Test results:
 	No issues identified.
@@ -626,7 +614,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:14.125029
+Run started:2024-06-13 12:16:45.180062
 
 Test results:
 	No issues identified.
@@ -659,7 +647,7 @@ Files skipped (0):
 backend/logging_config.py:12:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 11:53:14.827314
+Run started:2024-06-13 12:16:45.859324
 
 Test results:
 	No issues identified.
@@ -695,7 +683,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:15.509320
+Run started:2024-06-13 12:16:46.538075
 
 Test results:
 	No issues identified.
@@ -721,7 +709,7 @@ Files skipped (0):
 
 ## ./backend/server_connection.py
 ### flake8 Report:
-./backend/server_connection.py:6:1: E302 expected 2 blank lines, found 1
+./backend/server_connection.py:5:1: E303 too many blank lines (3)
 
 ### pylint Report:
 
@@ -730,7 +718,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:17.331942
+Run started:2024-06-13 12:16:48.267657
 
 Test results:
 	No issues identified.
@@ -768,7 +756,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 11:53:18.011530
+Run started:2024-06-13 12:16:48.954915
 
 Test results:
 	No issues identified.
