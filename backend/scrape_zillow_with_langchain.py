@@ -6,11 +6,13 @@ Module documentation
 Module documentation
 """
 
+
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+
 import time
 from langchain.prompts import Prompt
 from llama_index import Document, GPTVectorStoreIndex  # Correct import paths
@@ -64,6 +66,7 @@ class WebScrapingChain:
     """
     Function documentation
     """
+
 def scrape_zillow_listing(url):
     chain = WebScrapingChain()
     data = chain.run(url)

@@ -1,5 +1,7 @@
 import os
+
 import subprocess
+
 
 def run_command(command):
     """Function docstring"""
@@ -9,6 +11,7 @@ def run_command(command):
     except subprocess.CalledProcessError as e:
         return e.output if e.output else str(e)
 
+
 def analyze_file(filepath):
     """Function docstring"""
     analysis_results = {
@@ -17,6 +20,7 @@ def analyze_file(filepath):
         'bandit': run_command(f'bandit -r {filepath}')
     }
     return analysis_results
+
 
 def generate_analysis_report(file_analysis):
     """Function docstring"""
@@ -30,6 +34,7 @@ def generate_analysis_report(file_analysis):
         report += "\n### Bandit Results:\n"
         report += f"{analysis['bandit']}\n"
     return report
+
 
 def enhance_documentation():
     """Function docstring"""
@@ -50,6 +55,7 @@ def enhance_documentation():
         f.write("\n## Project Analysis Report\n")
         f.write(analysis_report)
 
+
 def run_flake8(filepath):
     """Function docstring"""
     try:
@@ -57,6 +63,7 @@ def run_flake8(filepath):
         return result.stdout if result.stdout else "No issues found by flake8."
     except subprocess.CalledProcessError as e:
         return e.output if e.output else str(e)
+
 
 def run_pylint(filepath):
     """Function docstring"""
@@ -66,6 +73,7 @@ def run_pylint(filepath):
     except subprocess.CalledProcessError as e:
         return e.output if e.output else str(e)
 
+
 def run_bandit(filepath):
     """Function docstring"""
     try:
@@ -73,6 +81,7 @@ def run_bandit(filepath):
         return result.stdout if result.stdout else "No issues found by bandit."
     except subprocess.CalledProcessError as e:
         return e.output if e.output else str(e)
+
 
 def evaluate_files(filepaths):
     """Function docstring"""
@@ -86,6 +95,7 @@ def evaluate_files(filepaths):
         evaluations.append((filepath, flake8_report, pylint_report, bandit_report))
     return evaluations
 
+
 def summarize_evaluations(evaluations):
     """Function docstring"""
     summary = "# Progress Report\n\n"
@@ -95,6 +105,7 @@ def summarize_evaluations(evaluations):
         summary += f"### pylint Report:\n{pylint_report}\n"
         summary += f"### bandit Report:\n{bandit_report}\n\n"
     return summary
+
 
 def main():
     """Function docstring"""

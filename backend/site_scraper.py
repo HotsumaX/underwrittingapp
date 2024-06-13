@@ -3,6 +3,7 @@
 from selenium import webdriver
 
 from selenium.webdriver.common.by import By
+
 def scrape_site(url):
     """
     Scrape the site for its title.

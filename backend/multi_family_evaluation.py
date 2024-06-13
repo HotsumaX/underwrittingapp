@@ -1,4 +1,5 @@
 """Module for multi-family property evaluation."""
+
 def evaluate_multi_family(property_data):
     """
     Evaluate the value of a multi-family property.

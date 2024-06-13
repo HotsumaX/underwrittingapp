@@ -6,6 +6,7 @@ Module documentation
 Module documentation
 """
 
+
 import logging
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -14,6 +15,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+
 import time
 
 app = Flask(__name__)
@@ -28,6 +30,7 @@ logger = logging.getLogger(__name__)
     """
     Function documentation
     """
+
 def setup_driver():
     options = Options()
     options.headless = True
@@ -41,6 +44,7 @@ def setup_driver():
     """
     Function documentation
     """
+
 def fetch_zillow_page(url):
     driver = setup_driver()
     driver.get(url)
@@ -63,6 +67,7 @@ def fetch_zillow_page(url):
     """
     Function documentation
     """
+
 def sample_zillow():
     url = request.args.get('url')
     html_content = fetch_zillow_page(url)
@@ -75,6 +80,7 @@ def sample_zillow():
     """
     Function documentation
     """
+
 def health_check():
     return jsonify({"status": "healthy"})
 

@@ -1,4 +1,5 @@
 """Module for single-family property evaluation."""
+
 def evaluate_single_family(property_data):
     """
     Evaluate the value of a single-family property.

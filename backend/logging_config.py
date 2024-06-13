@@ -6,6 +6,7 @@ Module documentation
 Module documentation
 """
 
+
 import logging
 
     """
@@ -14,6 +15,7 @@ import logging
     """
     Function documentation
     """
+
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,

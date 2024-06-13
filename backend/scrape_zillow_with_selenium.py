@@ -3,6 +3,7 @@
 from selenium import webdriver
 
 from selenium.webdriver.common.by import By
+
 def scrape_zillow(url):
     """
     Scrape Zillow for price and address.

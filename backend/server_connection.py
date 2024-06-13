@@ -1,6 +1,8 @@
 """Module to handle server connections."""
 
+
 import requests
+
 def check_server_connection(url):
     """
     Check the server connection by making a GET request.
