@@ -9,7 +9,7 @@
 improve_project.py:11:5: E0001: Parsing failed: 'invalid syntax. Maybe you meant '==' or ':=' instead of '='? (improve_project, line 11)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 12:16:29.771362
+Run started:2024-06-13 13:06:08.212873
 
 Test results:
 	No issues identified.
@@ -36,31 +36,35 @@ Files skipped (1):
 
 ## ./update_files.py
 ### flake8 Report:
-./update_files.py:5:1: E302 expected 2 blank lines, found 1
-./update_files.py:7:80: E501 line too long (80 > 79 characters)
+./update_files.py:1:1: F401 'os' imported but unused
+./update_files.py:6:1: E302 expected 2 blank lines, found 1
+./update_files.py:7:80: E501 line too long (92 > 79 characters)
 ./update_files.py:10:1: E302 expected 2 blank lines, found 1
-./update_files.py:16:1: E302 expected 2 blank lines, found 1
-./update_files.py:31:1: W293 blank line contains whitespace
-./update_files.py:34:1: E302 expected 2 blank lines, found 1
-./update_files.py:43:1: E302 expected 2 blank lines, found 1
-./update_files.py:49:1: E302 expected 2 blank lines, found 1
-./update_files.py:71:1: E305 expected 2 blank lines after class or function definition, found 1
-./update_files.py:72:11: W292 no newline at end of file
+./update_files.py:16:80: E501 line too long (110 > 79 characters)
+./update_files.py:19:1: E302 expected 2 blank lines, found 1
+./update_files.py:27:1: E302 expected 2 blank lines, found 1
+./update_files.py:47:1: E302 expected 2 blank lines, found 1
+./update_files.py:63:1: E305 expected 2 blank lines after class or function definition, found 1
+./update_files.py:64:11: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module update_files
-update_files.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
-update_files.py:72:0: C0304: Final newline missing (missing-final-newline)
+update_files.py:16:0: C0301: Line too long (110/100) (line-too-long)
+update_files.py:64:0: C0304: Final newline missing (missing-final-newline)
 update_files.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-update_files.py:7:13: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
-update_files.py:49:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:19:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:47:0: C0116: Missing function or method docstring (missing-function-docstring)
+update_files.py:1:0: W0611: Unused import os (unused-import)
 
 -----------------------------------
-Your code has been rated at 8.78/10
+Your code has been rated at 7.57/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:31.228701
+Run started:2024-06-13 13:06:09.964140
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -68,9 +72,9 @@ Test results:
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
    Location: ././update_files.py:3:0
-2	import os
+2	import re
 3	import subprocess
-4	
+4	import datetime
 
 --------------------------------------------------
 >> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
@@ -78,14 +82,14 @@ Test results:
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b602_subprocess_popen_with_shell_equals_true.html
    Location: ././update_files.py:7:13
-6	    """Run a shell command and return its output."""
-7	    result = subprocess.run(command, capture_output=True, text=True, shell=True)
-8	    return result.stdout if result.returncode == 0 else result.stderr
+6	def run_command(command):
+7	    result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
+8	    return result.stdout if result.stdout else result.stderr
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 58
+	Total lines of code: 48
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -138,7 +142,7 @@ Your code has been rated at 9.37/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:32.439171
+Run started:2024-06-13 13:06:11.132327
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -252,7 +256,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:33.711536
+Run started:2024-06-13 13:06:12.270106
 
 Test results:
 	No issues identified.
@@ -290,7 +294,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:34.433379
+Run started:2024-06-13 13:06:12.935608
 
 Test results:
 	No issues identified.
@@ -328,7 +332,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:35.098104
+Run started:2024-06-13 13:06:13.587242
 
 Test results:
 	No issues identified.
@@ -363,7 +367,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:35.763389
+Run started:2024-06-13 13:06:14.239572
 
 Test results:
 	No issues identified.
@@ -396,7 +400,7 @@ Files skipped (0):
 backend/scrape_crexi.py:13:4: E0001: Parsing failed: 'unexpected indent (scrape_crexi, line 13)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 12:16:36.481303
+Run started:2024-06-13 13:06:14.887835
 
 Test results:
 	No issues identified.
@@ -432,7 +436,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:37.190159
+Run started:2024-06-13 13:06:15.538447
 
 Test results:
 	No issues identified.
@@ -465,7 +469,7 @@ Files skipped (0):
 backend/scrape_zillow.py:21:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 21)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 12:16:37.892651
+Run started:2024-06-13 13:06:16.181625
 
 Test results:
 	No issues identified.
@@ -545,7 +549,7 @@ Your code has been rated at 2.44/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:43.328443
+Run started:2024-06-13 13:06:20.802873
 
 Test results:
 	No issues identified.
@@ -571,20 +575,43 @@ Files skipped (0):
 
 ## ./backend/app.py
 ### flake8 Report:
-./backend/app.py:27:5: E999 IndentationError: unexpected indent
+./backend/app.py:1:1: F401 'flask.request' imported but unused
+./backend/app.py:6:1: E302 expected 2 blank lines, found 1
+./backend/app.py:10:1: E302 expected 2 blank lines, found 1
+./backend/app.py:14:1: E302 expected 2 blank lines, found 1
+./backend/app.py:19:1: E305 expected 2 blank lines after class or function definition, found 1
+./backend/app.py:21:24: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module app
-backend/app.py:27:4: E0001: Parsing failed: 'unexpected indent (app, line 27)' (syntax-error)
+backend/app.py:21:0: C0304: Final newline missing (missing-final-newline)
+backend/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+backend/app.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/app.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/app.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+backend/app.py:2:0: C0411: standard import "logging" should be placed before third party import "flask.Flask" (wrong-import-order)
+backend/app.py:1:0: W0611: Unused request imported from flask (unused-import)
+
+-----------------------------------
+Your code has been rated at 4.17/10
+
 
 ### bandit Report:
-Run started:2024-06-13 12:16:44.003526
+Run started:2024-06-13 13:06:24.193528
 
 Test results:
-	No issues identified.
+>> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
+   Severity: High   Confidence: Medium
+   CWE: CWE-94 (https://cwe.mitre.org/data/definitions/94.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b201_flask_debug_true.html
+   Location: ././backend/app.py:21:4
+20	    logging.basicConfig(level=logging.DEBUG)
+21	    app.run(debug=True)
+
+--------------------------------------------------
 
 Code scanned:
-	Total lines of code: 71
+	Total lines of code: 15
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -593,14 +620,13 @@ Run metrics:
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 0
+		High: 1
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
-		Medium: 0
+		Medium: 1
 		High: 0
-Files skipped (1):
-	././backend/app.py (syntax error while parsing AST from file)
+Files skipped (0):
 
 
 ## ./backend/scrape_zillow_with_selenium.py
@@ -614,7 +640,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:45.180062
+Run started:2024-06-13 13:06:25.327642
 
 Test results:
 	No issues identified.
@@ -647,7 +673,7 @@ Files skipped (0):
 backend/logging_config.py:12:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-13 12:16:45.859324
+Run started:2024-06-13 13:06:25.972110
 
 Test results:
 	No issues identified.
@@ -683,7 +709,7 @@ Your code has been rated at 10.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:46.538075
+Run started:2024-06-13 13:06:26.623204
 
 Test results:
 	No issues identified.
@@ -709,22 +735,37 @@ Files skipped (0):
 
 ## ./backend/server_connection.py
 ### flake8 Report:
-./backend/server_connection.py:5:1: E303 too many blank lines (3)
+./backend/server_connection.py:1:1: F401 'os' imported but unused
+./backend/server_connection.py:3:1: F821 undefined name 'logging'
+./backend/server_connection.py:3:27: F821 undefined name 'logging'
+./backend/server_connection.py:3:80: E501 line too long (91 > 79 characters)
+./backend/server_connection.py:4:1: F401 'logging' imported but unused
+./backend/server_connection.py:4:1: E402 module level import not at top of file
+./backend/server_connection.py:10:1: E303 too many blank lines (4)
+./backend/server_connection.py:10:1: E402 module level import not at top of file
+./backend/server_connection.py:12:1: E302 expected 2 blank lines, found 1
 
 ### pylint Report:
+************* Module server_connection
+backend/server_connection.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+backend/server_connection.py:3:0: E0601: Using variable 'logging' before assignment (used-before-assignment)
+backend/server_connection.py:4:0: C0413: Import "import logging" should be placed at the top of the module (wrong-import-position)
+backend/server_connection.py:5:0: W0105: String statement has no effect (pointless-string-statement)
+backend/server_connection.py:10:0: C0413: Import "import requests" should be placed at the top of the module (wrong-import-position)
+backend/server_connection.py:1:0: W0611: Unused import os (unused-import)
 
-------------------------------------
-Your code has been rated at 10.00/10
+-----------------------------------
+Your code has been rated at 2.31/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:48.267657
+Run started:2024-06-13 13:06:28.612514
 
 Test results:
 	No issues identified.
 
 Code scanned:
-	Total lines of code: 17
+	Total lines of code: 20
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -756,7 +797,7 @@ Your code has been rated at 0.00/10
 
 
 ### bandit Report:
-Run started:2024-06-13 12:16:48.954915
+Run started:2024-06-13 13:06:29.267877
 
 Test results:
 	No issues identified.
