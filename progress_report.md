@@ -1,117 +1,6 @@
 # Progress Report
 
-## ./update_files.py
-### flake8 Report:
-./update_files.py:8:1: E302 expected 2 blank lines, found 1
-./update_files.py:30:1: E302 expected 2 blank lines, found 1
-./update_files.py:37:1: E305 expected 2 blank lines after class or function definition, found 1
-./update_files.py:38:11: W292 no newline at end of file
-
-### pylint Report:
-************* Module update_files
-update_files.py:38:0: C0304: Final newline missing (missing-final-newline)
-update_files.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-update_files.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
-update_files.py:23:23: W0718: Catching too general exception Exception (broad-exception-caught)
-update_files.py:22:20: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-update_files.py:24:20: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-update_files.py:27:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-update_files.py:30:0: C0116: Missing function or method docstring (missing-function-docstring)
-
-------------------------------------------------------------------
-Your code has been rated at 7.50/10 (previous run: 7.50/10, +0.00)
-
-
-### bandit Report:
-Run started:2024-06-15 15:08:46.083835
-
-Test results:
-	No issues identified.
-
-Code scanned:
-	Total lines of code: 33
-	Total lines skipped (#nosec): 0
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
-
-Run metrics:
-	Total issues (by severity):
-		Undefined: 0
-		Low: 0
-		Medium: 0
-		High: 0
-	Total issues (by confidence):
-		Undefined: 0
-		Low: 0
-		Medium: 0
-		High: 0
-Files skipped (0):
-
-
 ## ./vercel.json
-## ./improve_project.py
-### flake8 Report:
-./improve_project.py:8:1: E302 expected 2 blank lines, found 1
-./improve_project.py:10:80: E501 line too long (80 > 79 characters)
-./improve_project.py:13:1: E302 expected 2 blank lines, found 1
-./improve_project.py:17:1: E302 expected 2 blank lines, found 1
-./improve_project.py:19:1: W293 blank line contains whitespace
-./improve_project.py:29:1: E305 expected 2 blank lines after class or function definition, found 1
-./improve_project.py:30:11: W292 no newline at end of file
-
-### pylint Report:
-************* Module improve_project
-improve_project.py:19:0: C0303: Trailing whitespace (trailing-whitespace)
-improve_project.py:30:0: C0304: Final newline missing (missing-final-newline)
-improve_project.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
-
-------------------------------------------------------------------
-Your code has been rated at 8.24/10 (previous run: 8.24/10, +0.00)
-
-
-### bandit Report:
-Run started:2024-06-15 15:08:46.642253
-
-Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ././improve_project.py:5:0
-4	
-5	import subprocess
-6	import glob
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ././improve_project.py:10:13
-9	    """Function docstring"""
-10	    result = subprocess.run(command, capture_output=True, text=True, check=True)
-11	    return result.stdout if result.stdout else result.stderr
-
---------------------------------------------------
-
-Code scanned:
-	Total lines of code: 22
-	Total lines skipped (#nosec): 0
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
-
-Run metrics:
-	Total issues (by severity):
-		Undefined: 0
-		Low: 2
-		Medium: 0
-		High: 0
-	Total issues (by confidence):
-		Undefined: 0
-		Low: 0
-		Medium: 0
-		High: 2
-Files skipped (0):
-
-
 ## ./evaluate_repo.py
 ### flake8 Report:
 ./evaluate_repo.py:5:80: E501 line too long (80 > 79 characters)
@@ -126,27 +15,44 @@ Files skipped (0):
 ./evaluate_repo.py:50:1: E302 expected 2 blank lines, found 1
 ./evaluate_repo.py:63:1: E302 expected 2 blank lines, found 1
 ./evaluate_repo.py:70:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:96:80: E501 line too long (91 > 79 characters)
-./evaluate_repo.py:98:80: E501 line too long (109 > 79 characters)
-./evaluate_repo.py:99:80: E501 line too long (81 > 79 characters)
-./evaluate_repo.py:100:80: E501 line too long (109 > 79 characters)
-./evaluate_repo.py:101:80: E501 line too long (112 > 79 characters)
-./evaluate_repo.py:102:80: E501 line too long (95 > 79 characters)
-./evaluate_repo.py:105:80: E501 line too long (84 > 79 characters)
-./evaluate_repo.py:116:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:117:11: W292 no newline at end of file
+./evaluate_repo.py:75:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:80:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:82:80: E501 line too long (149 > 79 characters)
+./evaluate_repo.py:98:80: E501 line too long (112 > 79 characters)
+./evaluate_repo.py:100:80: E501 line too long (127 > 79 characters)
+./evaluate_repo.py:102:80: E501 line too long (117 > 79 characters)
+./evaluate_repo.py:105:80: E501 line too long (124 > 79 characters)
+./evaluate_repo.py:107:80: E501 line too long (91 > 79 characters)
+./evaluate_repo.py:109:80: E501 line too long (89 > 79 characters)
+./evaluate_repo.py:111:80: E501 line too long (83 > 79 characters)
+./evaluate_repo.py:112:1: W293 blank line contains whitespace
+./evaluate_repo.py:114:80: E501 line too long (84 > 79 characters)
+./evaluate_repo.py:115:80: E501 line too long (92 > 79 characters)
+./evaluate_repo.py:117:1: W293 blank line contains whitespace
+./evaluate_repo.py:120:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:142:5: F841 local variable 'updated_outline' is assigned to but never used
+./evaluate_repo.py:153:1: E305 expected 2 blank lines after class or function definition, found 1
+./evaluate_repo.py:154:11: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module evaluate_repo
-evaluate_repo.py:117:0: C0304: Final newline missing (missing-final-newline)
+evaluate_repo.py:82:0: C0301: Line too long (149/100) (line-too-long)
+evaluate_repo.py:98:0: C0301: Line too long (112/100) (line-too-long)
+evaluate_repo.py:100:0: C0301: Line too long (127/100) (line-too-long)
+evaluate_repo.py:102:0: C0301: Line too long (117/100) (line-too-long)
+evaluate_repo.py:105:0: C0301: Line too long (124/100) (line-too-long)
+evaluate_repo.py:112:0: C0303: Trailing whitespace (trailing-whitespace)
+evaluate_repo.py:117:0: C0303: Trailing whitespace (trailing-whitespace)
+evaluate_repo.py:154:0: C0304: Final newline missing (missing-final-newline)
 evaluate_repo.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+evaluate_repo.py:142:4: W0612: Unused variable 'updated_outline' (unused-variable)
 
 ------------------------------------------------------------------
-Your code has been rated at 9.71/10 (previous run: 9.50/10, +0.21)
+Your code has been rated at 9.08/10 (previous run: 9.25/10, -0.16)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:47.320223
+Run started:2024-06-15 15:42:44.664945
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -171,7 +77,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 88
+	Total lines of code: 118
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -227,7 +133,7 @@ Your code has been rated at 5.33/10 (previous run: 5.33/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:47.888275
+Run started:2024-06-15 15:42:45.219339
 
 Test results:
 	No issues identified.
@@ -261,7 +167,7 @@ Files skipped (0):
 backend/scrape_zillow.py:21:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 21)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:48.311202
+Run started:2024-06-15 15:42:45.622530
 
 Test results:
 	No issues identified.
@@ -295,7 +201,7 @@ Files skipped (1):
 backend/logging_config.py:12:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:48.726348
+Run started:2024-06-15 15:42:46.030089
 
 Test results:
 	No issues identified.
@@ -335,7 +241,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:49.141810
+Run started:2024-06-15 15:42:46.585224
 
 Test results:
 	No issues identified.
@@ -396,7 +302,7 @@ Your code has been rated at 5.00/10 (previous run: 5.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:50.101591
+Run started:2024-06-15 15:42:47.617833
 
 Test results:
 >> Issue: [B110:try_except_pass] Try, Except, Pass detected.
@@ -444,7 +350,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:50.522129
+Run started:2024-06-15 15:42:48.082463
 
 Test results:
 	No issues identified.
@@ -477,7 +383,7 @@ Files skipped (0):
 backend/single_family_evaluation.py:4:4: E0001: Parsing failed: 'unexpected indent (single_family_evaluation, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:50.967287
+Run started:2024-06-15 15:42:48.512719
 
 Test results:
 	No issues identified.
@@ -511,7 +417,7 @@ Files skipped (1):
 backend/offer_generator.py:4:4: E0001: Parsing failed: 'unexpected indent (offer_generator, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:51.390206
+Run started:2024-06-15 15:42:48.923586
 
 Test results:
 	No issues identified.
@@ -576,7 +482,7 @@ Your code has been rated at 6.73/10 (previous run: 6.73/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:51.922315
+Run started:2024-06-15 15:42:49.412874
 
 Test results:
 	No issues identified.
@@ -657,7 +563,7 @@ Your code has been rated at 5.38/10 (previous run: 5.38/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:53.023664
+Run started:2024-06-15 15:42:50.566023
 
 Test results:
 	No issues identified.
@@ -724,7 +630,7 @@ Your code has been rated at 7.55/10 (previous run: 7.55/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:53.782494
+Run started:2024-06-15 15:42:51.313607
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -776,7 +682,7 @@ Files skipped (0):
 backend/multi_family_evaluation.py:4:4: E0001: Parsing failed: 'unexpected indent (multi_family_evaluation, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:54.200707
+Run started:2024-06-15 15:42:51.727126
 
 Test results:
 	No issues identified.
@@ -816,7 +722,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:08:54.614569
+Run started:2024-06-15 15:42:52.133562
 
 Test results:
 	No issues identified.
@@ -849,7 +755,7 @@ Files skipped (0):
 backend/site_scraper.py:3:4: E0001: Parsing failed: 'unexpected indent (site_scraper, line 3)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:08:55.026507
+Run started:2024-06-15 15:42:52.535335
 
 Test results:
 	No issues identified.
@@ -893,7 +799,7 @@ Your code has been rated at 6.36/10 (previous run: 6.36/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:09:01.337663
+Run started:2024-06-15 15:42:58.759513
 
 Test results:
 	No issues identified.
@@ -934,7 +840,7 @@ Your code has been rated at 2.00/10 (previous run: 2.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:09:01.799909
+Run started:2024-06-15 15:42:59.213173
 
 Test results:
 	No issues identified.
@@ -974,7 +880,7 @@ Your code has been rated at 5.71/10 (previous run: 5.71/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:09:06.584843
+Run started:2024-06-15 15:43:03.927264
 
 Test results:
 	No issues identified.
@@ -1016,7 +922,7 @@ Your code has been rated at 8.33/10 (previous run: 8.33/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:09:10.963798
+Run started:2024-06-15 15:43:08.211930
 
 Test results:
 	No issues identified.
@@ -1056,7 +962,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:09:11.393562
+Run started:2024-06-15 15:43:08.630969
 
 Test results:
 	No issues identified.
@@ -1081,20 +987,18 @@ Files skipped (0):
 
 
 ## ./.vscode/settings.json
-
 ## Summary
-
 ### Current Status
 The following sections outline the current state of the repository based on the evaluation:
-
- - **Server Connection Improvement**: Improve the reliability and efficiency of the server connection module.
- - **Site Scraper Enhancement**: Ensure robust scraping logic and error handling.
- - **Evaluation of Single Family Homes**: Implement a comprehensive evaluation logic for single-family homes.
- - **Multi-Family Homes Evaluation**: Adapt the single-family evaluation logic to handle multi-family specifics.
- - **Property Offer Generator**: Create a module that generates offers based on evaluated data.
+ - **Code Style Improvement**: Address the 121 issues reported by flake8.
+ - **Code Quality Enhancement**: Resolve the 189 warnings and errors reported by pylint.
+ - **Security Improvement**: Fix the 494 security issues identified by bandit.
 
 ### Next Steps
 To align the project with the outlined goals, the following actions are recommended:
+- Improve code style and consistency by addressing flake8 issues.
+- Enhance code quality by resolving pylint warnings and errors.
+- Improve security by fixing issues identified by bandit.
 - Improve server connection reliability and efficiency.
 - Enhance site scraper with better logging and error handling.
 - Implement evaluation logic for single-family and multi-family homes.

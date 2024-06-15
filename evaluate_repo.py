@@ -67,6 +67,56 @@ def should_exclude(directory):
             return True
     return False
 
+def read_outline(filepath):
+    """Reads the application outline from a file."""
+    with open(filepath, 'r', encoding='utf-8') as file:
+        return file.read()
+
+def update_outline(filepath, new_content):
+    """Updates the application outline with new content."""
+    with open(filepath, 'a', encoding='utf-8') as file:
+        file.write(new_content)
+
+def generate_next_steps(evaluations):
+    """Generates next steps based on the analysis results."""
+    steps = ["## Summary\n", "### Current Status\n", "The following sections outline the current state of the repository based on the evaluation:\n"]
+
+    flake8_issues = 0
+    pylint_issues = 0
+    bandit_issues = 0
+
+    for analysis in evaluations.values():
+        if 'flake8' in analysis and analysis['flake8']:
+            flake8_issues += analysis['flake8'].count('\n')
+        if 'pylint' in analysis and analysis['pylint']:
+            pylint_issues += analysis['pylint'].count('\n')
+        if 'bandit' in analysis and analysis['bandit']:
+            bandit_issues += analysis['bandit'].count('\n')
+
+    # Add recommendations based on the count of issues found
+    if flake8_issues > 0:
+        steps.append(f" - **Code Style Improvement**: Address the {flake8_issues} issues reported by flake8.\n")
+    if pylint_issues > 0:
+        steps.append(f" - **Code Quality Enhancement**: Resolve the {pylint_issues} warnings and errors reported by pylint.\n")
+    if bandit_issues > 0:
+        steps.append(f" - **Security Improvement**: Fix the {bandit_issues} security issues identified by bandit.\n")
+
+    # Add general next steps
+    steps.append("\n### Next Steps\nTo align the project with the outlined goals, the following actions are recommended:\n")
+    if flake8_issues > 0:
+        steps.append("- Improve code style and consistency by addressing flake8 issues.\n")
+    if pylint_issues > 0:
+        steps.append("- Enhance code quality by resolving pylint warnings and errors.\n")
+    if bandit_issues > 0:
+        steps.append("- Improve security by fixing issues identified by bandit.\n")
+    
+    steps.append("- Improve server connection reliability and efficiency.\n")
+    steps.append("- Enhance site scraper with better logging and error handling.\n")
+    steps.append("- Implement evaluation logic for single-family and multi-family homes.\n")
+    steps.append("- Develop the property offer generator module.\n")
+    
+    return "".join(steps)
+
 def main():
     """Main function to find all files, run analysis, and generate reports."""
     # Find all files in the repository, excluding specified directories
@@ -84,33 +134,20 @@ def main():
     # Generate a summary report of the analysis
     summary = summarize_evaluations(evaluations)
 
-    # Write the summary report to progress_report.md
+    # Read the existing application outline
+    outline_path = 'appoutline.txt'
+    outline = read_outline(outline_path)
+
+    # Append the analysis summary to the application outline
+    updated_outline = outline + "\n" + summary
+    update_outline(outline_path, "\n" + summary)
+
+    # Generate next steps based on the evaluations
+    next_steps = generate_next_steps(evaluations)
+
+    # Write the summary report and next steps to progress_report.md
     with open("progress_report.md", "w", encoding="utf-8") as report_file:
         report_file.write(summary)
-
-    # Add a section with next steps for improvement
-    next_steps = """
-## Summary
-
-### Current Status
-The following sections outline the current state of the repository based on the evaluation:
-
- - **Server Connection Improvement**: Improve the reliability and efficiency of the server connection module.
- - **Site Scraper Enhancement**: Ensure robust scraping logic and error handling.
- - **Evaluation of Single Family Homes**: Implement a comprehensive evaluation logic for single-family homes.
- - **Multi-Family Homes Evaluation**: Adapt the single-family evaluation logic to handle multi-family specifics.
- - **Property Offer Generator**: Create a module that generates offers based on evaluated data.
-
-### Next Steps
-To align the project with the outlined goals, the following actions are recommended:
-- Improve server connection reliability and efficiency.
-- Enhance site scraper with better logging and error handling.
-- Implement evaluation logic for single-family and multi-family homes.
-- Develop the property offer generator module.
-"""
-
-    # Append the next steps section to the progress report
-    with open("progress_report.md", "a", encoding="utf-8") as report_file:
         report_file.write(next_steps)
 
 if __name__ == "__main__":
