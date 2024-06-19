@@ -3,56 +3,57 @@
 ## ./vercel.json
 ## ./evaluate_repo.py
 ### flake8 Report:
-./evaluate_repo.py:5:80: E501 line too long (80 > 79 characters)
-./evaluate_repo.py:7:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:10:80: E501 line too long (96 > 79 characters)
-./evaluate_repo.py:15:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:20:80: E501 line too long (97 > 79 characters)
+./evaluate_repo.py:6:80: E501 line too long (80 > 79 characters)
+./evaluate_repo.py:8:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:11:80: E501 line too long (96 > 79 characters)
+./evaluate_repo.py:16:1: E302 expected 2 blank lines, found 1
 ./evaluate_repo.py:21:80: E501 line too long (97 > 79 characters)
 ./evaluate_repo.py:22:80: E501 line too long (97 > 79 characters)
-./evaluate_repo.py:34:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:35:80: E501 line too long (82 > 79 characters)
-./evaluate_repo.py:50:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:63:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:70:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:75:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:80:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:82:80: E501 line too long (149 > 79 characters)
-./evaluate_repo.py:98:80: E501 line too long (112 > 79 characters)
-./evaluate_repo.py:100:80: E501 line too long (127 > 79 characters)
-./evaluate_repo.py:102:80: E501 line too long (117 > 79 characters)
-./evaluate_repo.py:105:80: E501 line too long (124 > 79 characters)
-./evaluate_repo.py:107:80: E501 line too long (91 > 79 characters)
-./evaluate_repo.py:109:80: E501 line too long (89 > 79 characters)
-./evaluate_repo.py:111:80: E501 line too long (83 > 79 characters)
-./evaluate_repo.py:112:1: W293 blank line contains whitespace
-./evaluate_repo.py:114:80: E501 line too long (84 > 79 characters)
-./evaluate_repo.py:115:80: E501 line too long (92 > 79 characters)
-./evaluate_repo.py:117:1: W293 blank line contains whitespace
-./evaluate_repo.py:120:1: E302 expected 2 blank lines, found 1
-./evaluate_repo.py:142:5: F841 local variable 'updated_outline' is assigned to but never used
-./evaluate_repo.py:153:1: E305 expected 2 blank lines after class or function definition, found 1
-./evaluate_repo.py:154:11: W292 no newline at end of file
+./evaluate_repo.py:23:80: E501 line too long (97 > 79 characters)
+./evaluate_repo.py:35:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:36:80: E501 line too long (82 > 79 characters)
+./evaluate_repo.py:51:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:64:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:71:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:76:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:81:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:83:80: E501 line too long (149 > 79 characters)
+./evaluate_repo.py:99:80: E501 line too long (112 > 79 characters)
+./evaluate_repo.py:101:80: E501 line too long (127 > 79 characters)
+./evaluate_repo.py:103:80: E501 line too long (117 > 79 characters)
+./evaluate_repo.py:106:80: E501 line too long (124 > 79 characters)
+./evaluate_repo.py:108:80: E501 line too long (91 > 79 characters)
+./evaluate_repo.py:110:80: E501 line too long (89 > 79 characters)
+./evaluate_repo.py:112:80: E501 line too long (83 > 79 characters)
+./evaluate_repo.py:113:1: W293 blank line contains whitespace
+./evaluate_repo.py:115:80: E501 line too long (84 > 79 characters)
+./evaluate_repo.py:116:80: E501 line too long (92 > 79 characters)
+./evaluate_repo.py:118:1: W293 blank line contains whitespace
+./evaluate_repo.py:121:1: E302 expected 2 blank lines, found 1
+./evaluate_repo.py:149:80: E501 line too long (87 > 79 characters)
+./evaluate_repo.py:150:5: F841 local variable 'updated_outline' is assigned to but never used
+./evaluate_repo.py:158:1: E305 expected 2 blank lines after class or function definition, found 1
+./evaluate_repo.py:159:11: W292 no newline at end of file
 
 ### pylint Report:
 ************* Module evaluate_repo
-evaluate_repo.py:82:0: C0301: Line too long (149/100) (line-too-long)
-evaluate_repo.py:98:0: C0301: Line too long (112/100) (line-too-long)
-evaluate_repo.py:100:0: C0301: Line too long (127/100) (line-too-long)
-evaluate_repo.py:102:0: C0301: Line too long (117/100) (line-too-long)
-evaluate_repo.py:105:0: C0301: Line too long (124/100) (line-too-long)
-evaluate_repo.py:112:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:117:0: C0303: Trailing whitespace (trailing-whitespace)
-evaluate_repo.py:154:0: C0304: Final newline missing (missing-final-newline)
+evaluate_repo.py:83:0: C0301: Line too long (149/100) (line-too-long)
+evaluate_repo.py:99:0: C0301: Line too long (112/100) (line-too-long)
+evaluate_repo.py:101:0: C0301: Line too long (127/100) (line-too-long)
+evaluate_repo.py:103:0: C0301: Line too long (117/100) (line-too-long)
+evaluate_repo.py:106:0: C0301: Line too long (124/100) (line-too-long)
+evaluate_repo.py:113:0: C0303: Trailing whitespace (trailing-whitespace)
+evaluate_repo.py:118:0: C0303: Trailing whitespace (trailing-whitespace)
+evaluate_repo.py:159:0: C0304: Final newline missing (missing-final-newline)
 evaluate_repo.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-evaluate_repo.py:142:4: W0612: Unused variable 'updated_outline' (unused-variable)
+evaluate_repo.py:150:4: W0612: Unused variable 'updated_outline' (unused-variable)
 
 ------------------------------------------------------------------
-Your code has been rated at 9.08/10 (previous run: 9.25/10, -0.16)
+Your code has been rated at 9.11/10 (previous run: 9.11/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:44.664945
+Run started:2024-06-19 13:39:06.983891
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -62,22 +63,22 @@ Test results:
    Location: ././evaluate_repo.py:2:0
 1	import os
 2	import subprocess
-3	
+3	from datetime import datetime
 
 --------------------------------------------------
 >> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
    Severity: High   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.7.9/plugins/b602_subprocess_popen_with_shell_equals_true.html
-   Location: ././evaluate_repo.py:10:17
-9	    try:
-10	        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
-11	        return result.stdout if result.stdout else result.stderr
+   Location: ././evaluate_repo.py:11:17
+10	    try:
+11	        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
+12	        return result.stdout if result.stdout else result.stderr
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 118
+	Total lines of code: 121
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -133,7 +134,7 @@ Your code has been rated at 5.33/10 (previous run: 5.33/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:45.219339
+Run started:2024-06-19 13:39:07.564630
 
 Test results:
 	No issues identified.
@@ -157,7 +158,6 @@ Run metrics:
 Files skipped (0):
 
 
-## ./backend/zillow_listing.html
 ## ./backend/scrape_zillow.py
 ### flake8 Report:
 ./backend/scrape_zillow.py:21:5: E999 IndentationError: unexpected indent
@@ -167,7 +167,7 @@ Files skipped (0):
 backend/scrape_zillow.py:21:4: E0001: Parsing failed: 'unexpected indent (scrape_zillow, line 21)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:45.622530
+Run started:2024-06-19 13:39:07.990302
 
 Test results:
 	No issues identified.
@@ -201,7 +201,7 @@ Files skipped (1):
 backend/logging_config.py:12:4: E0001: Parsing failed: 'unexpected indent (logging_config, line 12)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:46.030089
+Run started:2024-06-19 13:39:08.451791
 
 Test results:
 	No issues identified.
@@ -241,7 +241,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:46.585224
+Run started:2024-06-19 13:39:08.875478
 
 Test results:
 	No issues identified.
@@ -302,7 +302,7 @@ Your code has been rated at 5.00/10 (previous run: 5.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:47.617833
+Run started:2024-06-19 13:39:09.903867
 
 Test results:
 >> Issue: [B110:try_except_pass] Try, Except, Pass detected.
@@ -350,7 +350,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:48.082463
+Run started:2024-06-19 13:39:10.314934
 
 Test results:
 	No issues identified.
@@ -383,7 +383,7 @@ Files skipped (0):
 backend/single_family_evaluation.py:4:4: E0001: Parsing failed: 'unexpected indent (single_family_evaluation, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:48.512719
+Run started:2024-06-19 13:39:10.743574
 
 Test results:
 	No issues identified.
@@ -417,7 +417,7 @@ Files skipped (1):
 backend/offer_generator.py:4:4: E0001: Parsing failed: 'unexpected indent (offer_generator, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:48.923586
+Run started:2024-06-19 13:39:11.185207
 
 Test results:
 	No issues identified.
@@ -482,7 +482,7 @@ Your code has been rated at 6.73/10 (previous run: 6.73/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:49.412874
+Run started:2024-06-19 13:39:11.683210
 
 Test results:
 	No issues identified.
@@ -563,7 +563,7 @@ Your code has been rated at 5.38/10 (previous run: 5.38/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:50.566023
+Run started:2024-06-19 13:39:12.789211
 
 Test results:
 	No issues identified.
@@ -630,7 +630,7 @@ Your code has been rated at 7.55/10 (previous run: 7.55/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:51.313607
+Run started:2024-06-19 13:39:13.560724
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -682,7 +682,7 @@ Files skipped (0):
 backend/multi_family_evaluation.py:4:4: E0001: Parsing failed: 'unexpected indent (multi_family_evaluation, line 4)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:51.727126
+Run started:2024-06-19 13:39:13.984054
 
 Test results:
 	No issues identified.
@@ -722,7 +722,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:52.133562
+Run started:2024-06-19 13:39:14.404784
 
 Test results:
 	No issues identified.
@@ -755,7 +755,7 @@ Files skipped (0):
 backend/site_scraper.py:3:4: E0001: Parsing failed: 'unexpected indent (site_scraper, line 3)' (syntax-error)
 
 ### bandit Report:
-Run started:2024-06-15 15:42:52.535335
+Run started:2024-06-19 13:39:14.988823
 
 Test results:
 	No issues identified.
@@ -799,7 +799,7 @@ Your code has been rated at 6.36/10 (previous run: 6.36/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:58.759513
+Run started:2024-06-19 13:39:21.854876
 
 Test results:
 	No issues identified.
@@ -840,7 +840,7 @@ Your code has been rated at 2.00/10 (previous run: 2.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:42:59.213173
+Run started:2024-06-19 13:39:22.310921
 
 Test results:
 	No issues identified.
@@ -880,7 +880,7 @@ Your code has been rated at 5.71/10 (previous run: 5.71/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:43:03.927264
+Run started:2024-06-19 13:39:27.034207
 
 Test results:
 	No issues identified.
@@ -922,7 +922,7 @@ Your code has been rated at 8.33/10 (previous run: 8.33/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:43:08.211930
+Run started:2024-06-19 13:39:31.328142
 
 Test results:
 	No issues identified.
@@ -962,7 +962,7 @@ Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
 
 
 ### bandit Report:
-Run started:2024-06-15 15:43:08.630969
+Run started:2024-06-19 13:39:31.745838
 
 Test results:
 	No issues identified.
@@ -990,7 +990,7 @@ Files skipped (0):
 ## Summary
 ### Current Status
 The following sections outline the current state of the repository based on the evaluation:
- - **Code Style Improvement**: Address the 121 issues reported by flake8.
+ - **Code Style Improvement**: Address the 122 issues reported by flake8.
  - **Code Quality Enhancement**: Resolve the 189 warnings and errors reported by pylint.
  - **Security Improvement**: Fix the 494 security issues identified by bandit.
 

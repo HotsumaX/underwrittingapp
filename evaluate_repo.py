@@ -1,5 +1,6 @@
 import os
 import subprocess
+from datetime import datetime
 
 # List of directories to exclude from the analysis
 EXCLUDE_DIRS = ['node_modules', 'venv', '.venv', '__pycache__', 'dist', 'build']
@@ -134,16 +135,20 @@ def main():
     # Generate a summary report of the analysis
     summary = summarize_evaluations(evaluations)
 
+    # Generate next steps based on the evaluations
+    next_steps = generate_next_steps(evaluations)
+
+    # Get the current timestamp
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp_str = f"\n# Update on {timestamp}\n"
+
     # Read the existing application outline
     outline_path = 'appoutline.txt'
     outline = read_outline(outline_path)
 
-    # Append the analysis summary to the application outline
-    updated_outline = outline + "\n" + summary
-    update_outline(outline_path, "\n" + summary)
-
-    # Generate next steps based on the evaluations
-    next_steps = generate_next_steps(evaluations)
+    # Append the timestamp, analysis summary, and next steps to the application outline
+    updated_outline = outline + timestamp_str + summary + next_steps
+    update_outline(outline_path, timestamp_str + summary + next_steps)
 
     # Write the summary report and next steps to progress_report.md
     with open("progress_report.md", "w", encoding="utf-8") as report_file:
